@@ -20,7 +20,7 @@ instance.interceptors.request.use(
 
 instance.interceptors.response.use(
   (res) => {
-    if (res.data.code === 0) {
+    if (res.data.code === '1') {
       return res
     }
     ElMessage({ message: res.data.message || '服务异常', type: 'error' })
