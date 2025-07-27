@@ -21,3 +21,11 @@ export const getNew = (limit) => {
 export const getHot = () => {
   return request.get('/home/hot')
 }
+// 获取热门品牌
+export const getBrand = (limit) => {
+  return request.get('/home/brand', {
+    params: {
+      limit
+    }
+  })
+}
