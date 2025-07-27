@@ -99,7 +99,7 @@ const handleChildrenLeave = () => {
           :key="item.id"
           class="w-[313px] h-[120px] bg-white border-gray-300 border-2 rounded-sm flex items-center gap-2 px-2"
         >
-          <img :src="item.picture" alt="" class="w-[95px]" />
+          <img v-img-lazy="item.picture" alt="" class="w-[95px]" />
           <div class="flex-1 min-w-0">
             <h5 class="name">{{ item.name }}</h5>
             <p class="desc truncate">{{ item.desc }}</p>

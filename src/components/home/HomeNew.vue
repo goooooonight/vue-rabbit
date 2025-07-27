@@ -33,7 +33,7 @@ getNewFun()
           v-for="item in newList"
           :key="item.id"
         >
-          <img :src="item.picture" alt="" class="w-[306px] h-[306px]" />
+          <img v-img-lazy="item.picture" alt="" class="w-[306px] h-[306px]" />
           <div
             class="px-[25px] py-[10px] flex flex-col items-center justify-center gap-2"
           >

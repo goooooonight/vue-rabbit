@@ -25,7 +25,7 @@ getHotFun()
           v-for="item in hotList"
           :key="item.id"
         >
-          <img :src="item.picture" alt="" />
+          <img v-img-lazy="item.picture" alt="" />
           <div
             class="px-[25px] py-[10px] flex flex-col items-center justify-center gap-2"
           >

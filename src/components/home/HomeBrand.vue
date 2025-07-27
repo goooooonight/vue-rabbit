@@ -11,7 +11,6 @@ const getBrandFun = async () => {
     data: { result }
   } = await getBrand(pageTotal * pageCount)
   brandList.value = result
-  console.log(result)
 }
 // 进入页面自动执行
 getBrandFun()
@@ -61,7 +60,7 @@ const currentPageBrands = computed(() => {
           v-for="item in currentPageBrands"
           :key="item.id"
         >
-          <img :src="item.picture" alt="" class="h-full" />
+          <img v-img-lazy="item.picture" alt="" class="h-full" />
         </div>
       </template>
     </HomePanel>
