@@ -10,9 +10,9 @@ defineProps({
 </script>
 
 <template>
-  <div class="xtx-container px-[10px] py-[20px]">
+  <div class="xtx-container px-[10px]">
     <!-- 标题 -->
-    <div class="flex">
+    <div class="flex py-[40px]">
       <h1 class="text-4xl">
         {{ title
         }}<small class="ml-6 text-lg text-[#999]">{{ subTitle }}</small>
@@ -20,7 +20,7 @@ defineProps({
       <slot name="head"></slot>
     </div>
     <!-- 商品展示 -->
-    <div class="mt-[20px] flex gap-2">
+    <div class="flex gap-2">
       <slot name="itemList"></slot>
     </div>
   </div>
