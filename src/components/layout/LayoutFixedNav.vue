@@ -20,8 +20,8 @@ const { y } = useScroll(window)
       </h1>
       <LayoutCateUl></LayoutCateUl>
       <ul class="flex items-center gap-[40px]">
-        <LayoutCateLi itemName="品牌"></LayoutCateLi>
-        <LayoutCateLi itemName="专题"></LayoutCateLi>
+        <LayoutCateLi><RouterLink to="/"> 品牌 </RouterLink></LayoutCateLi>
+        <LayoutCateLi><RouterLink to="/"> 专题 </RouterLink></LayoutCateLi>
       </ul>
     </div>
   </div>

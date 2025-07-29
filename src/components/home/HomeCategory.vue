@@ -58,9 +58,9 @@ const handleChildrenLeave = () => {
         @mouseenter="handleCateEnter(cate.id)"
         @mouseleave="handleCateLeave"
       >
-        <!-- @mouseleave="hoverCateId = ''"
-      > -->
-        <RouterLink to="/" class="text-lg mr-2">{{ cate.name }}</RouterLink>
+        <RouterLink :to="`/category/${cate.id}`" class="text-lg mr-2">{{
+          cate.name
+        }}</RouterLink>
         <RouterLink
           to="/"
           v-for="children in cate.children.slice(0, 2)"

@@ -60,20 +60,24 @@ const handleChildrenLeave = () => {
 <template>
   <!-- 分类列表 -->
   <ul class="w-[820px] cate-ul flex items-center gap-[40px]">
-    <LayoutCateLi itemName="首页"></LayoutCateLi>
+    <LayoutCateLi>
+      <RouterLink to="/"> 首页 </RouterLink>
+    </LayoutCateLi>
     <LayoutCateLi
       v-for="item in cateList"
       :key="item.id"
-      :itemName="item.name"
       @mouseenter="handleCateEnter(item.id)"
       @mouseleave="handleCateLeave"
     >
+      <RouterLink :to="`/category/${item.id}`">
+        {{ item.name }}
+      </RouterLink>
     </LayoutCateLi>
   </ul>
   <!-- 二级分类列表 -->
   <transition name="menu">
     <ul
-      class="children-cate flex items-center gap-6 h-[120px] w-[80%] bg-white shadow-[0_-6px_8px_-1px_rgba(0,0,0,0.1)] absolute left-1/2 top-4/5 z-[999]"
+      class="children-cate flex items-center gap-6 h-[120px] w-full bg-white shadow-[0_-6px_8px_-1px_rgba(0,0,0,0.1)] absolute left-1/2 top-4/5 z-[999]"
       v-show="hoverCateId"
       @mouseenter="handleChildrenEnter"
       @mouseleave="handleChildrenLeave"

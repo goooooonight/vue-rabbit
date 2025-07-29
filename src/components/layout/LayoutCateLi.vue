@@ -1,13 +1,8 @@
-<script setup>
-import { defineProps } from 'vue'
-defineProps({
-  itemName: String
-})
-</script>
+<script setup></script>
 
 <template>
   <li class="cate-li">
-    {{ itemName }}
+    <slot></slot>
   </li>
 </template>
 

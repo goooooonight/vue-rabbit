@@ -5,6 +5,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/login', component: () => import('@/views/login/RbLogin.vue') },
+    // 布局架子
     {
       path: '/',
       component: () => import('@/views/layout/RbLayout.vue'),
@@ -14,8 +15,9 @@ const router = createRouter({
           path: '/home',
           component: () => import('@/views/home/RbHome.vue')
         },
+        // 分类
         {
-          path: '/category',
+          path: '/category/:cateId',
           component: () => import('@/views/category/RbCategory.vue')
         }
       ]

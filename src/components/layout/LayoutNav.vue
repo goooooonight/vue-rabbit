@@ -11,7 +11,7 @@ import LayoutCateUl from './LayoutCateUl.vue'
       <h1
         class="w-[200px] h-[132px] bg-[url(/src/assets/images/logo.png)] bg-[position:center_18px] bg-contain bg-no-repeat flex-shrink-0"
       >
-        <RouterLink to="/">小兔鲜</RouterLink>
+        <RouterLink to="/" class="h-full">小兔鲜</RouterLink>
       </h1>
       <LayoutCateUl></LayoutCateUl>
       <!-- 搜索框 -->

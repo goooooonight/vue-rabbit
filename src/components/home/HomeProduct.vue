@@ -31,7 +31,7 @@ const { cateList } = storeToRefs(useCateStore())
             </li>
           </ul>
           <RouterLink
-            to="/"
+            :to="`/category/${cate.id}`"
             class="check-all ml-[80px] text-lg flex items-center gap-1"
             >查看全部<el-icon color="#999"><ArrowRight /></el-icon
           ></RouterLink>
@@ -40,9 +40,14 @@ const { cateList } = storeToRefs(useCateStore())
       <!-- 商品展示 -->
       <template #itemList>
         <div
-          class="w-[240px] h-[610px] grid place-items-center bg-gradient-to-br from-[#93ddcd] via-[#a8e6d7] to-[#1dc779] shadow-lg rounded-lg overflow-hidden"
+          class="w-[240px] h-[610px] bg-gradient-to-br from-[#93ddcd] via-[#a8e6d7] to-[#1dc779] shadow-lg rounded-lg overflow-hidden"
         >
-          <img v-img-lazy="cate.picture" alt="" />
+          <RouterLink
+            :to="`/category/${cate.id}`"
+            class="w-full h-full grid place-items-center"
+          >
+            <img v-img-lazy="cate.picture" alt="" />
+          </RouterLink>
         </div>
         <ul class="grid grid-cols-4 gap-2">
           <li
