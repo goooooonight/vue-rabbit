@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { getCate } from '@/api/category'
+import { getCateList } from '@/api/category'
 
 // 用户模块
 export const useCateStore = defineStore('rabbit-category', () => {
@@ -10,7 +10,7 @@ export const useCateStore = defineStore('rabbit-category', () => {
   const getCategory = async () => {
     const {
       data: { result }
-    } = await getCate()
+    } = await getCateList()
     cateList.value = result
   }
 
