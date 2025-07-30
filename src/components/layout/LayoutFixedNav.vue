@@ -1,6 +1,5 @@
 <script setup>
 import LayoutCateUl from './LayoutCateUl.vue'
-import LayoutCateLi from './LayoutCateLi.vue'
 import { useScroll } from '@vueuse/core'
 // 获取页面滚动距离
 const { y } = useScroll(window)
@@ -16,12 +15,12 @@ const { y } = useScroll(window)
       <h1
         class="w-[200px] h-[100px] bg-[url(/src/assets/images/logo.png)] bg-position-[center_12px] bg-size-[160px] bg-no-repeat"
       >
-        <RouterLink to="/">小兔鲜</RouterLink>
+        <RouterLink to="/" class="h-full">小兔鲜</RouterLink>
       </h1>
       <LayoutCateUl></LayoutCateUl>
       <ul class="flex items-center gap-[40px]">
-        <LayoutCateLi><RouterLink to="/"> 品牌 </RouterLink></LayoutCateLi>
-        <LayoutCateLi><RouterLink to="/"> 专题 </RouterLink></LayoutCateLi>
+        <li><RouterLink to="/"> 品牌 </RouterLink></li>
+        <li><RouterLink to="/"> 专题 </RouterLink></li>
       </ul>
     </div>
   </div>
@@ -48,6 +47,11 @@ const { y } = useScroll(window)
   ul {
     padding-left: 40px;
     border-left: 2px $xtxColor solid;
+    a {
+      &:hover {
+        color: $xtxColor;
+      }
+    }
   }
 }
 </style>

@@ -49,6 +49,9 @@ getNewFun()
 <style scoped lang="scss">
 a {
   color: #999;
+  &:hover {
+    color: $xtxColor;
+  }
 }
 .price {
   color: $priceColor;

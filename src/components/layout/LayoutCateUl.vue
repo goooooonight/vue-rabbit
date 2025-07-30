@@ -2,7 +2,6 @@
 import { ref, watch } from 'vue'
 import { useCateStore } from '@/stores/modules/category'
 import { storeToRefs } from 'pinia'
-import LayoutCateLi from './LayoutCateLi.vue'
 
 // 分类模块对象
 const cateStore = useCateStore()
@@ -59,20 +58,21 @@ const handleChildrenLeave = () => {
 
 <template>
   <!-- 分类列表 -->
-  <ul class="w-[820px] cate-ul flex items-center gap-[40px]">
-    <LayoutCateLi>
+  <ul class="cate-ul w-[820px] flex items-center gap-[40px] z-[998]">
+    <li class="w-[38px] text-center">
       <RouterLink to="/"> 首页 </RouterLink>
-    </LayoutCateLi>
-    <LayoutCateLi
+    </li>
+    <li
       v-for="item in cateList"
       :key="item.id"
+      class="w-[38px] text-center"
       @mouseenter="handleCateEnter(item.id)"
       @mouseleave="handleCateLeave"
     >
-      <RouterLink :to="`/category/${item.id}`">
+      <RouterLink active-class="active" :to="`/category/${item.id}`">
         {{ item.name }}
       </RouterLink>
-    </LayoutCateLi>
+    </li>
   </ul>
   <!-- 二级分类列表 -->
   <transition name="menu">
@@ -96,7 +96,17 @@ const handleChildrenLeave = () => {
 // 分类导航列表样式
 .cate-ul {
   padding-left: 40px;
-  z-index: 998;
+  a {
+    &:hover {
+      color: $xtxColor;
+      border-bottom: 1px $xtxColor solid;
+    }
+  }
+  // 导航激活状态样式
+  .active {
+    color: $xtxColor;
+    border-bottom: 1px $xtxColor solid;
+  }
 }
 // 二级分类列表
 .children-cate {

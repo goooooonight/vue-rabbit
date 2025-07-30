@@ -18,9 +18,9 @@ getBannerFun()
 
 <template>
   <div class="xtx-container">
-    <div class="relative">
+    <div class="relative" v-if="bannerList.length > 0">
       <HomeCategory></HomeCategory>
-      <el-carousel v-if="bannerList.length > 0" height="500px">
+      <el-carousel height="500px">
         <el-carousel-item v-for="item in bannerList" :key="item.id">
           <img :src="item.imgUrl" alt="" />
         </el-carousel-item>
