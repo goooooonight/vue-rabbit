@@ -4,21 +4,21 @@ import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/login', component: () => import('@/views/login/RbLogin.vue') },
+    { path: '/login', component: () => import('@/views/login/XtxLogin.vue') },
     // 布局架子
     {
       path: '/',
-      component: () => import('@/views/layout/RbLayout.vue'),
+      component: () => import('@/views/layout/XtxLayout.vue'),
       redirect: '/home',
       children: [
         {
           path: '/home',
-          component: () => import('@/views/home/RbHome.vue')
+          component: () => import('@/views/home/XtxHome.vue')
         },
         // 分类
         {
           path: '/category/:cateId',
-          component: () => import('@/views/category/RbCategory.vue')
+          component: () => import('@/views/category/XtxCategory.vue')
         }
       ]
     },
