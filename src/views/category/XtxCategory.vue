@@ -1,37 +1,13 @@
 <script setup>
-import { useRoute } from 'vue-router'
-import { getCate } from '@/api/category'
-import { ref, onMounted } from 'vue'
-import { onBeforeRouteUpdate } from 'vue-router'
-import { getBanner } from '@/api/home'
 import CatePanel from '@/components/category/CatePanel.vue'
+import { useBanner } from '@/composables/useBanner'
+import { useCategory } from '@/composables/useCategory'
 
 // 一级分类
-const cate = ref({})
-// 获取一级分类
-const cateId = useRoute().params.cateId
-const getCateFun = async (cateId) => {
-  const {
-    data: { result }
-  } = await getCate(cateId)
-  cate.value = result
-}
-onMounted(() => getCateFun(cateId))
-// 路由更新后重新获取分类数据
-onBeforeRouteUpdate((to) => {
-  getCateFun(to.params.cateId)
-})
+const { cate } = useCategory()
 
 // 轮播图数据
-const bannerList = ref([])
-// 获取轮播图数据
-const getBannerFun = async () => {
-  const {
-    data: { result }
-  } = await getBanner('2')
-  bannerList.value = result
-}
-onMounted(() => getBannerFun())
+const { bannerList } = useBanner()
 </script>
 
 <template>
