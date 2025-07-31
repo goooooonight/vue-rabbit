@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, defineProps } from 'vue'
 import GoodsItem from '../category/GoodsItem.vue'
-import { getSubCateItems } from '@/api/subCategory'
+import { getSubCateItems } from '@/api/sub-category'
 
 // 二级分类商品列表
 const itemLists = ref([])

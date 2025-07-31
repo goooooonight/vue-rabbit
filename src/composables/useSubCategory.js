@@ -1,4 +1,4 @@
-import { getSubCate } from '@/api/subCategory'
+import { getSubCate } from '@/api/sub-category'
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { onBeforeRouteUpdate } from 'vue-router'

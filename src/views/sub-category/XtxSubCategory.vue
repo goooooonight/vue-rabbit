@@ -1,7 +1,7 @@
 <script setup>
 import { useSubCategory } from '@/composables/useSubCategory'
-import SubFilter from '@/components/subCategory/SubFilter.vue'
-import SubProduct from '@/components/subCategory/SubProduct.vue'
+import SubFilter from '@/components/sub-category/SubFilter.vue'
+import SubProduct from '@/components/sub-category/SubProduct.vue'
 
 // 二级分类
 const { subCate } = useSubCategory()

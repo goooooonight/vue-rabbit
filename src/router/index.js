@@ -23,7 +23,7 @@ const router = createRouter({
         // 二级分类
         {
           path: '/category/sub/:subCateId',
-          component: () => import('@/views/subCategory/XtxSubCategory.vue')
+          component: () => import('@/views/sub-category/XtxSubCategory.vue')
         }
       ]
     },
