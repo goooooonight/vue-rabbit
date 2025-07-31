@@ -28,7 +28,10 @@ const router = createRouter({
       ]
     },
     { path: '/*', component: () => import('@/views/NotFound.vue') }
-  ]
+  ],
+  scrollBehavior() {
+    return { top: 0 }
+  }
 })
 
 // 路由守卫
