@@ -86,6 +86,7 @@ const handleChildrenLeave = () => {
       @mouseenter="handleChildrenEnter"
       @mouseleave="handleChildrenLeave"
     >
+      <!-- 分类推荐头部 -->
       <div class="mb-8">
         <h4 class="text-2xl">
           分类推荐<small class="ml-2 text-base text-gray-600"
@@ -93,20 +94,22 @@ const handleChildrenLeave = () => {
           >
         </h4>
       </div>
+      <!-- 分类推荐商品列表 -->
       <div class="flex gap-3 flex-wrap">
-        <div
-          v-for="item in cateGoods"
-          :key="item.id"
-          class="w-[313px] h-[120px] bg-white border-gray-300 border-2 rounded-sm flex items-center gap-2 px-2"
-        >
-          <img v-img-lazy="item.picture" alt="" class="w-[95px]" />
-          <div class="flex-1 min-w-0">
-            <h5 class="name">{{ item.name }}</h5>
-            <p class="desc truncate">{{ item.desc }}</p>
-            <span class="price"
-              ><span class="text-lg">￥</span>{{ item.price }}</span
-            >
-          </div>
+        <div v-for="item in cateGoods" :key="item.id">
+          <RouterLink
+            :to="`/goods/${item.id}`"
+            class="w-[313px] h-[120px] bg-white hover:bg-[#e6faf5] border-[#eee] border-[1px] rounded-[2px] flex items-center gap-2 px-2"
+          >
+            <img v-img-lazy="item.picture" alt="" class="w-[95px]" />
+            <div class="flex-1 min-w-0">
+              <h5 class="text-[16px] text-[#666]">{{ item.name }}</h5>
+              <p class="text-[#999] truncate">{{ item.desc }}</p>
+              <span class="price text-[22px]"
+                ><span class="text-lg">￥</span>{{ item.price }}</span
+              >
+            </div>
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -123,15 +126,7 @@ li {
   }
 }
 // 分类推荐物品样式
-.name {
-  font-size: 16px;
-  color: #666;
-}
-.desc {
-  color: #999;
-}
 .price {
-  font-size: 22px;
   color: $priceColor;
 }
 </style>

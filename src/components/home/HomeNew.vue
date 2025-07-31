@@ -21,25 +21,29 @@ getNewFun()
 <template>
   <div class="bg-white">
     <HomePanel title="新鲜好物" sub-title="新鲜出炉 品质靠谱">
+      <!-- 面板头部 -->
       <template #head>
         <RouterLink
           to="/"
-          class="ml-auto mt-auto text-lg flex items-center gap-1"
+          class="check-all ml-auto mt-auto text-lg flex items-center gap-1"
           >查看全部<el-icon color="#999"><ArrowRight /></el-icon></RouterLink
       ></template>
+      <!-- 物品列表 -->
       <template #itemList>
         <div
           class="w-[306px] h-[406px] bg-[#f0f9f4] transition-transform duration-300 hover:-translate-y-2 shadow-[0_3px_8px_rgb(0_0_0_/_20%)]"
           v-for="item in newList"
           :key="item.id"
         >
-          <img v-img-lazy="item.picture" alt="" class="w-[306px] h-[306px]" />
-          <div
-            class="px-[25px] py-[10px] flex flex-col items-center justify-center gap-2"
-          >
-            <p class="truncate text-[22px] w-full">{{ item.name }}</p>
-            <span class="price text-[22px]">￥{{ item.price }}</span>
-          </div>
+          <RouterLink :to="`/goods/${item.id}`">
+            <img v-img-lazy="item.picture" alt="" class="w-[306px] h-[306px]" />
+            <div
+              class="px-[25px] py-[10px] flex flex-col items-center justify-center gap-2"
+            >
+              <p class="truncate text-[22px] w-full">{{ item.name }}</p>
+              <span class="price text-[22px]">￥{{ item.price }}</span>
+            </div>
+          </RouterLink>
         </div>
       </template>
     </HomePanel>
@@ -47,7 +51,7 @@ getNewFun()
 </template>
 
 <style scoped lang="scss">
-a {
+.check-all {
   color: #999;
   &:hover {
     color: $xtxColor;

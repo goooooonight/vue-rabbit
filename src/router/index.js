@@ -24,6 +24,11 @@ const router = createRouter({
         {
           path: '/category/sub/:subCateId',
           component: () => import('@/views/sub-category/XtxSubCategory.vue')
+        },
+        // 商品详细
+        {
+          path: '/goods/:goodsId',
+          component: () => import('@/views/goods/XtxGoods.vue')
         }
       ]
     },

@@ -7,18 +7,20 @@ defineProps({
 </script>
 
 <template>
-  <div
-    class="item w-[220px] h-[300px] px-[30px] flex flex-col justify-center items-center"
-  >
-    <img v-img-lazy="item.picture" alt="" class="w-[160px] h-[160px]" />
-    <p class="w-full text-center text-[16px] truncate">
-      {{ item.name }}
-    </p>
-    <p class="w-full text-center truncate text-[#999]">
-      {{ item.desc }}
-    </p>
-    <p class="price text-[20px]">￥{{ item.price }}</p>
-  </div>
+  <RouterLink :to="`/goods/${item.id}`">
+    <div
+      class="item w-[220px] h-[300px] px-[30px] flex flex-col justify-center items-center"
+    >
+      <img v-img-lazy="item.picture" alt="" class="w-[160px] h-[160px]" />
+      <p class="w-full text-center text-[16px] truncate">
+        {{ item.name }}
+      </p>
+      <p class="w-full text-center truncate text-[#999]">
+        {{ item.desc }}
+      </p>
+      <p class="price text-[20px]">￥{{ item.price }}</p>
+    </div>
+  </RouterLink>
 </template>
 
 <style scoped lang="scss">
