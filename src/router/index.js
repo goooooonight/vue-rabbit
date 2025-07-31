@@ -19,6 +19,11 @@ const router = createRouter({
         {
           path: '/category/:cateId',
           component: () => import('@/views/category/XtxCategory.vue')
+        },
+        // 二级分类
+        {
+          path: '/category/sub/:subCateId',
+          component: () => import('@/views/subCategory/XtxSubCategory.vue')
         }
       ]
     },

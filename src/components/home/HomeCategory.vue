@@ -62,9 +62,9 @@ const handleChildrenLeave = () => {
           cate.name
         }}</RouterLink>
         <RouterLink
-          to="/"
           v-for="children in cate.children.slice(0, 2)"
           :key="children.id"
+          :to="`/category/sub/${children.id}`"
           class="mr-2"
         >
           {{ children.name }}</RouterLink

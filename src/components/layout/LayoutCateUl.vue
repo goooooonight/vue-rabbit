@@ -83,10 +83,12 @@ const handleChildrenLeave = () => {
       @mouseleave="handleChildrenLeave"
     >
       <li v-for="(item, index) in childrenCate" :key="index">
-        <div class="flex flex-col items-center">
-          <img :src="item.picture" alt="" class="w-[50px] h-[50px] mb-2" />
-          <span>{{ item.name }}</span>
-        </div>
+        <RouterLink :to="`/category/sub/${item.id}`">
+          <div class="flex flex-col items-center">
+            <img :src="item.picture" alt="" class="w-[50px] h-[50px] mb-2" />
+            <span>{{ item.name }}</span>
+          </div>
+        </RouterLink>
       </li>
     </ul>
   </transition>
@@ -112,6 +114,11 @@ const handleChildrenLeave = () => {
 .children-cate {
   padding: 0 5%;
   transform: translateX(-50%);
+  div {
+    &:hover {
+      color: $xtxColor;
+    }
+  }
 }
 // 二级分类动画
 // 菜单动画

@@ -38,7 +38,10 @@ const { bannerList } = useBanner()
           :key="item.id"
           class="w-[168px] h-[160px]"
         >
-          <RouterLink to="/" class="flex flex-col items-center">
+          <RouterLink
+            :to="`/category/sub/${item.id}`"
+            class="flex flex-col items-center"
+          >
             <img v-img-lazy="item.picture" alt="" class="w-[100px] h-[100px]" />
             <p class="leading-[40px] text-[16px]">{{ item.name }}</p>
           </RouterLink>

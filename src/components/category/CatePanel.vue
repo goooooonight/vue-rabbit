@@ -17,7 +17,7 @@ defineProps({
       </h3>
       <p class="text-center text-[20px] text-[#999]">这里四字，这里也是</p>
       <RouterLink
-        to="/"
+        :to="`/category/sub/${children.id}`"
         class="check-all absolute top-0 right-[20px] text-lg flex items-center gap-1"
         >查看全部<el-icon color="#999"><ArrowRight /></el-icon
       ></RouterLink>

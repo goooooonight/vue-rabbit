@@ -25,9 +25,11 @@ const { cateList } = storeToRefs(useCateStore())
               v-for="children in cate.children.slice(0, 4)"
               :key="children.id"
             >
-              <RouterLink to="/" class="children-li px-4 py-1 rounded-[5px]">{{
-                children.name
-              }}</RouterLink>
+              <RouterLink
+                :to="`/category/sub/${children.id}`"
+                class="children-li px-4 py-1 rounded-[5px]"
+                >{{ children.name }}</RouterLink
+              >
             </li>
           </ul>
           <RouterLink
