@@ -1,6 +1,7 @@
 <script setup>
 import { ArrowRight } from '@element-plus/icons-vue'
 import { defineProps } from 'vue'
+import GoodsItem from './GoodsItem.vue'
 
 defineProps({
   // 二级分类
@@ -26,18 +27,7 @@ defineProps({
     <ul class="flex">
       <li v-for="item in children.goods" :key="item.id">
         <RouterLink to="/">
-          <div
-            class="item w-[220px] h-[300px] px-[30px] flex flex-col justify-center items-center"
-          >
-            <img v-img-lazy="item.picture" alt="" class="w-[160px] h-[160px]" />
-            <p class="w-full text-center text-[16px] truncate">
-              {{ item.name }}
-            </p>
-            <p class="w-full text-center truncate text-[#999]">
-              {{ item.desc }}
-            </p>
-            <p class="price text-[20px]">￥{{ item.price }}</p>
-          </div>
+          <GoodsItem :item="item"></GoodsItem>
         </RouterLink>
       </li>
     </ul>
@@ -55,20 +45,5 @@ defineProps({
 // 列表样式
 ul {
   padding: 0 65px;
-  p {
-    padding-top: 10px;
-  }
-  .item {
-    transition: all 0.3s ease;
-    &:hover {
-      box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.15),
-        0 2px 8px rgba(0, 0, 0, 0.1);
-      transform: translateY(-2px);
-    }
-  }
-  .price {
-    color: $priceColor;
-  }
 }
 </style>
