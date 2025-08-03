@@ -6,17 +6,19 @@ import { Iphone } from '@element-plus/icons-vue'
   <!-- 头部导航 -->
   <header>
     <div class="xtx-container">
-      <ul
-        class="flex items-center justify-end divide-solid divide-gray-400 divide-x-2 h-[53px]"
-      >
-        <li class="nav-item text-base">请先登录</li>
-        <li class="nav-item text-base">免费注册</li>
-        <li class="nav-item text-base">我的订单</li>
-        <li class="nav-item text-base">会员中心</li>
-        <li class="nav-item text-base">帮助中心</li>
-        <li class="nav-item text-base">关于我们</li>
-        <li class="nav-item text-base flex items-center">
-          <el-icon><Iphone /></el-icon>手机版
+      <ul class="h-[53px] flex items-center justify-end">
+        <li class="nav-item text-base">
+          <RouterLink to="/login"> 请先登录</RouterLink>
+        </li>
+        <li><RouterLink to="/">免费注册</RouterLink></li>
+        <li><RouterLink to="/">我的订单</RouterLink></li>
+        <li><RouterLink to="/">会员中心</RouterLink></li>
+        <li><RouterLink to="/">帮助中心</RouterLink></li>
+        <li><RouterLink to="/">关于我们</RouterLink></li>
+        <li>
+          <RouterLink to="/" class="flex items-center">
+            <el-icon><Iphone /></el-icon>手机版
+          </RouterLink>
         </li>
       </ul>
     </div>
@@ -27,13 +29,27 @@ import { Iphone } from '@element-plus/icons-vue'
 header {
   background-color: #333;
 }
-.nav-item {
-  color: $infoTextColor;
-  padding: 0 15px;
-  &:hover {
-    color: $xtxColor;
+li {
+  a {
+    color: $infoTextColor;
+    padding: 0 15px;
+    &:hover {
+      color: $xtxColor;
+    }
   }
-  cursor: pointer;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 14%; // 从25%的位置开始
+    bottom: 14%; // 到75%的位置结束
+    width: 0.5px;
+    background-color: #f5f5f5;
+  }
+  &:last-child::after {
+    display: none;
+  }
 }
 .cate-tabs {
   height: 166px;

@@ -5,12 +5,17 @@ import { ref } from 'vue'
 export const useUserStore = defineStore(
   'rabbit-user',
   () => {
-    const token = ref('') // 定义 token
-    const setToken = (newToken) => (token.value = newToken) // 设置 token
-
-    return { token, setToken }
+    // 用户信息
+    // 定义用户信息对象
+    const userInfo = ref({})
+    // 设置用户信息
+    const setUserInfo = (newInfo) => {
+      userInfo.value = newInfo
+    }
+    return { userInfo, setUserInfo }
   },
+  // 持久化
   {
-    persist: true // 持久化
+    persist: true
   }
 )
