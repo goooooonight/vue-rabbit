@@ -1,0 +1,229 @@
+<script setup>
+import { defineProps, ref } from 'vue'
+import { Flag, Comment, StarFilled, Shop } from '@element-plus/icons-vue'
+import GoodsImage from './GoodsImage.vue'
+
+defineProps({
+  goods: Object
+})
+
+// 选择的商品参数
+const activeSpec = ref({})
+
+// 购买商品数量
+const num = ref(1)
+</script>
+
+<template>
+  <!-- 商品面板 -->
+  <div class="px-[50px] py-[30px] bg-white flex">
+    <!-- 左侧面板 -->
+    <div>
+      <!-- 图片区域 -->
+      <GoodsImage
+        v-if="goods.mainPictures"
+        :pictures="goods.mainPictures"
+      ></GoodsImage>
+      <!-- 底部人气区域 -->
+      <ul class="footer-ul w-[400px] flex">
+        <li>
+          <p class="title">销量人气</p>
+          <p class="content">{{ goods.salesCount }}</p>
+          <p class="link">
+            <el-icon><Flag /></el-icon><RouterLink to="/">销量人气</RouterLink>
+          </p>
+        </li>
+        <li>
+          <p class="title">商品评价</p>
+          <p class="content">{{ goods.commentCount }}</p>
+          <p class="link">
+            <el-icon><Comment /></el-icon
+            ><RouterLink to="/">商品评价</RouterLink>
+          </p>
+        </li>
+        <li>
+          <p class="title">收藏人气</p>
+          <p class="content">{{ goods.collectCount }}</p>
+          <p class="link">
+            <el-icon><StarFilled /></el-icon
+            ><RouterLink to="/">收藏人气</RouterLink>
+          </p>
+        </li>
+        <li>
+          <p class="title">品牌信息</p>
+          <p class="content">{{ goods.brand?.name }}</p>
+          <p class="link">
+            <el-icon><Shop /></el-icon><RouterLink to="/">品牌信息</RouterLink>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <!-- 右侧面板 -->
+    <div class="ml-[60px] flex flex-col gap-[10px] flex-1">
+      <!-- 商品名称 描述 价格 -->
+      <p class="text-[22px]">{{ goods.name }}</p>
+      <p class="text-[#999]">{{ goods.desc }}</p>
+      <p>
+        <span class="price">
+          <span>￥</span><span class="text-[22px]">{{ goods.price }}</span>
+        </span>
+        <span class="ml-[15px] text-[16px] text-[#999] line-through"
+          >￥{{ goods.oldPrice }}</span
+        >
+      </p>
+      <!-- 服务面板 -->
+      <div
+        class="w-[500px] px-[10px] py-[20px] bg-[#f5f5f5] flex flex-col gap-[20px]"
+      >
+        <dl>
+          <dt>促销</dt>
+          <dd>12月好物放送，App领券购买直降120元</dd>
+        </dl>
+        <dl>
+          <dt>配送</dt>
+          <dd>至<el-select></el-select></dd>
+        </dl>
+        <dl>
+          <dt>服务</dt>
+          <dd>
+            <ul class="flex gap-[10px]">
+              <li>无忧退货</li>
+              <li>快速退款</li>
+              <li>免费包邮</li>
+            </ul>
+            <el-link type="primary" underline="never">了解详细</el-link>
+          </dd>
+        </dl>
+      </div>
+      <!-- 商品参数 数量 -->
+      <div class="mt-[15px] px-[10px] flex flex-col gap-[15px]">
+        <dl v-for="spec in goods.specs" :key="spec.id">
+          <dt>{{ spec.name }}</dt>
+          <dd class="spec-dd flex-1 flex-wrap">
+            <div
+              v-for="(value, index) in spec.values"
+              :key="index"
+              class="cursor-pointer border border-[#e4e4e4]"
+              :class="{
+                'spec-active': activeSpec[spec.name] === value.name
+              }"
+              @click="activeSpec[spec.name] = value.name"
+            >
+              <!-- 如果携带图片则展示图片 -->
+              <img
+                v-if="value.picture"
+                v-img-lazy="value.picture"
+                alt=""
+                :title="value.desc"
+                class="w-[50px] h-[50px]"
+              />
+              <!-- 否则展示文字 -->
+              <span v-else class="block px-[20px] py-[5px]">
+                {{ value.name }}
+              </span>
+            </div>
+          </dd>
+        </dl>
+        <dl>
+          <dt>数量</dt>
+          <dd>
+            <el-input-number
+              class="custom-input-number"
+              v-model="num"
+              :min="1"
+              :max="goods.inventory"
+            />
+          </dd>
+        </dl>
+      </div>
+      <!-- 加入购物车按钮 -->
+      <div class="w-[180px] mt-[10px]">
+        <el-button type="primary" size="large" class="w-full"
+          >加入购物车</el-button
+        >
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+// 底部列表
+.footer-ul {
+  li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    // 分割线
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 12%; // 从25%的位置开始
+      bottom: 12%; // 到75%的位置结束
+      width: 0.5px;
+      background-color: #e4e4e4;
+    }
+    &:last-child::after {
+      display: none;
+    }
+    // 标题
+    .title {
+      color: #999;
+    }
+    // 内容
+    .content {
+      color: $priceColor;
+    }
+    // 链接
+    .link {
+      display: flex;
+      align-items: center;
+      // 图标样式
+      i {
+        color: $xtxColor;
+      }
+      // 跳转链接样式
+      a {
+        &:hover {
+          color: $xtxColor;
+        }
+      }
+    }
+  }
+}
+.price {
+  color: $priceColor;
+}
+dl {
+  display: flex;
+  align-items: center;
+  dt {
+    color: #999;
+    margin-right: 20px;
+  }
+  dd {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    li::before {
+      content: '•';
+      color: $xtxColor;
+      margin-right: 2px;
+    }
+  }
+}
+// 规格参数样式
+.spec-dd {
+  margin-right: 10px;
+}
+.spec-active {
+  border: 1px $xtxColor solid;
+}
+.custom-input-number {
+  width: 120px;
+}
+</style>

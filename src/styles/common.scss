@@ -103,3 +103,18 @@ ul {
 .el-breadcrumb__inner.is-link {
   font-weight: 400 !important;
 }
+
+// loading加载样式
+.loading {
+  position: relative;
+}
+.loading:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff url('/src/assets/images/loading.gif') no-repeat center;
+  z-index: 999;
+}

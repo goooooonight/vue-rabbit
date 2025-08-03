@@ -19,3 +19,20 @@ export const lazyPlugin = {
     })
   }
 }
+
+export const LoadingPlugin = {
+  install(app) {
+    app.directive('load', {
+      mounted(el, binding) {
+        binding.value
+          ? el.classList.add('loading')
+          : el.classList.remove('loading')
+      },
+      updated(el, binding) {
+        binding.value
+          ? el.classList.add('loading')
+          : el.classList.remove('loading')
+      }
+    })
+  }
+}

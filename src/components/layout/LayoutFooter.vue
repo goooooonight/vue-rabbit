@@ -3,7 +3,7 @@
 <template>
   <footer>
     <!-- 底部服务 -->
-    <div class="bg-white py-[40px]">
+    <div class="bg-white py-[40px] mt-[20px]">
       <div class="xtx-container flex">
         <dl>
           <dt>客户服务</dt>
