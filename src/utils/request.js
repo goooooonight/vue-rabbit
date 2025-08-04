@@ -24,6 +24,7 @@ instance.interceptors.request.use(
   },
   (err) => Promise.reject(err)
 )
+
 // 响应拦截器
 instance.interceptors.response.use(
   (res) => {
@@ -39,7 +40,10 @@ instance.interceptors.response.use(
       type: 'error'
     })
     console.log(err)
+    // 身份认证失败
     if (err.response?.status === 401) {
+      const userStore = useUserStore()
+      userStore.removeUserInfo()
       router.push('/login')
     }
     return Promise.reject(err)

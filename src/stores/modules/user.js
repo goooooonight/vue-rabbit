@@ -12,8 +12,14 @@ export const useUserStore = defineStore(
     const setUserInfo = (newInfo) => {
       userInfo.value = newInfo
     }
-    return { userInfo, setUserInfo }
+    // 清除用户信息
+    const removeUserInfo = () => {
+      userInfo.value = {}
+    }
+
+    return { userInfo, setUserInfo, removeUserInfo }
   },
+
   // 持久化
   {
     persist: true
