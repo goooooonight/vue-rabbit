@@ -2,13 +2,17 @@
 import { defineProps, ref } from 'vue'
 import { Flag, Comment, StarFilled, Shop } from '@element-plus/icons-vue'
 import GoodsImage from './GoodsImage.vue'
+// import GoodsSku from './GoodsSku.vue'
+import XtxSku from '@/components/XtxSku/index.vue'
 
 defineProps({
   goods: Object
 })
 
-// 选择的商品参数
-const activeSpec = ref({})
+// sku规格被操作时
+const skuChange = (sku) => {
+  console.log(sku)
+}
 
 // 购买商品数量
 const num = ref(1)
@@ -97,33 +101,8 @@ const num = ref(1)
       </div>
       <!-- 商品参数 数量 -->
       <div class="mt-[15px] px-[10px] flex flex-col gap-[15px]">
-        <dl v-for="spec in goods.specs" :key="spec.id">
-          <dt>{{ spec.name }}</dt>
-          <dd class="spec-dd flex-1 flex-wrap">
-            <div
-              v-for="(value, index) in spec.values"
-              :key="index"
-              class="cursor-pointer border border-[#e4e4e4]"
-              :class="{
-                'spec-active': activeSpec[spec.name] === value.name
-              }"
-              @click="activeSpec[spec.name] = value.name"
-            >
-              <!-- 如果携带图片则展示图片 -->
-              <img
-                v-if="value.picture"
-                v-img-lazy="value.picture"
-                alt=""
-                :title="value.desc"
-                class="w-[50px] h-[50px]"
-              />
-              <!-- 否则展示文字 -->
-              <span v-else class="block px-[20px] py-[5px]">
-                {{ value.name }}
-              </span>
-            </div>
-          </dd>
-        </dl>
+        <XtxSku :goods="goods" @change="skuChange"></XtxSku>
+        <!-- <GoodsSku :goods="goods"></GoodsSku> -->
         <dl>
           <dt>数量</dt>
           <dd>
@@ -215,13 +194,6 @@ dl {
       margin-right: 2px;
     }
   }
-}
-// 规格参数样式
-.spec-dd {
-  margin-right: 10px;
-}
-.spec-active {
-  border: 1px $xtxColor solid;
 }
 .custom-input-number {
   width: 120px;
