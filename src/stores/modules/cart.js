@@ -16,7 +16,7 @@ export const useCartStore = defineStore(
       }
       // 如果不存在，则添加商品
       else {
-        cartList.value.push(goods)
+        cartList.value.unshift(goods)
       }
     }
 
