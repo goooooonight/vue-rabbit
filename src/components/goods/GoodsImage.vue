@@ -82,7 +82,8 @@ watch([elementX, elementY, isOutside], () => {
           {
             backgroundImage: `url(${pictures[hoverIndex]})`,
             backgroundPositionX: `${positionX}px`,
-            backgroundPositionY: `${positionY}px`
+            backgroundPositionY: `${positionY}px`,
+            backgroundSize: '800px 800px'
           }
         ]"
       />
