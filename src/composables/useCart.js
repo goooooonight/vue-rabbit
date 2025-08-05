@@ -33,11 +33,20 @@ export const useCart = () => {
     }, 0)
   })
 
+  // 商品总价
+  const priceTotal = computed(() => {
+    return cartList.value.reduce(
+      (price, item) => price + item.count * item.price,
+      0
+    )
+  })
+
   return {
     cartStore,
     cartList,
     cartCount,
     checkCount,
-    checkPrice
+    checkPrice,
+    priceTotal
   }
 }
