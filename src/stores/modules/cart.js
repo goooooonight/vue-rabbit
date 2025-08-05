@@ -12,7 +12,7 @@ export const useCartStore = defineStore(
       const item = cartList.value.find((item) => item.skuId === goods.skuId)
       // 如果已经存在同类商品，则数量加1
       if (item) {
-        item.count++
+        item.count += goods.count
       }
       // 如果不存在，则添加商品
       else {
