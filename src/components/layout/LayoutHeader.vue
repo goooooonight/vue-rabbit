@@ -5,6 +5,7 @@ import { storeToRefs } from 'pinia'
 import { ElMessageBox } from 'element-plus'
 import 'element-plus/theme-chalk/el-message-box.css'
 import 'element-plus/theme-chalk/el-overlay.css'
+import { useCart } from '@/composables/useCart'
 
 const userStore = useUserStore()
 // 用户信息
@@ -20,6 +21,10 @@ const logout = async () => {
   })
   // 清空用户信息
   removeUserInfo()
+
+  // 清空购物车
+  const { cartStore } = useCart()
+  cartStore.clearCart()
 }
 </script>
 

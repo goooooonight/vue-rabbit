@@ -16,7 +16,6 @@ const { goods } = defineProps({
 const skuObj = ref({})
 // sku规格被操作时
 const skuChange = (sku) => {
-  console.log(sku)
   skuObj.value = sku
 }
 
@@ -24,12 +23,11 @@ const skuChange = (sku) => {
 const count = ref(1)
 
 // 加入购物车
-const addCart = () => {
+const addCart = async () => {
   // sku有效时，添加至购物车
   if (skuObj.value.skuId) {
-    console.log('111')
     const cartStore = useCartStore()
-    cartStore.addCart({
+    await cartStore.addCart({
       id: goods.id, // 商品id
       name: goods.name, // 商品名称
       picture: goods.mainPictures[0], // 商品图片

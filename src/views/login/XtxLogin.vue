@@ -8,6 +8,8 @@ import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
 
 import { useUserStore } from '@/stores'
+import { mergeCartAPI } from '@/api/cart'
+import { useCart } from '@/composables/useCart'
 
 // 表单对象
 const loginForm = ref({
@@ -61,6 +63,20 @@ const loginFun = async () => {
     // 将用户信息存入piana
     const { setUserInfo } = useUserStore()
     setUserInfo(result)
+
+    // 合并购物车
+    const { cartStore, cartList } = useCart()
+    await mergeCartAPI(
+      cartList.value.map(({ skuId, selected, count }) => ({
+        skuId,
+        selected,
+        count
+      }))
+    )
+    // 合并完成后清空本地购物车
+    cartStore.clearCart()
+    // 获取购物车
+    cartStore.getCartFromServer()
 
     // 登录成功提示
     ElMessage({

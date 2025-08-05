@@ -16,7 +16,7 @@ const removeCheckCart = async () => {
     cancelButtonText: '取消'
   })
   // 使用store方法删除选中商品
-  cartStore.removeSelectedCart()
+  await cartStore.removeSelectedCart()
   ElMessage.success('商品删除成功')
 }
 </script>

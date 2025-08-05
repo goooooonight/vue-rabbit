@@ -37,7 +37,7 @@ const removeCart = async (skuId) => {
     confirmButtonText: '确认',
     cancelButtonText: '取消'
   })
-  cartStore.removeCart(skuId)
+  await cartStore.removeCart(skuId)
   ElMessage.success('商品删除成功')
 }
 
@@ -47,7 +47,7 @@ const router = useRouter()
 
 <template>
   <div class="bg-white">
-    <el-table :data="cartList">
+    <el-table :data="cartList" row-key="skuId">
       <!-- 是否选中 -->
       <el-table-column
         width="120"
@@ -86,7 +86,7 @@ const router = useRouter()
             </RouterLink>
             <div>
               <!-- 商品名称 -->
-              <p>{{ row.name }}</p>
+              <p class="text-left">{{ row.name }}</p>
               <!-- 商品规格弹窗 -->
               <el-popover
                 trigger="click"
@@ -123,7 +123,8 @@ const router = useRouter()
         <template #default="{ row }">
           <el-input-number
             class="custom-input-number"
-            v-model="row.count"
+            :model-value="row.count"
+            @change="(count) => cartStore.editCount(row.skuId, count)"
             :min="1"
             :max="goods.inventory"
           />
