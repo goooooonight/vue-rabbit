@@ -30,9 +30,12 @@ const router = createRouter({
         {
           path: '/goods/:goodsId',
           component: () => import('@/views/goods/XtxGoods.vue')
-        }
+        },
+        // 购物车
+        { path: '/cart', component: () => import('@/views/cart/XtxCart.vue') }
       ]
     },
+    // 404
     { path: '/*', component: () => import('@/views/NotFound.vue') }
   ],
   scrollBehavior() {

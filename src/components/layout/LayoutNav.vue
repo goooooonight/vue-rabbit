@@ -1,6 +1,10 @@
 <script setup>
 import { Search, ShoppingCart } from '@element-plus/icons-vue'
 import LayoutCateUl from './LayoutCateUl.vue'
+import { useCart } from '@/composables/useCart'
+
+// 购物车商品总数
+const { cartCount } = useCart()
 </script>
 
 <template>
@@ -20,8 +24,10 @@ import LayoutCateUl from './LayoutCateUl.vue'
         <input type="text" placeholder="搜一搜" />
       </div>
       <!-- 购物车 -->
-      <el-badge :value="12">
-        <el-icon size="22px"><ShoppingCart /></el-icon>
+      <el-badge :value="cartCount">
+        <RouterLink to="/cart">
+          <el-icon size="22px"><ShoppingCart /></el-icon>
+        </RouterLink>
       </el-badge>
     </div>
   </div>

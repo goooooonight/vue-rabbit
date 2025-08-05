@@ -4,18 +4,48 @@ import { Flag, Comment, StarFilled, Shop } from '@element-plus/icons-vue'
 import GoodsImage from './GoodsImage.vue'
 // import GoodsSku from './GoodsSku.vue'
 import XtxSku from '@/components/XtxSku/index.vue'
+import { ElMessage } from 'element-plus'
+import 'element-plus/theme-chalk/el-message.css'
+import { useCartStore } from '@/stores/modules/cart'
 
-defineProps({
+const { goods } = defineProps({
   goods: Object
 })
 
+// sku对象
+const skuObj = ref({})
 // sku规格被操作时
 const skuChange = (sku) => {
   console.log(sku)
+  skuObj.value = sku
 }
 
 // 购买商品数量
-const num = ref(1)
+const count = ref(1)
+
+// 加入购物车
+const addCart = () => {
+  // sku有效时，添加至购物车
+  if (skuObj.value.skuId) {
+    console.log('111')
+    const cartStore = useCartStore()
+    cartStore.addCart({
+      id: goods.id, // 商品id
+      name: goods.name, // 商品名称
+      picture: goods.mainPictures[0], // 商品图片
+      price: goods.price, // 商品价格
+      count: count.value, // 添加商品数量
+      skuId: skuObj.value.skuId, // 规格id
+      attrsText: skuObj.value.specsText, // 规格描述
+      selected: true // 商品是否选中
+    })
+    ElMessage.success('加入购物车成功')
+  }
+  // sku无效时，提示
+  else {
+    ElMessage.warning('请选择完整规格')
+  }
+}
 </script>
 
 <template>
@@ -108,7 +138,7 @@ const num = ref(1)
           <dd>
             <el-input-number
               class="custom-input-number"
-              v-model="num"
+              v-model="count"
               :min="1"
               :max="goods.inventory"
             />
@@ -117,7 +147,7 @@ const num = ref(1)
       </div>
       <!-- 加入购物车按钮 -->
       <div class="w-[180px] mt-[10px]">
-        <el-button type="primary" size="large" class="w-full"
+        <el-button type="primary" size="large" class="w-full" @click="addCart"
           >加入购物车</el-button
         >
       </div>
