@@ -7,6 +7,7 @@ import XtxSku from '@/components/XtxSku/index.vue'
 import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
 import { useCartStore } from '@/stores/modules/cart'
+import { onBeforeRouteUpdate } from 'vue-router'
 
 const { goods } = defineProps({
   goods: Object
@@ -21,6 +22,9 @@ const skuChange = (sku) => {
 
 // 购买商品数量
 const count = ref(1)
+onBeforeRouteUpdate(() => {
+  count.value = 1
+})
 
 // 加入购物车
 const addCart = async () => {
