@@ -32,7 +32,12 @@ const router = createRouter({
           component: () => import('@/views/goods/XtxGoods.vue')
         },
         // 购物车
-        { path: '/cart', component: () => import('@/views/cart/XtxCart.vue') }
+        { path: '/cart', component: () => import('@/views/cart/XtxCart.vue') },
+        // 订单
+        {
+          path: '/order',
+          component: () => import('@/views/order/XtxOrder.vue')
+        }
       ]
     },
     // 404

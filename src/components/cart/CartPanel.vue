@@ -4,6 +4,7 @@ import { ElMessageBox } from 'element-plus'
 import 'element-plus/theme-chalk/el-message-box.css'
 import 'element-plus/theme-chalk/el-overlay.css'
 import { ElMessage } from 'element-plus'
+import { useRouter } from 'vue-router'
 
 // 购物车状态管理 购物车列表 购物车商品总数  选中商品数量 选中商品总价
 const { cartStore, cartList, cartCount, checkCount, checkPrice } = useCart()
@@ -19,6 +20,9 @@ const removeCheckCart = async () => {
   await cartStore.removeSelectedCart()
   ElMessage.success('商品删除成功')
 }
+
+// 定义路由对象
+const router = useRouter()
 </script>
 
 <template>
@@ -47,7 +51,11 @@ const removeCheckCart = async () => {
           >￥{{ checkPrice.toFixed(2) }}</span
         >
       </p>
-      <el-button type="primary" size="large" class="custom-button ml-[20px]"
+      <el-button
+        type="primary"
+        size="large"
+        class="custom-button ml-[20px]"
+        @click="router.push('/order')"
         >下单结算</el-button
       >
     </div>
