@@ -12,7 +12,6 @@ export const useSubCategory = () => {
     const {
       data: { result }
     } = await getSubCate(subCateId)
-    console.log(result)
     subCate.value = result
   }
   onMounted(() => getSubCateFun(subCateId))

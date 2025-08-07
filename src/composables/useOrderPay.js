@@ -24,7 +24,6 @@ export const useOrderPay = () => {
     const {
       data: { result }
     } = await getOrderInfoAPI(orderId)
-    console.log(result)
     orderInfo.value = result
     // 退出加载状态
     isLoading.value = false
