@@ -143,13 +143,19 @@ const addCart = async () => {
               v-model="count"
               :min="1"
               :max="goods.inventory"
+              :disabled="goods.inventory === 0"
             />
           </dd>
         </dl>
       </div>
       <!-- 加入购物车按钮 -->
       <div class="w-[180px] mt-[10px]">
-        <el-button type="primary" size="large" class="w-full" @click="addCart"
+        <el-button
+          type="primary"
+          size="large"
+          class="w-full"
+          :disabled="goods.inventory === 0"
+          @click="addCart"
           >加入购物车</el-button
         >
       </div>
