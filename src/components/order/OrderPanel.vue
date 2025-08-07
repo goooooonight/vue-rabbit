@@ -5,6 +5,11 @@ import { useOrder } from '@/composables/useOrder'
 import AddressUl from './AddressUl.vue'
 import AddressFormDialog from './AddressFormDialog.vue'
 import { Close } from '@element-plus/icons-vue'
+import { commitOrderAPI } from '@/api/order'
+import { useRouter } from 'vue-router'
+import { ElMessage } from 'element-plus'
+import 'element-plus/theme-chalk/el-message.css'
+import { useCart } from '@/composables/useCart'
 
 // 获取地址相关对象、方法
 const {
@@ -23,6 +28,30 @@ const {
 
 // 获取订单相关对象、方法
 const { goods, summary, isLoading } = useOrder()
+
+// 定义路由对象
+const router = useRouter()
+// 提交订单
+const commitOrder = async () => {
+  const {
+    data: { result }
+  } = await commitOrderAPI({
+    deliveryTimeType: 1, // 配送时间
+    payType: 1, //支付方式
+    payChannel: 1, //支付渠道
+    buyerMessage: '', //买家备注留言
+    goods: goods.value.map((item) => ({
+      skuId: item.skuId,
+      count: item.count
+    })), //商品集合
+    addressId: activeAddr.value //收货地址id
+  })
+  ElMessage.success('提交订单成功')
+  // 删除购物车选中商品
+  useCart().cartStore.removeSelectedCart()
+  // 跳转支付页
+  router.push(`/pay?orderId=${result.id}`)
+}
 </script>
 
 <template>
@@ -214,7 +243,11 @@ const { goods, summary, isLoading } = useOrder()
 
     <!-- 提交订单按钮 -->
     <div class="p-[60px] flex justify-end">
-      <el-button type="primary" size="large" class="commit-btn"
+      <el-button
+        type="primary"
+        size="large"
+        class="commit-btn"
+        @click="commitOrder"
         >提交订单</el-button
       >
     </div>

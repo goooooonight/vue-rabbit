@@ -37,6 +37,16 @@ const router = createRouter({
         {
           path: '/order',
           component: () => import('@/views/order/XtxOrder.vue')
+        },
+        // 支付
+        {
+          path: '/pay',
+          component: () => import('@/views/pay/XtxPay.vue')
+        },
+        // 支付结果
+        {
+          path: '/paycallback',
+          component: () => import('@/views/pay/XtxPayCallBack.vue')
         }
       ]
     },
