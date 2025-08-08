@@ -56,7 +56,7 @@
       </div>
 
       <!-- 右侧内容 -->
-      <div class="ml-6 bg-white flex-1">
+      <div class="ml-6 flex-1">
         <router-view />
       </div>
     </div>

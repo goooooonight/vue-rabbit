@@ -28,7 +28,7 @@ const tabChange = (type) => {
 </script>
 
 <template>
-  <div>
+  <div class="bg-white">
     <!-- 选项卡 -->
     <el-tabs @tab-change="tabChange" v-model="activeTab">
       <el-tab-pane
@@ -57,7 +57,7 @@ const tabChange = (type) => {
         v-model:current-page="params.page"
         v-model:page-size="params.pageSize"
         :total="total"
-        :pager-count="7"
+        :pager-count="9"
         class="mx-auto"
         @current-change="getUserOrder()"
       />
