@@ -20,8 +20,6 @@ const tabTypes = [
 ]
 // tab切换
 const tabChange = (type) => {
-  console.log(type)
-
   params.value.orderState = type
   getUserOrder()
 }

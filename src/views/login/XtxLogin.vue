@@ -49,47 +49,42 @@ const rules = {
 const router = useRouter()
 // 登录函数
 const loginFun = async () => {
-  try {
-    // 表单校验
-    await form.value.validate()
-    // 发送登录请求
-    const {
-      data: { result }
-    } = await login({
-      account: loginForm.value.account,
-      password: loginForm.value.password
-    })
+  // 表单校验
+  await form.value.validate()
+  // 发送登录请求
+  const {
+    data: { result }
+  } = await login({
+    account: loginForm.value.account,
+    password: loginForm.value.password
+  })
 
-    // 将用户信息存入piana
-    const { setUserInfo } = useUserStore()
-    setUserInfo(result)
+  // 将用户信息存入piana
+  const { setUserInfo } = useUserStore()
+  setUserInfo(result)
 
-    // 合并购物车
-    const { cartStore, cartList } = useCart()
-    await mergeCartAPI(
-      cartList.value.map(({ skuId, selected, count }) => ({
-        skuId,
-        selected,
-        count
-      }))
-    )
-    // 合并完成后清空本地购物车
-    cartStore.clearCart()
-    // 获取购物车
-    cartStore.getCartFromServer()
+  // 合并购物车
+  const { cartStore, cartList } = useCart()
+  await mergeCartAPI(
+    cartList.value.map(({ skuId, selected, count }) => ({
+      skuId,
+      selected,
+      count
+    }))
+  )
+  // 合并完成后清空本地购物车
+  cartStore.clearCart()
+  // 获取购物车
+  cartStore.getCartFromServer()
 
-    // 登录成功提示
-    ElMessage({
-      message: '登录成功!',
-      type: 'success'
-    })
+  // 登录成功提示
+  ElMessage({
+    message: '登录成功!',
+    type: 'success'
+  })
 
-    // 跳转到首页
-    router.replace('/')
-  } catch (error) {
-    // 打印错误信息
-    console.error(error)
-  }
+  // 跳转到首页
+  router.replace('/')
 }
 </script>
 
