@@ -35,7 +35,11 @@ const logout = async () => {
       <ul class="h-[53px] flex items-center justify-end">
         <li class="nav-item text-base">
           <!-- 如果已登录 -- 显示昵称 -->
-          <RouterLink v-if="userInfo.token" to="/" class="flex items-center">
+          <RouterLink
+            v-if="userInfo.token"
+            to="/member/user"
+            class="flex items-center"
+          >
             <el-icon size="15px" class="mr-1"><User /></el-icon>
             {{ userInfo.nickname }}</RouterLink
           >
@@ -50,7 +54,7 @@ const logout = async () => {
           <!-- 如果未登录 -- 显示"免费注册" -->
           <RouterLink v-else to="/">免费注册</RouterLink>
         </li>
-        <li><RouterLink to="/">我的订单</RouterLink></li>
+        <li><RouterLink to="/member/order">我的订单</RouterLink></li>
         <li><RouterLink to="/">会员中心</RouterLink></li>
         <li><RouterLink to="/">帮助中心</RouterLink></li>
         <li><RouterLink to="/">关于我们</RouterLink></li>

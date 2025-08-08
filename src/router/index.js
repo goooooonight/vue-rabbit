@@ -47,6 +47,23 @@ const router = createRouter({
         {
           path: '/paycallback',
           component: () => import('@/views/pay/XtxPayCallBack.vue')
+        },
+        // 个人中心
+        {
+          path: '/member',
+          component: () => import('@/views/member/XtxMember.vue'),
+          children: [
+            // 个人中心
+            {
+              path: '/member/user',
+              component: () => import('@/views/member/XtxMemberUser.vue')
+            },
+            // 我的订单
+            {
+              path: '/member/order',
+              component: () => import('@/views/member/XtxMemberOrder.vue')
+            }
+          ]
         }
       ]
     },

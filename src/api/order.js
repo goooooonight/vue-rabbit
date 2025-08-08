@@ -14,3 +14,10 @@ export const commitOrderAPI = (obj) => {
 export const getOrderInfoAPI = (id) => {
   return request.get(`/member/order/${id}`)
 }
+
+// 获取用户订单
+export const getUserOrderAPI = (params) => {
+  return request.get('/member/order', {
+    params
+  })
+}
