@@ -6,11 +6,15 @@ import { ElMessageBox } from 'element-plus'
 import 'element-plus/theme-chalk/el-message-box.css'
 import 'element-plus/theme-chalk/el-overlay.css'
 import { useCart } from '@/composables/useCart'
+import { useRouter } from 'vue-router'
 
 const userStore = useUserStore()
 // 用户信息
 const { userInfo } = storeToRefs(userStore)
 const { removeUserInfo } = userStore
+
+// 路由对象
+const router = useRouter()
 
 // 退出登录
 const logout = async () => {
@@ -21,10 +25,11 @@ const logout = async () => {
   })
   // 清空用户信息
   removeUserInfo()
-
   // 清空购物车
   const { cartStore } = useCart()
   cartStore.clearCart()
+  // 跳转至登录页
+  router.push('/login')
 }
 </script>
 
