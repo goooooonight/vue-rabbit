@@ -50,7 +50,7 @@ const tabChange = (type) => {
     </el-tabs>
 
     <!-- 分页组件 -->
-    <div class="my-8 flex">
+    <div class="py-8 flex">
       <el-pagination
         background
         layout=" total, prev, pager, next"

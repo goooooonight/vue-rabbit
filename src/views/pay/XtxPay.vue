@@ -55,7 +55,7 @@ const { isLoading, timeFormat, orderInfo, isWaiting, aliPay } = useOrderPay()
     <OrderCard
       title="选择以下支付方式付款"
       class="mt-6"
-      v-if="orderInfo.countdown != -1"
+      v-if="!isLoading && orderInfo.countdown != -1"
     >
       <!-- 支付平台 -->
       <div>
