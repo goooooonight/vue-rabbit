@@ -10,57 +10,58 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/views/layout/XtxLayout.vue'),
-      redirect: '/home',
+      redirect: 'home',
       children: [
         {
-          path: '/home',
+          path: 'home',
           component: () => import('@/views/home/XtxHome.vue')
         },
         // 分类
         {
-          path: '/category/:cateId',
+          path: 'category/:cateId',
           component: () => import('@/views/category/XtxCategory.vue')
         },
         // 二级分类
         {
-          path: '/category/sub/:subCateId',
+          path: 'category/sub/:subCateId',
           component: () => import('@/views/sub-category/XtxSubCategory.vue')
         },
         // 商品详细
         {
-          path: '/goods/:goodsId',
+          path: 'goods/:goodsId',
           component: () => import('@/views/goods/XtxGoods.vue')
         },
         // 购物车
-        { path: '/cart', component: () => import('@/views/cart/XtxCart.vue') },
+        { path: 'cart', component: () => import('@/views/cart/XtxCart.vue') },
         // 订单
         {
-          path: '/order',
+          path: 'order',
           component: () => import('@/views/order/XtxOrder.vue')
         },
         // 支付
         {
-          path: '/pay',
+          path: 'pay',
           component: () => import('@/views/pay/XtxPay.vue')
         },
         // 支付结果
         {
-          path: '/paycallback',
+          path: 'paycallback',
           component: () => import('@/views/pay/XtxPayCallBack.vue')
         },
-        // 个人中心
+        // 用户中心
         {
-          path: '/member',
+          path: 'member',
           component: () => import('@/views/member/XtxMember.vue'),
+          redirect: '/member/user',
           children: [
             // 个人中心
             {
-              path: '/member/user',
+              path: 'user',
               component: () => import('@/views/member/XtxMemberUser.vue')
             },
             // 我的订单
             {
-              path: '/member/order',
+              path: 'order',
               component: () => import('@/views/member/XtxMemberOrder.vue')
             }
           ]
