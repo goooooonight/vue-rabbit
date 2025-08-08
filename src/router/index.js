@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import { useUserStore } from '@/stores'
+import { useUserStore } from '@/stores'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -77,8 +77,18 @@ const router = createRouter({
 })
 
 // 路由守卫
-// router.beforeEach((to) => {
-//   const userStore = useUserStore()
-//   if (!userStore.token && to.path !== '/login') return '/login'
-// })
+router.beforeEach((to) => {
+  const userStore = useUserStore()
+  // 黑名单：需要登录才能访问的路由
+  const blackList = ['/member', '/order', '/pay', '/paycallback']
+  // 检查是否在黑名单中
+  const isInBlackList = blackList.some((path) => {
+    return to.path.startsWith(path)
+  })
+
+  // 如果没有 token 且在黑名单中，重定向到登录页
+  if (!userStore.userInfo.token && isInBlackList) {
+    return '/login'
+  }
+})
 export default router
