@@ -1,1 +1,141 @@
-import{f as _,_ as y,h as v,x as C,E,w as P,l as S}from"./base-Bes0XUun.js";import{a as $}from"./aria-CnJd5Vss.js";import{u as w}from"./request-FXAcKJdj.js";import{L as c,r as k,A as x,c as i,o,y as I,g as e,p as n,H as A,O as N,I as j,a as D,m as f,w as K,W as L,t as O}from"./index-DU_P6jZu.js";const g=Symbol("breadcrumbKey"),T=_({separator:{type:String,default:"/"},separatorIcon:{type:$}}),q=c({name:"ElBreadcrumb"}),z=c({...q,props:T,setup(l){const t=l,{t:p}=w(),s=v("breadcrumb"),a=k();return A(g,t),x(()=>{const r=a.value.querySelectorAll(`.${s.e("item")}`);r.length&&r[r.length-1].setAttribute("aria-current","page")}),(r,u)=>(o(),i("div",{ref_key:"breadcrumb",ref:a,class:n(e(s).b()),"aria-label":e(p)("el.breadcrumb.label"),role:"navigation"},[I(r.$slots,"default")],10,["aria-label"]))}});var H=y(z,[["__file","breadcrumb.vue"]]);const M=_({to:{type:C([String,Object]),default:""},replace:Boolean}),V=c({name:"ElBreadcrumbItem"}),W=c({...V,props:M,setup(l){const t=l,p=j(),s=N(g,void 0),a=v("breadcrumb"),r=p.appContext.config.globalProperties.$router,u=k(),h=()=>{!t.to||!r||(t.replace?r.replace(t.to):r.push(t.to))};return(m,F)=>{var b,d;return o(),i("span",{class:n(e(a).e("item"))},[D("span",{ref_key:"link",ref:u,class:n([e(a).e("inner"),e(a).is("link",!!m.to)]),role:"link",onClick:h},[I(m.$slots,"default")],2),(b=e(s))!=null&&b.separatorIcon?(o(),f(e(E),{key:0,class:n(e(a).e("separator"))},{default:K(()=>[(o(),f(L(e(s).separatorIcon)))]),_:1},8,["class"])):(o(),i("span",{key:1,class:n(e(a).e("separator")),role:"presentation"},O((d=e(s))==null?void 0:d.separator),3))],2)}}});var B=y(W,[["__file","breadcrumb-item.vue"]]);const U=P(H,{BreadcrumbItem:B}),X=S(B);export{U as E,X as a};
+import {
+  f as _,
+  _ as y,
+  h as v,
+  x as C,
+  E,
+  w as P,
+  l as S
+} from './base-Bes0XUun.js'
+import { a as $ } from './aria-CnJd5Vss.js'
+import { u as w } from './request-FXAcKJdj.js'
+import {
+  L as c,
+  r as k,
+  A as x,
+  c as i,
+  o,
+  y as I,
+  g as e,
+  p as n,
+  H as A,
+  O as N,
+  I as j,
+  a as D,
+  m as f,
+  w as K,
+  W as L,
+  t as O
+} from './index-DU_P6jZu.js'
+const g = Symbol('breadcrumbKey'),
+  T = _({
+    separator: { type: String, default: '/' },
+    separatorIcon: { type: $ }
+  }),
+  q = c({ name: 'ElBreadcrumb' }),
+  z = c({
+    ...q,
+    props: T,
+    setup(l) {
+      const t = l,
+        { t: p } = w(),
+        s = v('breadcrumb'),
+        a = k()
+      return (
+        A(g, t),
+        x(() => {
+          const r = a.value.querySelectorAll(`.${s.e('item')}`)
+          r.length && r[r.length - 1].setAttribute('aria-current', 'page')
+        }),
+        (r, u) => (
+          o(),
+          i(
+            'div',
+            {
+              ref_key: 'breadcrumb',
+              ref: a,
+              class: n(e(s).b()),
+              'aria-label': e(p)('el.breadcrumb.label'),
+              role: 'navigation'
+            },
+            [I(r.$slots, 'default')],
+            10,
+            ['aria-label']
+          )
+        )
+      )
+    }
+  })
+var H = y(z, [['__file', 'breadcrumb.vue']])
+const M = _({
+    to: { type: C([String, Object]), default: '' },
+    replace: Boolean
+  }),
+  V = c({ name: 'ElBreadcrumbItem' }),
+  W = c({
+    ...V,
+    props: M,
+    setup(l) {
+      const t = l,
+        p = j(),
+        s = N(g, void 0),
+        a = v('breadcrumb'),
+        r = p.appContext.config.globalProperties.$router,
+        u = k(),
+        h = () => {
+          !t.to || !r || (t.replace ? r.replace(t.to) : r.push(t.to))
+        }
+      return (m, F) => {
+        var b, d
+        return (
+          o(),
+          i(
+            'span',
+            { class: n(e(a).e('item')) },
+            [
+              D(
+                'span',
+                {
+                  ref_key: 'link',
+                  ref: u,
+                  class: n([e(a).e('inner'), e(a).is('link', !!m.to)]),
+                  role: 'link',
+                  onClick: h
+                },
+                [I(m.$slots, 'default')],
+                2
+              ),
+              (b = e(s)) != null && b.separatorIcon
+                ? (o(),
+                  f(
+                    e(E),
+                    { key: 0, class: n(e(a).e('separator')) },
+                    {
+                      default: K(() => [(o(), f(L(e(s).separatorIcon)))]),
+                      _: 1
+                    },
+                    8,
+                    ['class']
+                  ))
+                : (o(),
+                  i(
+                    'span',
+                    {
+                      key: 1,
+                      class: n(e(a).e('separator')),
+                      role: 'presentation'
+                    },
+                    O((d = e(s)) == null ? void 0 : d.separator),
+                    3
+                  ))
+            ],
+            2
+          )
+        )
+      }
+    }
+  })
+var B = y(W, [['__file', 'breadcrumb-item.vue']])
+const U = P(H, { BreadcrumbItem: B }),
+  X = S(B)
+export { U as E, X as a }

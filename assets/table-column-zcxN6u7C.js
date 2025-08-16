@@ -1,14 +1,4626 @@
-import{a0 as Ke,K as fe,S as de,a6 as ie,d as ve,$ as Tt,J as zl,a1 as Ze,r as x,I as ae,g as le,q as B,i as ce,Z as Il,Q as He,a5 as Dl,L as Ee,e as ue,l as jt,m as Te,o as Q,w as Re,k as qe,c as se,p as U,y as Se,a as re,F as rt,j as Wt,f as Yt,t as Oe,a8 as qt,A as Ie,a2 as Vl,a9 as Ct,O as ye,aa as A,P as jl,a4 as Be,x as xe,N as Pe,v as Mt,G as Ut,H as Yl,ab as ql}from"./index-DU_P6jZu.js";import{E as Xt}from"./scrollbar-Deottvjw.js";import{E as Gt,u as Ul}from"./popper-D0fPJ8qx.js";import{t as Xl}from"./error-Cq9Fpw4b.js";import{B as ke,k as we,g as We,y as Ne,h as pe,_ as wt,G as Gl,t as Ql,E as St,J as Ue,K as _e,L as ze,C as Jl,M as et,a as Qt,A as Zl,l as en,w as tn}from"./base-Bes0XUun.js";import{g as Jt,e as Ht,u as Zt,d as ln}from"./request-FXAcKJdj.js";import{i as nt,k as nn,a as on,b as an,S as rn}from"./isEqual-Bfv98oY_.js";import{i as Et,c as sn,e as el,d as un,f as dn,g as st,h as cn,j as fn,k as kt,u as At}from"./aria-CnJd5Vss.js";import{c as hn,k as tl,a as vn,b as pn,d as mn,i as gn}from"./_initCloneObject-Czt_Nu0w.js";import{s as yn,o as bn,i as Cn,a as $t,b as wn}from"./index-fOI-oh1j.js";import{i as Sn}from"./isPlainObject-DPoAC1FZ.js";import{b as En}from"./tag-BDl_GAG7.js";import{c as ll}from"./input-BHo3TFaK.js";import{d as tt}from"./debounce-BUz-fiHp.js";import{E as Ae}from"./checkbox-B8oi5Mlv.js";import{C as xn}from"./index-Cy4a31WU.js";import{a as Rn}from"./use-form-common-props-BOay2t_u.js";function Nn(e,t){return yn(bn(e,t,Cn),e+"")}function Ln(e,t,l){if(!Et(l))return!1;var n=typeof t;return(n=="number"?nt(l)&&sn(t,l.length):n=="string"&&t in l)?el(l[t],e):!1}function Fn(e){return Nn(function(t,l){var n=-1,a=l.length,r=a>1?l[a-1]:void 0,i=a>2?l[2]:void 0;for(r=e.length>3&&typeof r=="function"?(a--,r):void 0,i&&Ln(l[0],l[1],i)&&(r=a<3?void 0:r,a=1),t=Object(t);++n<a;){var o=l[n];o&&e(t,o,n,r)}return t})}function On(e){return function(t,l,n){for(var a=-1,r=Object(t),i=n(t),o=i.length;o--;){var u=i[++a];if(l(r[u],u,r)===!1)break}return t}}var nl=On();function Tn(e,t){return e&&nl(e,t,nn)}function Wn(e,t){return function(l,n){if(l==null)return l;if(!nt(l))return e(l,n);for(var a=l.length,r=-1,i=Object(l);++r<a&&n(i[r],r,i)!==!1;);return l}}var Mn=Wn(Tn);function it(e,t,l){(l!==void 0&&!el(e[t],l)||l===void 0&&!(t in e))&&un(e,t,l)}function Hn(e){return dn(e)&&nt(e)}function ut(e,t){if(!(t==="constructor"&&typeof e[t]=="function")&&t!="__proto__")return e[t]}function kn(e){return hn(e,tl(e))}function An(e,t,l,n,a,r,i){var o=ut(e,l),u=ut(t,l),s=i.get(u);if(s){it(e,l,s);return}var d=r?r(o,u,l+"",e,t,i):void 0,f=d===void 0;if(f){var g=st(u),p=!g&&on(u),v=!g&&!p&&an(u);d=u,g||p||v?st(o)?d=o:Hn(o)?d=vn(o):p?(f=!1,d=pn(u,!0)):v?(f=!1,d=mn(u,!0)):d=[]:Sn(u)||$t(u)?(d=o,$t(o)?d=kn(o):(!Et(o)||cn(o))&&(d=gn(u))):f=!1}f&&(i.set(u,d),a(d,u,n,r,i),i.delete(u)),it(e,l,d)}function ol(e,t,l,n,a){e!==t&&nl(t,function(r,i){if(a||(a=new rn),Et(r))An(e,t,i,l,ol,n,a);else{var o=n?n(ut(e,i),r,i+"",e,t,a):void 0;o===void 0&&(o=r),it(e,i,o)}},tl)}function $n(e,t){var l=-1,n=nt(e)?Array(e.length):[];return Mn(e,function(a,r,i){n[++l]=t(a,r,i)}),n}function Pn(e,t){var l=st(e)?fn:$n;return l(e,En(t))}function al(e,t){return wn(Pn(e,t))}function De(e){return e===null}var rl=Fn(function(e,t,l){ol(e,t,l)});const _n=e=>ke?window.requestAnimationFrame(e):setTimeout(e,16),ot=function(e){var t;return(t=e.target)==null?void 0:t.closest("td")},Bn=function(e,t,l,n,a){if(!t&&!n&&(!a||ie(a)&&!a.length))return e;fe(l)?l=l==="descending"?-1:1:l=l&&l<0?-1:1;const r=n?null:function(o,u){return a?al(ll(a),s=>fe(s)?Ht(o,s):s(o,u,e)):(t!=="$key"&&Ze(o)&&"$value"in o&&(o=o.$value),[Ze(o)?t?Ht(o,t):null:o])},i=function(o,u){var s,d,f,g,p,v;if(n)return n(o.value,u.value);for(let y=0,b=(d=(s=o.key)==null?void 0:s.length)!=null?d:0;y<b;y++){if(((f=o.key)==null?void 0:f[y])<((g=u.key)==null?void 0:g[y]))return-1;if(((p=o.key)==null?void 0:p[y])>((v=u.key)==null?void 0:v[y]))return 1}return 0};return e.map((o,u)=>({value:o,index:u,key:r?r(o,u):null})).sort((o,u)=>{let s=i(o,u);return s||(s=o.index-u.index),s*+l}).map(o=>o.value)},sl=function(e,t){let l=null;return e.columns.forEach(n=>{n.id===t&&(l=n)}),l},Kn=function(e,t){let l=null;for(let n=0;n<e.columns.length;n++){const a=e.columns[n];if(a.columnKey===t){l=a;break}}return l||Xl("ElTable",`No column matching with column-key: ${t}`),l},Pt=function(e,t,l){const n=(t.className||"").match(new RegExp(`${l}-table_[^\\s]+`,"gm"));return n?sl(e,n[0]):null},te=(e,t,l=!1)=>{if(!e)throw new Error("Row is required when get row identity");if(fe(t)){if(!t.includes("."))return l?e[t]:`${e[t]}`;const n=t.split(".");let a=e;for(const r of n)a=a[r];return l?a:`${a}`}else if(de(t))return t.call(null,e);return""},Me=function(e,t,l=!1,n="children"){const a=e||[],r={};return a.forEach((i,o)=>{if(r[te(i,t)]={row:i,index:o},l){const u=i[n];ie(u)&&Object.assign(r,Me(u,t,!0,n))}}),r};function zn(e,t){const l={};let n;for(n in e)l[n]=e[n];for(n in t)if(Ke(t,n)){const a=t[n];we(a)||(l[n]=a)}return l}function xt(e){return e===""||we(e)||(e=Number.parseInt(e,10),Number.isNaN(e)&&(e="")),e}function il(e){return e===""||we(e)||(e=xt(e),Number.isNaN(e)&&(e=80)),e}function In(e){return We(e)?e:fe(e)?/^\d+(?:px)?$/.test(e)?Number.parseInt(e,10):e:null}function Dn(...e){return e.length===0?t=>t:e.length===1?e[0]:e.reduce((t,l)=>(...n)=>t(l(...n)))}function lt(e,t,l,n,a,r,i){let o=r??0,u=!1;const d=(()=>{if(!i)return e.indexOf(t);const y=te(t,i);return e.findIndex(b=>te(b,i)===y)})(),f=d!==-1,g=a?.call(null,t,o),p=y=>{y==="add"?e.push(t):e.splice(d,1),u=!0},v=y=>{let b=0;const O=n?.children&&y[n.children];return O&&ie(O)&&(b+=O.length,O.forEach(N=>{b+=v(N)})),b};return(!a||g)&&(Ne(l)?l&&!f?p("add"):!l&&f&&p("remove"):p(f?"remove":"add")),!n?.checkStrictly&&n?.children&&ie(t[n.children])&&t[n.children].forEach(y=>{const b=lt(e,y,l??!f,n,a,o+1,i);o+=v(y)+1,b&&(u=b)}),u}function Vn(e,t,l="children",n="hasChildren",a=!1){const r=o=>!(ie(o)&&o.length);function i(o,u,s){t(o,u,s),u.forEach(d=>{if(d[n]&&a){t(d,null,s+1);return}const f=d[l];r(f)||i(d,f,s+1)})}e.forEach(o=>{if(o[n]&&a){t(o,null,0);return}const u=o[l];r(u)||i(o,u,0)})}const jn=(e,t,l,n)=>{const a={strategy:"fixed",...e.popperOptions},r=de(n?.tooltipFormatter)?n.tooltipFormatter({row:l,column:n,cellValue:Jt(l,n.property).value}):void 0;return zl(r)?{slotContent:r,content:null,...e,popperOptions:a}:{slotContent:null,content:r??t,...e,popperOptions:a}};let oe=null;function Yn(e,t,l,n,a,r){var i;const o=jn(e,t,l,n),u={...o,slotContent:void 0};if(oe?.trigger===a){const v=(i=oe.vm)==null?void 0:i.component;rl(v?.props,u),v&&o.slotContent&&(v.slots.content=()=>[o.slotContent]);return}oe?.();const s=r?.refs.tableWrapper,d=s?.dataset.prefix,f=ve(Gt,{virtualTriggering:!0,virtualRef:a,appendTo:s,placement:"top",transition:"none",offset:0,hideAfter:0,...u},o.slotContent?{content:()=>o.slotContent}:void 0);f.appContext={...r.appContext,...r};const g=document.createElement("div");Tt(f,g),f.component.exposed.onOpen();const p=s?.querySelector(`.${d}-scrollbar__wrap`);oe=()=>{Tt(null,g),p?.removeEventListener("scroll",oe),oe=null},oe.trigger=a??void 0,oe.vm=f,p?.addEventListener("scroll",oe)}function ul(e){return e.children?al(e.children,ul):[e]}function _t(e,t){return e+t.colSpan}const dl=(e,t,l,n)=>{let a=0,r=e;const i=l.states.columns.value;if(n){const u=ul(n[e]);a=i.slice(0,i.indexOf(u[0])).reduce(_t,0),r=a+u.reduce(_t,0)-1}else a=e;let o;switch(t){case"left":r<l.states.fixedLeafColumnsLength.value&&(o="left");break;case"right":a>=i.length-l.states.rightFixedLeafColumnsLength.value&&(o="right");break;default:r<l.states.fixedLeafColumnsLength.value?o="left":a>=i.length-l.states.rightFixedLeafColumnsLength.value&&(o="right")}return o?{direction:o,start:a,after:r}:{}},Rt=(e,t,l,n,a,r=0)=>{const i=[],{direction:o,start:u,after:s}=dl(t,l,n,a);if(o){const d=o==="left";i.push(`${e}-fixed-column--${o}`),d&&s+r===n.states.fixedLeafColumnsLength.value-1?i.push("is-last-column"):!d&&u-r===n.states.columns.value.length-n.states.rightFixedLeafColumnsLength.value&&i.push("is-first-column")}return i};function Bt(e,t){return e+(De(t.realWidth)||Number.isNaN(t.realWidth)?Number(t.width):t.realWidth)}const Nt=(e,t,l,n)=>{const{direction:a,start:r=0,after:i=0}=dl(e,t,l,n);if(!a)return;const o={},u=a==="left",s=l.states.columns.value;return u?o.left=s.slice(0,r).reduce(Bt,0):o.right=s.slice(i+1).reverse().reduce(Bt,0),o},$e=(e,t)=>{e&&(Number.isNaN(e[t])||(e[t]=`${e[t]}px`))};function qn(e){const t=ae(),l=x(!1),n=x([]);return{updateExpandRows:()=>{const u=e.data.value||[],s=e.rowKey.value;if(l.value)n.value=u.slice();else if(s){const d=Me(n.value,s);n.value=u.reduce((f,g)=>{const p=te(g,s);return d[p]&&f.push(g),f},[])}else n.value=[]},toggleRowExpansion:(u,s)=>{lt(n.value,u,s,void 0,void 0,void 0,e.rowKey.value)&&t.emit("expand-change",u,n.value.slice())},setExpandRowKeys:u=>{t.store.assertRowKey();const s=e.data.value||[],d=e.rowKey.value,f=Me(s,d);n.value=u.reduce((g,p)=>{const v=f[p];return v&&g.push(v.row),g},[])},isRowExpanded:u=>{const s=e.rowKey.value;return s?!!Me(n.value,s)[te(u,s)]:n.value.includes(u)},states:{expandRows:n,defaultExpandAll:l}}}function Un(e){const t=ae(),l=x(null),n=x(null),a=s=>{t.store.assertRowKey(),l.value=s,i(s)},r=()=>{l.value=null},i=s=>{var d;const{data:f,rowKey:g}=e;let p=null;g.value&&(p=(d=(le(f)||[]).find(v=>te(v,g.value)===s))!=null?d:null),n.value=p??null,t.emit("current-change",n.value,null)};return{setCurrentRowKey:a,restoreCurrentRowKey:r,setCurrentRowByKey:i,updateCurrentRow:s=>{const d=n.value;if(s&&s!==d){n.value=s,t.emit("current-change",n.value,d);return}!s&&d&&(n.value=null,t.emit("current-change",null,d))},updateCurrentRowData:()=>{const s=e.rowKey.value,d=e.data.value||[],f=n.value;if(f&&!d.includes(f)){if(s){const g=te(f,s);i(g)}else n.value=null;De(n.value)&&t.emit("current-change",null,f)}else l.value&&(i(l.value),r())},states:{_currentRowKey:l,currentRow:n}}}function Xn(e){const t=x([]),l=x({}),n=x(16),a=x(!1),r=x({}),i=x("hasChildren"),o=x("children"),u=x(!1),s=ae(),d=B(()=>{if(!e.rowKey.value)return{};const c=e.data.value||[];return g(c)}),f=B(()=>{const c=e.rowKey.value,m=Object.keys(r.value),C={};return m.length&&m.forEach(h=>{if(r.value[h].length){const w={children:[]};r.value[h].forEach(R=>{const W=te(R,c);w.children.push(W),R[i.value]&&!C[W]&&(C[W]={children:[]})}),C[h]=w}}),C}),g=c=>{const m=e.rowKey.value,C=new Map;return Vn(c,(h,w,R)=>{const W=te(h,m,!0);ie(w)?C.set(W,{children:w.map(H=>H[m]),level:R}):a.value&&C.set(W,{children:[],lazy:!0,level:R})},o.value,i.value,a.value),C},p=(c=!1,m)=>{var C,h;m||(m=(C=s.store)==null?void 0:C.states.defaultExpandAll.value);const w=d.value,R=f.value,W={};if(w instanceof Map&&w.size){const H=le(l),M=[],z=(K,I)=>{if(c)return t.value?m||t.value.includes(I):!!(m||K?.expanded);{const L=m||t.value&&t.value.includes(I);return!!(K?.expanded||L)}};w.forEach((K,I)=>{const L=H[I],T={...w.get(I)};if(T.expanded=z(L,I),T.lazy){const{loaded:E=!1,loading:k=!1}=L||{};T.loaded=!!E,T.loading=!!k,M.push(I)}W[I]=T});const j=Object.keys(R);a.value&&j.length&&M.length&&j.forEach(K=>{var I;const L=H[K],T=R[K].children;if(M.includes(K)){if(((I=W[K].children)==null?void 0:I.length)!==0)throw new Error("[ElTable]children must be an empty array.");W[K].children=T}else{const{loaded:E=!1,loading:k=!1}=L||{};W[K]={lazy:!0,loaded:!!E,loading:!!k,expanded:z(L,K),children:T,level:void 0}}})}l.value=W,(h=s.store)==null||h.updateTableScrollY()};ce(()=>t.value,()=>{p(!0)}),ce(()=>d.value,()=>{p()}),ce(()=>f.value,()=>{p()});const v=c=>{t.value=c,p()},y=c=>a.value&&c&&"loaded"in c&&!c.loaded,b=(c,m)=>{s.store.assertRowKey();const C=e.rowKey.value,h=te(c,C),w=h&&l.value[h];if(h&&w&&"expanded"in w){const R=w.expanded;m=we(m)?!w.expanded:m,l.value[h].expanded=m,R!==m&&s.emit("expand-change",c,m),y(w)&&N(c,h,w),s.store.updateTableScrollY()}},O=c=>{s.store.assertRowKey();const m=e.rowKey.value,C=te(c,m),h=l.value[C];y(h)?N(c,C,h):b(c,void 0)},N=(c,m,C)=>{const{load:h}=s.props;h&&!l.value[m].loaded&&(l.value[m].loading=!0,h(c,C,w=>{if(!ie(w))throw new TypeError("[ElTable] data must be an array");l.value[m].loading=!1,l.value[m].loaded=!0,l.value[m].expanded=!0,w.length&&(r.value[m]=w),s.emit("expand-change",c,!0)}))};return{loadData:N,loadOrToggle:O,toggleTreeExpansion:b,updateTreeExpandKeys:v,updateTreeData:p,updateKeyChildren:(c,m)=>{const{lazy:C,rowKey:h}=s.props;if(C){if(!h)throw new Error("[Table] rowKey is required in updateKeyChild");r.value[c]&&(r.value[c]=m)}},normalize:g,states:{expandRowKeys:t,treeData:l,indent:n,lazy:a,lazyTreeNodeMap:r,lazyColumnIdentifier:i,childrenColumnName:o,checkStrictly:u}}}const Gn=(e,t)=>{const l=t.sortingColumn;return!l||fe(l.sortable)?e:Bn(e,t.sortProp,t.sortOrder,l.sortMethod,l.sortBy)},Xe=e=>{const t=[];return e.forEach(l=>{l.children&&l.children.length>0?t.push.apply(t,Xe(l.children)):t.push(l)}),t};function Qn(){var e;const t=ae(),{size:l}=Il((e=t.proxy)==null?void 0:e.$props),n=x(null),a=x([]),r=x([]),i=x(!1),o=x([]),u=x([]),s=x([]),d=x([]),f=x([]),g=x([]),p=x([]),v=x([]),y=[],b=x(0),O=x(0),N=x(0),S=x(!1),c=x([]),m=x(!1),C=x(!1),h=x(null),w=x({}),R=x(null),W=x(null),H=x(null),M=x(null),z=x(null),j=B(()=>n.value?Me(c.value,n.value):void 0);ce(a,()=>{var F;t.state&&(T(!1),t.props.tableLayout==="auto"&&((F=t.refs.tableHeaderRef)==null||F.updateFixedColumnStyle()))},{deep:!0});const K=()=>{if(!n.value)throw new Error("[ElTable] prop row-key is required")},I=F=>{var $;($=F.children)==null||$.forEach(_=>{_.fixed=F.fixed,I(_)})},L=()=>{o.value.forEach(q=>{I(q)}),d.value=o.value.filter(q=>[!0,"left"].includes(q.fixed));const F=o.value.find(q=>q.type==="selection");let $;F&&F.fixed!=="right"&&!d.value.includes(F)&&o.value.indexOf(F)===0&&d.value.length&&(d.value.unshift(F),$=!0),f.value=o.value.filter(q=>q.fixed==="right");const _=o.value.filter(q=>($?q.type!=="selection":!0)&&!q.fixed);u.value=Array.from(d.value).concat(_).concat(f.value);const P=Xe(_),D=Xe(d.value),V=Xe(f.value);b.value=P.length,O.value=D.length,N.value=V.length,s.value=Array.from(D).concat(P).concat(V),i.value=d.value.length>0||f.value.length>0},T=(F,$=!1)=>{F&&L(),$?t.state.doLayout():t.state.debouncedUpdateLayout()},E=F=>j.value?!!j.value[te(F,n.value)]:c.value.includes(F),k=()=>{S.value=!1;const F=c.value;c.value=[],F.length&&t.emit("selection-change",[])},Y=()=>{var F,$;let _;if(n.value){_=[];const P=($=(F=t?.store)==null?void 0:F.states)==null?void 0:$.childrenColumnName.value,D=Me(a.value,n.value,!0,P);for(const V in j.value)Ke(j.value,V)&&!D[V]&&_.push(j.value[V].row)}else _=c.value.filter(P=>!a.value.includes(P));if(_.length){const P=c.value.filter(D=>!_.includes(D));c.value=P,t.emit("selection-change",P.slice())}},X=()=>(c.value||[]).slice(),G=(F,$,_=!0,P=!1)=>{var D,V,q,be;const Ce={children:(V=(D=t?.store)==null?void 0:D.states)==null?void 0:V.childrenColumnName.value,checkStrictly:(be=(q=t?.store)==null?void 0:q.states)==null?void 0:be.checkStrictly.value};if(lt(c.value,F,$,Ce,P?void 0:h.value,a.value.indexOf(F),n.value)){const Ye=(c.value||[]).slice();_&&t.emit("select",Ye,F),t.emit("selection-change",Ye)}},ee=()=>{var F,$;const _=C.value?!S.value:!(S.value||c.value.length);S.value=_;let P=!1,D=0;const V=($=(F=t?.store)==null?void 0:F.states)==null?void 0:$.rowKey.value,{childrenColumnName:q}=t.store.states,be={children:q.value,checkStrictly:!1};a.value.forEach((Ce,je)=>{const Ye=je+D;lt(c.value,Ce,_,be,h.value,Ye,V)&&(P=!0),D+=J(te(Ce,V))}),P&&t.emit("selection-change",c.value?c.value.slice():[]),t.emit("select-all",(c.value||[]).slice())},he=()=>{var F;if(((F=a.value)==null?void 0:F.length)===0){S.value=!1;return}const{childrenColumnName:$}=t.store.states;let _=0,P=0;const D=q=>{var be;for(const Ce of q){const je=h.value&&h.value.call(null,Ce,_);if(E(Ce))P++;else if(!h.value||je)return!1;if(_++,(be=Ce[$.value])!=null&&be.length&&!D(Ce[$.value]))return!1}return!0},V=D(a.value||[]);S.value=P===0?!1:V},J=F=>{var $;if(!t||!t.store)return 0;const{treeData:_}=t.store.states;let P=0;const D=($=_.value[F])==null?void 0:$.children;return D&&(P+=D.length,D.forEach(V=>{P+=J(V)})),P},ge=(F,$)=>{const _={};return ll(F).forEach(P=>{w.value[P.id]=$,_[P.columnKey||P.id]=$}),_},Z=(F,$,_)=>{W.value&&W.value!==F&&(W.value.order=null),W.value=F,H.value=$,M.value=_},Fe=()=>{let F=le(r);Object.keys(w.value).forEach($=>{const _=w.value[$];if(!_||_.length===0)return;const P=sl({columns:s.value},$);P&&P.filterMethod&&(F=F.filter(D=>_.some(V=>P.filterMethod.call(null,V,D,P))))}),R.value=F},Ve=()=>{var F;a.value=Gn((F=R.value)!=null?F:[],{sortingColumn:W.value,sortProp:H.value,sortOrder:M.value})},xl=(F=void 0)=>{F?.filter||Fe(),Ve()},Rl=F=>{const{tableHeaderRef:$}=t.refs;if(!$)return;const _=Object.assign({},$.filterPanels),P=Object.keys(_);if(P.length)if(fe(F)&&(F=[F]),ie(F)){const D=F.map(V=>Kn({columns:s.value},V));P.forEach(V=>{const q=D.find(be=>be.id===V);q&&(q.filteredValue=[])}),t.store.commit("filterChange",{column:D,values:[],silent:!0,multi:!0})}else P.forEach(D=>{const V=s.value.find(q=>q.id===D);V&&(V.filteredValue=[])}),w.value={},t.store.commit("filterChange",{column:{},values:[],silent:!0})},Nl=()=>{W.value&&(Z(null,null,null),t.store.commit("changeSortCondition",{silent:!0}))},{setExpandRowKeys:Ll,toggleRowExpansion:Ot,updateExpandRows:Fl,states:Ol,isRowExpanded:Tl}=qn({data:a,rowKey:n}),{updateTreeExpandKeys:Wl,toggleTreeExpansion:Ml,updateTreeData:Hl,updateKeyChildren:kl,loadOrToggle:Al,states:$l}=Xn({data:a,rowKey:n}),{updateCurrentRowData:Pl,updateCurrentRow:_l,setCurrentRowKey:Bl,states:Kl}=Un({data:a,rowKey:n});return{assertRowKey:K,updateColumns:L,scheduleLayout:T,isSelected:E,clearSelection:k,cleanSelection:Y,getSelectionRows:X,toggleRowSelection:G,_toggleAllSelection:ee,toggleAllSelection:null,updateAllSelected:he,updateFilters:ge,updateCurrentRow:_l,updateSort:Z,execFilter:Fe,execSort:Ve,execQuery:xl,clearFilter:Rl,clearSort:Nl,toggleRowExpansion:Ot,setExpandRowKeysAdapter:F=>{Ll(F),Wl(F)},setCurrentRowKey:Bl,toggleRowExpansionAdapter:(F,$)=>{s.value.some(({type:P})=>P==="expand")?Ot(F,$):Ml(F,$)},isRowExpanded:Tl,updateExpandRows:Fl,updateCurrentRowData:Pl,loadOrToggle:Al,updateTreeData:Hl,updateKeyChildren:kl,states:{tableSize:l,rowKey:n,data:a,_data:r,isComplex:i,_columns:o,originColumns:u,columns:s,fixedColumns:d,rightFixedColumns:f,leafColumns:g,fixedLeafColumns:p,rightFixedLeafColumns:v,updateOrderFns:y,leafColumnsLength:b,fixedLeafColumnsLength:O,rightFixedLeafColumnsLength:N,isAllSelected:S,selection:c,reserveSelection:m,selectOnIndeterminate:C,selectable:h,filters:w,filteredData:R,sortingColumn:W,sortProp:H,sortOrder:M,hoverRow:z,...Ol,...$l,...Kl}}}function dt(e,t){return e.map(l=>{var n;return l.id===t.id?t:((n=l.children)!=null&&n.length&&(l.children=dt(l.children,t)),l)})}function ct(e){e.forEach(t=>{var l,n;t.no=(l=t.getColumnIndex)==null?void 0:l.call(t),(n=t.children)!=null&&n.length&&ct(t.children)}),e.sort((t,l)=>t.no-l.no)}function Jn(){const e=ae(),t=Qn();return{ns:pe("table"),...t,mutations:{setData(i,o){const u=le(i._data)!==o;i.data.value=o,i._data.value=o,e.store.execQuery(),e.store.updateCurrentRowData(),e.store.updateExpandRows(),e.store.updateTreeData(e.store.states.defaultExpandAll.value),le(i.reserveSelection)?e.store.assertRowKey():u?e.store.clearSelection():e.store.cleanSelection(),e.store.updateAllSelected(),e.$ready&&e.store.scheduleLayout()},insertColumn(i,o,u,s){var d;const f=le(i._columns);let g=[];u?(u&&!u.children&&(u.children=[]),(d=u.children)==null||d.push(o),g=dt(f,u)):(f.push(o),g=f),ct(g),i._columns.value=g,i.updateOrderFns.push(s),o.type==="selection"&&(i.selectable.value=o.selectable,i.reserveSelection.value=o.reserveSelection),e.$ready&&(e.store.updateColumns(),e.store.scheduleLayout())},updateColumnOrder(i,o){var u;((u=o.getColumnIndex)==null?void 0:u.call(o))!==o.no&&(ct(i._columns.value),e.$ready&&e.store.updateColumns())},removeColumn(i,o,u,s){var d;const f=le(i._columns)||[];if(u)(d=u.children)==null||d.splice(u.children.findIndex(p=>p.id===o.id),1),He(()=>{var p;((p=u.children)==null?void 0:p.length)===0&&delete u.children}),i._columns.value=dt(f,u);else{const p=f.indexOf(o);p>-1&&(f.splice(p,1),i._columns.value=f)}const g=i.updateOrderFns.indexOf(s);g>-1&&i.updateOrderFns.splice(g,1),e.$ready&&(e.store.updateColumns(),e.store.scheduleLayout())},sort(i,o){const{prop:u,order:s,init:d}=o;if(u){const f=le(i.columns).find(g=>g.property===u);f&&(f.order=s,e.store.updateSort(f,u,s),e.store.commit("changeSortCondition",{init:d}))}},changeSortCondition(i,o){const{sortingColumn:u,sortProp:s,sortOrder:d}=i,f=le(u),g=le(s),p=le(d);De(p)&&(i.sortingColumn.value=null,i.sortProp.value=null);const v={filter:!0};e.store.execQuery(v),(!o||!(o.silent||o.init))&&e.emit("sort-change",{column:f,prop:g,order:p}),e.store.updateTableScrollY()},filterChange(i,o){const{column:u,values:s,silent:d}=o,f=e.store.updateFilters(u,s);e.store.execQuery(),d||e.emit("filter-change",f),e.store.updateTableScrollY()},toggleAllSelection(){var i,o;(o=(i=e.store).toggleAllSelection)==null||o.call(i)},rowSelectedChanged(i,o){e.store.toggleRowSelection(o),e.store.updateAllSelected()},setHoverRow(i,o){i.hoverRow.value=o},setCurrentRow(i,o){e.store.updateCurrentRow(o)}},commit:function(i,...o){const u=e.store.mutations;if(u[i])u[i].apply(e,[e.store.states,...o]);else throw new Error(`Action not found: ${i}`)},updateTableScrollY:function(){He(()=>e.layout.updateScrollY.apply(e.layout))}}}const Lt={rowKey:"rowKey",defaultExpandAll:"defaultExpandAll",selectOnIndeterminate:"selectOnIndeterminate",indent:"indent",lazy:"lazy",data:"data","treeProps.hasChildren":{key:"lazyColumnIdentifier",default:"hasChildren"},"treeProps.children":{key:"childrenColumnName",default:"children"},"treeProps.checkStrictly":{key:"checkStrictly",default:!1}};function Zn(e,t){if(!e)throw new Error("Table is required.");const l=Jn();return l.toggleAllSelection=tt(l._toggleAllSelection,10),Object.keys(Lt).forEach(n=>{cl(fl(t,n),n,l)}),eo(l,t),l}function eo(e,t){Object.keys(Lt).forEach(l=>{ce(()=>fl(t,l),n=>{cl(n,l,e)})})}function cl(e,t,l){let n=e,a=Lt[t];Ze(a)&&(n=n||a.default,a=a.key),l.states[a].value=n}function fl(e,t){if(t.includes(".")){const l=t.split(".");let n=e;return l.forEach(a=>{n=n[a]}),n}else return e[t]}class to{constructor(t){this.observers=[],this.table=null,this.store=null,this.columns=[],this.fit=!0,this.showHeader=!0,this.height=x(null),this.scrollX=x(!1),this.scrollY=x(!1),this.bodyWidth=x(null),this.fixedWidth=x(null),this.rightFixedWidth=x(null),this.gutterWidth=0;for(const l in t)Ke(t,l)&&(Dl(this[l])?this[l].value=t[l]:this[l]=t[l]);if(!this.table)throw new Error("Table is required for Table Layout");if(!this.store)throw new Error("Store is required for Table Layout")}updateScrollY(){const t=this.height.value;if(De(t))return!1;const l=this.table.refs.scrollBarRef;if(this.table.vnode.el&&l?.wrapRef){let n=!0;const a=this.scrollY.value;return n=l.wrapRef.scrollHeight>l.wrapRef.clientHeight,this.scrollY.value=n,a!==n}return!1}setHeight(t,l="height"){if(!ke)return;const n=this.table.vnode.el;if(t=In(t),this.height.value=Number(t),!n&&(t||t===0)){He(()=>this.setHeight(t,l));return}n&&We(t)?(n.style[l]=`${t}px`,this.updateElsHeight()):n&&fe(t)&&(n.style[l]=t,this.updateElsHeight())}setMaxHeight(t){this.setHeight(t,"max-height")}getFlattenColumns(){const t=[];return this.table.store.states.columns.value.forEach(n=>{n.isColumnGroup?t.push.apply(t,n.columns):t.push(n)}),t}updateElsHeight(){this.updateScrollY(),this.notifyObservers("scrollable")}headerDisplayNone(t){if(!t)return!0;let l=t;for(;l.tagName!=="DIV";){if(getComputedStyle(l).display==="none")return!0;l=l.parentElement}return!1}updateColumnsWidth(){var t;if(!ke)return;const l=this.fit,n=(t=this.table.vnode.el)==null?void 0:t.clientWidth;let a=0;const r=this.getFlattenColumns(),i=r.filter(s=>!We(s.width));if(r.forEach(s=>{We(s.width)&&s.realWidth&&(s.realWidth=null)}),i.length>0&&l){if(r.forEach(s=>{a+=Number(s.width||s.minWidth||80)}),a<=n){this.scrollX.value=!1;const s=n-a;if(i.length===1)i[0].realWidth=Number(i[0].minWidth||80)+s;else{const d=i.reduce((p,v)=>p+Number(v.minWidth||80),0),f=s/d;let g=0;i.forEach((p,v)=>{if(v===0)return;const y=Math.floor(Number(p.minWidth||80)*f);g+=y,p.realWidth=Number(p.minWidth||80)+y}),i[0].realWidth=Number(i[0].minWidth||80)+s-g}}else this.scrollX.value=!0,i.forEach(s=>{s.realWidth=Number(s.minWidth)});this.bodyWidth.value=Math.max(a,n),this.table.state.resizeState.value.width=this.bodyWidth.value}else r.forEach(s=>{!s.width&&!s.minWidth?s.realWidth=80:s.realWidth=Number(s.width||s.minWidth),a+=s.realWidth}),this.scrollX.value=a>n,this.bodyWidth.value=a;const o=this.store.states.fixedColumns.value;if(o.length>0){let s=0;o.forEach(d=>{s+=Number(d.realWidth||d.width)}),this.fixedWidth.value=s}const u=this.store.states.rightFixedColumns.value;if(u.length>0){let s=0;u.forEach(d=>{s+=Number(d.realWidth||d.width)}),this.rightFixedWidth.value=s}this.notifyObservers("columns")}addObserver(t){this.observers.push(t)}removeObserver(t){const l=this.observers.indexOf(t);l!==-1&&this.observers.splice(l,1)}notifyObservers(t){this.observers.forEach(n=>{var a,r;switch(t){case"columns":(a=n.state)==null||a.onColumnsChange(this);break;case"scrollable":(r=n.state)==null||r.onScrollableChange(this);break;default:throw new Error(`Table Layout don't have event ${t}.`)}})}}const{CheckboxGroup:lo}=Ae,no=Ee({name:"ElTableFilterPanel",components:{ElCheckbox:Ae,ElCheckboxGroup:lo,ElScrollbar:Xt,ElTooltip:Gt,ElIcon:St,ArrowDown:Ql,ArrowUp:Gl},directives:{ClickOutside:xn},props:{placement:{type:String,default:"bottom-start"},store:{type:Object},column:{type:Object},upDataColumn:{type:Function},appendTo:Ul.appendTo},setup(e){const t=ae(),{t:l}=Zt(),n=pe("table-filter"),a=t?.parent;e.column&&!a.filterPanels.value[e.column.id]&&(a.filterPanels.value[e.column.id]=t);const r=x(!1),i=x(null),o=B(()=>e.column&&e.column.filters),u=B(()=>e.column&&e.column.filterClassName?`${n.b()} ${e.column.filterClassName}`:n.b()),s=B({get:()=>{var m;return(((m=e.column)==null?void 0:m.filteredValue)||[])[0]},set:m=>{d.value&&(Ue(m)?d.value.splice(0,1):d.value.splice(0,1,m))}}),d=B({get(){return e.column?e.column.filteredValue||[]:[]},set(m){var C;e.column&&((C=e.upDataColumn)==null||C.call(e,"filteredValue",m))}}),f=B(()=>e.column?e.column.filterMultiple:!0),g=m=>m.value===s.value,p=()=>{r.value=!1},v=m=>{m.stopPropagation(),r.value=!r.value},y=()=>{r.value=!1},b=()=>{S(d.value),p()},O=()=>{d.value=[],S(d.value),p()},N=m=>{s.value=m,Ue(m)?S([]):S(d.value),p()},S=m=>{var C,h;(C=e.store)==null||C.commit("filterChange",{column:e.column,values:m}),(h=e.store)==null||h.updateAllSelected()};ce(r,m=>{var C;e.column&&((C=e.upDataColumn)==null||C.call(e,"filterOpened",m))},{immediate:!0});const c=B(()=>{var m,C;return(C=(m=i.value)==null?void 0:m.popperRef)==null?void 0:C.contentRef});return{tooltipVisible:r,multiple:f,filterClassName:u,filteredValue:d,filterValue:s,filters:o,handleConfirm:b,handleReset:O,handleSelect:N,isPropAbsent:Ue,isActive:g,t:l,ns:n,showFilterPanel:v,hideFilterPanel:y,popperPaneRef:c,tooltip:i}}});function oo(e,t,l,n,a,r){const i=ue("el-checkbox"),o=ue("el-checkbox-group"),u=ue("el-scrollbar"),s=ue("arrow-up"),d=ue("arrow-down"),f=ue("el-icon"),g=ue("el-tooltip"),p=jt("click-outside");return Q(),Te(g,{ref:"tooltip",visible:e.tooltipVisible,offset:0,placement:e.placement,"show-arrow":!1,"stop-popper-mouse-event":!1,teleported:"",effect:"light",pure:"","popper-class":e.filterClassName,persistent:"","append-to":e.appendTo},{content:Re(()=>[e.multiple?(Q(),se("div",{key:0},[re("div",{class:U(e.ns.e("content"))},[ve(u,{"wrap-class":e.ns.e("wrap")},{default:Re(()=>[ve(o,{modelValue:e.filteredValue,"onUpdate:modelValue":v=>e.filteredValue=v,class:U(e.ns.e("checkbox-group"))},{default:Re(()=>[(Q(!0),se(rt,null,Wt(e.filters,v=>(Q(),Te(i,{key:v.value,value:v.value},{default:Re(()=>[Yt(Oe(v.text),1)]),_:2},1032,["value"]))),128))]),_:1},8,["modelValue","onUpdate:modelValue","class"])]),_:1},8,["wrap-class"])],2),re("div",{class:U(e.ns.e("bottom"))},[re("button",{class:U({[e.ns.is("disabled")]:e.filteredValue.length===0}),disabled:e.filteredValue.length===0,type:"button",onClick:e.handleConfirm},Oe(e.t("el.table.confirmFilter")),11,["disabled","onClick"]),re("button",{type:"button",onClick:e.handleReset},Oe(e.t("el.table.resetFilter")),9,["onClick"])],2)])):(Q(),se("ul",{key:1,class:U(e.ns.e("list"))},[re("li",{class:U([e.ns.e("list-item"),{[e.ns.is("active")]:e.isPropAbsent(e.filterValue)}]),onClick:v=>e.handleSelect(null)},Oe(e.t("el.table.clearFilter")),11,["onClick"]),(Q(!0),se(rt,null,Wt(e.filters,v=>(Q(),se("li",{key:v.value,class:U([e.ns.e("list-item"),e.ns.is("active",e.isActive(v))]),label:v.value,onClick:y=>e.handleSelect(v.value)},Oe(v.text),11,["label","onClick"]))),128))],2))]),default:Re(()=>[qe((Q(),se("span",{class:U([`${e.ns.namespace.value}-table__column-filter-trigger`,`${e.ns.namespace.value}-none-outline`]),onClick:e.showFilterPanel},[ve(f,null,{default:Re(()=>[Se(e.$slots,"filter-icon",{},()=>{var v;return[(v=e.column)!=null&&v.filterOpened?(Q(),Te(s,{key:0})):(Q(),Te(d,{key:1}))]})]),_:3})],10,["onClick"])),[[p,e.hideFilterPanel,e.popperPaneRef]])]),_:3},8,["visible","placement","popper-class","append-to"])}var ao=wt(no,[["render",oo],["__file","filter-panel.vue"]]);function Ft(e){const t=ae();qt(()=>{l.value.addObserver(t)}),Ie(()=>{n(l.value),a(l.value)}),Vl(()=>{n(l.value),a(l.value)}),Ct(()=>{l.value.removeObserver(t)});const l=B(()=>{const r=e.layout;if(!r)throw new Error("Can not find table layout.");return r}),n=r=>{var i;const o=((i=e.vnode.el)==null?void 0:i.querySelectorAll("colgroup > col"))||[];if(!o.length)return;const u=r.getFlattenColumns(),s={};u.forEach(d=>{s[d.id]=d});for(let d=0,f=o.length;d<f;d++){const g=o[d],p=g.getAttribute("name"),v=s[p];v&&g.setAttribute("width",v.realWidth||v.width)}},a=r=>{var i,o;const u=((i=e.vnode.el)==null?void 0:i.querySelectorAll("colgroup > col[name=gutter]"))||[];for(let d=0,f=u.length;d<f;d++)u[d].setAttribute("width",r.scrollY.value?r.gutterWidth:"0");const s=((o=e.vnode.el)==null?void 0:o.querySelectorAll("th.gutter"))||[];for(let d=0,f=s.length;d<f;d++){const g=s[d];g.style.width=r.scrollY.value?`${r.gutterWidth}px`:"0",g.style.display=r.scrollY.value?"":"none"}};return{tableLayout:l.value,onColumnsChange:n,onScrollableChange:a}}const me=Symbol("ElTable");function ro(e,t){const l=ae(),n=ye(me),a=y=>{y.stopPropagation()},r=(y,b)=>{!b.filters&&b.sortable?v(y,b,!1):b.filterable&&!b.sortable&&a(y),n?.emit("header-click",b,y)},i=(y,b)=>{n?.emit("header-contextmenu",b,y)},o=x(null),u=x(!1),s=x(),d=(y,b)=>{var O,N;if(ke&&!(b.children&&b.children.length>0)&&o.value&&e.border){u.value=!0;const S=n;t("set-drag-visible",!0);const c=S?.vnode.el,m=c?.getBoundingClientRect().left,C=(N=(O=l?.vnode)==null?void 0:O.el)==null?void 0:N.querySelector(`th.${b.id}`),h=C.getBoundingClientRect(),w=h.left-m+30;et(C,"noclick"),s.value={startMouseLeft:y.clientX,startLeft:h.right-m,startColumnLeft:h.left-m,tableLeft:m};const R=S?.refs.resizeProxy;R.style.left=`${s.value.startLeft}px`,document.onselectstart=function(){return!1},document.ondragstart=function(){return!1};const W=M=>{const z=M.clientX-s.value.startMouseLeft,j=s.value.startLeft+z;R.style.left=`${Math.max(w,j)}px`},H=()=>{if(u.value){const{startColumnLeft:M,startLeft:z}=s.value,K=Number.parseInt(R.style.left,10)-M;b.width=b.realWidth=K,S?.emit("header-dragend",b.width,z-M,b,y),requestAnimationFrame(()=>{e.store.scheduleLayout(!1,!0)}),document.body.style.cursor="",u.value=!1,o.value=null,s.value=void 0,t("set-drag-visible",!1)}document.removeEventListener("mousemove",W),document.removeEventListener("mouseup",H),document.onselectstart=null,document.ondragstart=null,setTimeout(()=>{ze(C,"noclick")},0)};document.addEventListener("mousemove",W),document.addEventListener("mouseup",H)}},f=(y,b)=>{var O;if(b.children&&b.children.length>0)return;const N=y.target;if(!Jl(N))return;const S=N?.closest("th");if(!(!b||!b.resizable||!S)&&!u.value&&e.border){const c=S.getBoundingClientRect(),m=document.body.style,C=((O=S.parentNode)==null?void 0:O.lastElementChild)===S,h=e.allowDragLastColumn||!C;c.width>12&&c.right-y.clientX<8&&h?(m.cursor="col-resize",_e(S,"is-sortable")&&(S.style.cursor="col-resize"),o.value=b):u.value||(m.cursor="",_e(S,"is-sortable")&&(S.style.cursor="pointer"),o.value=null)}},g=()=>{ke&&(document.body.style.cursor="")},p=({order:y,sortOrders:b})=>{if(y==="")return b[0];const O=b.indexOf(y||null);return b[O>b.length-2?0:O+1]},v=(y,b,O)=>{var N;y.stopPropagation();const S=b.order===O?null:O||p(b),c=(N=y.target)==null?void 0:N.closest("th");if(c&&_e(c,"noclick")){ze(c,"noclick");return}if(!b.sortable)return;const m=y.currentTarget;if(["ascending","descending"].some(W=>_e(m,W)&&!b.sortOrders.includes(W)))return;const C=e.store.states;let h=C.sortProp.value,w;const R=C.sortingColumn.value;(R!==b||R===b&&De(R.order))&&(R&&(R.order=null),C.sortingColumn.value=b,h=b.property),S?w=b.order=S:w=b.order=null,C.sortProp.value=h,C.sortOrder.value=w,n?.store.commit("changeSortCondition")};return{handleHeaderClick:r,handleHeaderContextMenu:i,handleMouseDown:d,handleMouseMove:f,handleMouseOut:g,handleSortClick:v,handleFilterClick:a}}function so(e){const t=ye(me),l=pe("table");return{getHeaderRowStyle:o=>{const u=t?.props.headerRowStyle;return de(u)?u.call(null,{rowIndex:o}):u},getHeaderRowClass:o=>{const u=[],s=t?.props.headerRowClassName;return fe(s)?u.push(s):de(s)&&u.push(s.call(null,{rowIndex:o})),u.join(" ")},getHeaderCellStyle:(o,u,s,d)=>{var f;let g=(f=t?.props.headerCellStyle)!=null?f:{};de(g)&&(g=g.call(null,{rowIndex:o,columnIndex:u,row:s,column:d}));const p=Nt(u,d.fixed,e.store,s);return $e(p,"left"),$e(p,"right"),Object.assign({},g,p)},getHeaderCellClass:(o,u,s,d)=>{const f=Rt(l.b(),u,d.fixed,e.store,s),g=[d.id,d.order,d.headerAlign,d.className,d.labelClassName,...f];d.children||g.push("is-leaf"),d.sortable&&g.push("is-sortable");const p=t?.props.headerCellClassName;return fe(p)?g.push(p):de(p)&&g.push(p.call(null,{rowIndex:o,columnIndex:u,row:s,column:d})),g.push(l.e("cell")),g.filter(v=>!!v).join(" ")}}}const hl=e=>{const t=[];return e.forEach(l=>{l.children?(t.push(l),t.push.apply(t,hl(l.children))):t.push(l)}),t},vl=e=>{let t=1;const l=(r,i)=>{if(i&&(r.level=i.level+1,t<r.level&&(t=r.level)),r.children){let o=0;r.children.forEach(u=>{l(u,r),o+=u.colSpan}),r.colSpan=o}else r.colSpan=1};e.forEach(r=>{r.level=1,l(r,void 0)});const n=[];for(let r=0;r<t;r++)n.push([]);return hl(e).forEach(r=>{r.children?(r.rowSpan=1,r.children.forEach(i=>i.isSubColumn=!0)):r.rowSpan=t-r.level+1,n[r.level-1].push(r)}),n};function io(e){const t=ye(me),l=B(()=>vl(e.store.states.originColumns.value));return{isGroup:B(()=>{const r=l.value.length>1;return r&&t&&(t.state.isGroup.value=!0),r}),toggleAllSelection:r=>{r.stopPropagation(),t?.store.commit("toggleAllSelection")},columnRows:l}}var uo=Ee({name:"ElTableHeader",components:{ElCheckbox:Ae},props:{fixed:{type:String,default:""},store:{required:!0,type:Object},border:Boolean,defaultSort:{type:Object,default:()=>({prop:"",order:""})},appendFilterPanelTo:{type:String},allowDragLastColumn:{type:Boolean}},setup(e,{emit:t}){const l=ae(),n=ye(me),a=pe("table"),r=x({}),{onColumnsChange:i,onScrollableChange:o}=Ft(n),u=n?.props.tableLayout==="auto",s=jl(new Map),d=x(),f=()=>{setTimeout(()=>{s.size>0&&(s.forEach((W,H)=>{const M=d.value.querySelector(`.${H.replace(/\s/g,".")}`);if(M){const z=M.getBoundingClientRect().width;W.width=z}}),s.clear())})};ce(s,f),Ie(async()=>{await He(),await He();const{prop:W,order:H}=e.defaultSort;n?.store.commit("sort",{prop:W,order:H,init:!0}),f()});const{handleHeaderClick:g,handleHeaderContextMenu:p,handleMouseDown:v,handleMouseMove:y,handleMouseOut:b,handleSortClick:O,handleFilterClick:N}=ro(e,t),{getHeaderRowStyle:S,getHeaderRowClass:c,getHeaderCellStyle:m,getHeaderCellClass:C}=so(e),{isGroup:h,toggleAllSelection:w,columnRows:R}=io(e);return l.state={onColumnsChange:i,onScrollableChange:o},l.filterPanels=r,{ns:a,filterPanels:r,onColumnsChange:i,onScrollableChange:o,columnRows:R,getHeaderRowClass:c,getHeaderRowStyle:S,getHeaderCellClass:C,getHeaderCellStyle:m,handleHeaderClick:g,handleHeaderContextMenu:p,handleMouseDown:v,handleMouseMove:y,handleMouseOut:b,handleSortClick:O,handleFilterClick:N,isGroup:h,toggleAllSelection:w,saveIndexSelection:s,isTableLayoutAuto:u,theadRef:d,updateFixedColumnStyle:f}},render(){const{ns:e,isGroup:t,columnRows:l,getHeaderCellStyle:n,getHeaderCellClass:a,getHeaderRowClass:r,getHeaderRowStyle:i,handleHeaderClick:o,handleHeaderContextMenu:u,handleMouseDown:s,handleMouseMove:d,handleSortClick:f,handleMouseOut:g,store:p,$parent:v,saveIndexSelection:y,isTableLayoutAuto:b}=this;let O=1;return A("thead",{ref:"theadRef",class:{[e.is("group")]:t}},l.map((N,S)=>A("tr",{class:r(S),key:S,style:i(S)},N.map((c,m)=>{c.rowSpan>O&&(O=c.rowSpan);const C=a(S,m,N,c);return b&&c.fixed&&y.set(C,c),A("th",{class:C,colspan:c.colSpan,key:`${c.id}-thead`,rowspan:c.rowSpan,style:n(S,m,N,c),onClick:h=>{var w;(w=h.currentTarget)!=null&&w.classList.contains("noclick")||o(h,c)},onContextmenu:h=>u(h,c),onMousedown:h=>s(h,c),onMousemove:h=>d(h,c),onMouseout:g},[A("div",{class:["cell",c.filteredValue&&c.filteredValue.length>0?"highlight":""]},[c.renderHeader?c.renderHeader({column:c,$index:m,store:p,_self:v}):c.label,c.sortable&&A("span",{onClick:h=>f(h,c),class:"caret-wrapper"},[A("i",{onClick:h=>f(h,c,"ascending"),class:"sort-caret ascending"}),A("i",{onClick:h=>f(h,c,"descending"),class:"sort-caret descending"})]),c.filterable&&A(ao,{store:p,placement:c.filterPlacement||"bottom-start",appendTo:v?.appendFilterPanelTo,column:c,upDataColumn:(h,w)=>{c[h]=w}},{"filter-icon":()=>c.renderFilterIcon?c.renderFilterIcon({filterOpened:c.filterOpened}):null})])])}))))}});function at(e,t,l=.03){return e-t>l}function co(e){const t=ye(me),l=x(""),n=x(A("div")),a=(v,y,b)=>{var O,N,S;const c=t,m=ot(v);let C=null;const h=(O=c?.vnode.el)==null?void 0:O.dataset.prefix;m&&(C=Pt({columns:(S=(N=e.store)==null?void 0:N.states.columns.value)!=null?S:[]},m,h),C&&c?.emit(`cell-${b}`,y,C,m,v)),c?.emit(`row-${b}`,y,C,v)},r=(v,y)=>{a(v,y,"dblclick")},i=(v,y)=>{var b;(b=e.store)==null||b.commit("setCurrentRow",y),a(v,y,"click")},o=(v,y)=>{a(v,y,"contextmenu")},u=tt(v=>{var y;(y=e.store)==null||y.commit("setHoverRow",v)},30),s=tt(()=>{var v;(v=e.store)==null||v.commit("setHoverRow",null)},30),d=v=>{const y=window.getComputedStyle(v,null),b=Number.parseInt(y.paddingLeft,10)||0,O=Number.parseInt(y.paddingRight,10)||0,N=Number.parseInt(y.paddingTop,10)||0,S=Number.parseInt(y.paddingBottom,10)||0;return{left:b,right:O,top:N,bottom:S}},f=(v,y,b)=>{var O;let N=(O=y?.target)==null?void 0:O.parentNode;for(;v>1&&(N=N?.nextSibling,!(!N||N.nodeName!=="TR"));)b(N,"hover-row hover-fixed-row"),v--};return{handleDoubleClick:r,handleClick:i,handleContextMenu:o,handleMouseEnter:u,handleMouseLeave:s,handleCellMouseEnter:(v,y,b)=>{var O,N,S,c,m,C;if(!t)return;const h=t,w=ot(v),R=(O=h?.vnode.el)==null?void 0:O.dataset.prefix;let W=null;if(w){if(W=Pt({columns:(S=(N=e.store)==null?void 0:N.states.columns.value)!=null?S:[]},w,R),!W)return;w.rowSpan>1&&f(w.rowSpan,v,et);const G=h.hoverState={cell:w,column:W,row:y};h?.emit("cell-mouse-enter",G.row,G.column,G.cell,v)}if(!b)return;const H=v.target.querySelector(".cell");if(!(_e(H,`${R}-tooltip`)&&H.childNodes.length))return;const M=document.createRange();M.setStart(H,0),M.setEnd(H,H.childNodes.length);const{width:z,height:j}=M.getBoundingClientRect(),{width:K,height:I}=H.getBoundingClientRect(),{top:L,left:T,right:E,bottom:k}=d(H),Y=T+E,X=L+k;at(z+Y,K)||at(j+X,I)||at(H.scrollWidth,K)?Yn(b,(c=w?.innerText||w?.textContent)!=null?c:"",y,W,w,h):((m=oe)==null?void 0:m.trigger)===w&&((C=oe)==null||C())},handleCellMouseLeave:v=>{const y=ot(v);if(!y)return;y.rowSpan>1&&f(y.rowSpan,v,ze);const b=t?.hoverState;t?.emit("cell-mouse-leave",b?.row,b?.column,b?.cell,v)},tooltipContent:l,tooltipTrigger:n}}function fo(e){const t=ye(me),l=pe("table");return{getRowStyle:(s,d)=>{const f=t?.props.rowStyle;return de(f)?f.call(null,{row:s,rowIndex:d}):f||null},getRowClass:(s,d)=>{var f;const g=[l.e("row")];t?.props.highlightCurrentRow&&s===((f=e.store)==null?void 0:f.states.currentRow.value)&&g.push("current-row"),e.stripe&&d%2===1&&g.push(l.em("row","striped"));const p=t?.props.rowClassName;return fe(p)?g.push(p):de(p)&&g.push(p.call(null,{row:s,rowIndex:d})),g},getCellStyle:(s,d,f,g)=>{const p=t?.props.cellStyle;let v=p??{};de(p)&&(v=p.call(null,{rowIndex:s,columnIndex:d,row:f,column:g}));const y=Nt(d,e?.fixed,e.store);return $e(y,"left"),$e(y,"right"),Object.assign({},v,y)},getCellClass:(s,d,f,g,p)=>{const v=Rt(l.b(),d,e?.fixed,e.store,void 0,p),y=[g.id,g.align,g.className,...v],b=t?.props.cellClassName;return fe(b)?y.push(b):de(b)&&y.push(b.call(null,{rowIndex:s,columnIndex:d,row:f,column:g})),y.push(l.e("cell")),y.filter(O=>!!O).join(" ")},getSpan:(s,d,f,g)=>{let p=1,v=1;const y=t?.props.spanMethod;if(de(y)){const b=y({row:s,column:d,rowIndex:f,columnIndex:g});ie(b)?(p=b[0],v=b[1]):Ze(b)&&(p=b.rowspan,v=b.colspan)}return{rowspan:p,colspan:v}},getColspanRealWidth:(s,d,f)=>{if(d<1)return s[f].realWidth;const g=s.map(({realWidth:p,width:v})=>p||v).slice(f,f+d);return Number(g.reduce((p,v)=>Number(p)+Number(v),-1))}}}const ho=Ee({name:"TableTdWrapper"}),vo=Ee({...ho,props:{colspan:{type:Number,default:1},rowspan:{type:Number,default:1}},setup(e){return(t,l)=>(Q(),se("td",{colspan:e.colspan,rowspan:e.rowspan},[Se(t.$slots,"default")],8,["colspan","rowspan"]))}});var po=wt(vo,[["__file","td-wrapper.vue"]]);function mo(e){const t=ye(me),l=pe("table"),{handleDoubleClick:n,handleClick:a,handleContextMenu:r,handleMouseEnter:i,handleMouseLeave:o,handleCellMouseEnter:u,handleCellMouseLeave:s,tooltipContent:d,tooltipTrigger:f}=co(e),{getRowStyle:g,getRowClass:p,getCellStyle:v,getCellClass:y,getSpan:b,getColspanRealWidth:O}=fo(e),N=B(()=>{var h;return(h=e.store)==null?void 0:h.states.columns.value.findIndex(({type:w})=>w==="default")}),S=(h,w)=>{var R;const W=(R=t?.props)==null?void 0:R.rowKey;return W?te(h,W):w},c=(h,w,R,W=!1)=>{const{tooltipEffect:H,tooltipOptions:M,store:z}=e,{indent:j,columns:K}=z.states,I=p(h,w);let L=!0;return R&&(I.push(l.em("row",`level-${R.level}`)),L=!!R.display),A("tr",{style:[L?null:{display:"none"},g(h,w)],class:I,key:S(h,w),onDblclick:E=>n(E,h),onClick:E=>a(E,h),onContextmenu:E=>r(E,h),onMouseenter:()=>i(w),onMouseleave:o},K.value.map((E,k)=>{const{rowspan:Y,colspan:X}=b(h,E,w,k);if(!Y||!X)return null;const G=Object.assign({},E);G.realWidth=O(K.value,X,k);const ee={store:z,_self:e.context||t,column:G,row:h,$index:w,cellIndex:k,expanded:W};k===N.value&&R&&(ee.treeNode={indent:R.level&&R.level*j.value,level:R.level},Ne(R.expanded)&&(ee.treeNode.expanded=R.expanded,"loading"in R&&(ee.treeNode.loading=R.loading),"noLazyChildren"in R&&(ee.treeNode.noLazyChildren=R.noLazyChildren)));const he=`${S(h,w)},${k}`,J=G.columnKey||G.rawColumnKey||"",ge=E.showOverflowTooltip&&rl({effect:H},M,E.showOverflowTooltip);return A(po,{style:v(w,k,h,E),class:y(w,k,h,E,X-1),key:`${J}${he}`,rowspan:Y,colspan:X,onMouseenter:Z=>u(Z,h,ge),onMouseleave:s},{default:()=>m(k,E,ee)})}))},m=(h,w,R)=>w.renderCell(R);return{wrappedRowRender:(h,w)=>{const R=e.store,{isRowExpanded:W,assertRowKey:H}=R,{treeData:M,lazyTreeNodeMap:z,childrenColumnName:j,rowKey:K}=R.states,I=R.states.columns.value;if(I.some(({type:T})=>T==="expand")){const T=W(h),E=c(h,w,void 0,T),k=t?.renderExpanded;if(!k)return console.error("[Element Error]renderExpanded is required."),E;const Y=[[E]];return(t.props.preserveExpandedContent||T)&&Y[0].push(A("tr",{key:`expanded-row__${E.key}`,style:{display:T?"":"none"}},[A("td",{colspan:I.length,class:`${l.e("cell")} ${l.e("expanded-cell")}`},[k({row:h,$index:w,store:R,expanded:T})])])),Y}else if(Object.keys(M.value).length){H();const T=te(h,K.value);let E=M.value[T],k=null;E&&(k={expanded:E.expanded,level:E.level,display:!0,noLazyChildren:void 0,loading:void 0},Ne(E.lazy)&&(k&&Ne(E.loaded)&&E.loaded&&(k.noLazyChildren=!(E.children&&E.children.length)),k.loading=E.loading));const Y=[c(h,w,k??void 0)];if(E){let X=0;const G=(he,J)=>{he&&he.length&&J&&he.forEach(ge=>{const Z={display:J.display&&J.expanded,level:J.level+1,expanded:!1,noLazyChildren:!1,loading:!1},Fe=te(ge,K.value);if(Ue(Fe))throw new Error("For nested data item, row-key is required.");if(E={...M.value[Fe]},E&&(Z.expanded=E.expanded,E.level=E.level||Z.level,E.display=!!(E.expanded&&Z.display),Ne(E.lazy)&&(Ne(E.loaded)&&E.loaded&&(Z.noLazyChildren=!(E.children&&E.children.length)),Z.loading=E.loading)),X++,Y.push(c(ge,w+X,Z)),E){const Ve=z.value[Fe]||ge[j.value];G(Ve,E)}})};E.display=!0;const ee=z.value[T]||h[j.value];G(ee,E)}return Y}else return c(h,w,void 0)},tooltipContent:d,tooltipTrigger:f}}const go={store:{required:!0,type:Object},stripe:Boolean,tooltipEffect:String,tooltipOptions:{type:Object},context:{default:()=>({}),type:Object},rowClassName:[String,Function],rowStyle:[Object,Function],fixed:{type:String,default:""},highlight:Boolean};var yo=Ee({name:"ElTableBody",props:go,setup(e){var t;const l=ae(),n=ye(me),a=pe("table"),{wrappedRowRender:r,tooltipContent:i,tooltipTrigger:o}=mo(e),{onColumnsChange:u,onScrollableChange:s}=Ft(n),d=[];return ce((t=e.store)==null?void 0:t.states.hoverRow,(f,g)=>{var p,v;const y=l?.vnode.el,b=Array.from(y?.children||[]).filter(S=>S?.classList.contains(`${a.e("row")}`));let O=f;const N=(p=b[O])==null?void 0:p.childNodes;if(N?.length){let S=0;Array.from(N).reduce((m,C,h)=>{var w,R;return((w=N[h])==null?void 0:w.colSpan)>1&&(S=(R=N[h])==null?void 0:R.colSpan),C.nodeName!=="TD"&&S===0&&m.push(h),S>0&&S--,m},[]).forEach(m=>{var C;for(O=f;O>0;){const h=(C=b[O-1])==null?void 0:C.childNodes;if(h[m]&&h[m].nodeName==="TD"&&h[m].rowSpan>1){et(h[m],"hover-cell"),d.push(h[m]);break}O--}})}else d.forEach(S=>ze(S,"hover-cell")),d.length=0;!((v=e.store)!=null&&v.states.isComplex.value)||!ke||_n(()=>{const S=b[g],c=b[f];S&&!S.classList.contains("hover-fixed-row")&&ze(S,"hover-row"),c&&et(c,"hover-row")})}),Ct(()=>{var f;(f=oe)==null||f()}),{ns:a,onColumnsChange:u,onScrollableChange:s,wrappedRowRender:r,tooltipContent:i,tooltipTrigger:o}},render(){const{wrappedRowRender:e,store:t}=this,l=t?.states.data.value||[];return A("tbody",{tabIndex:-1},[l.reduce((n,a)=>n.concat(e(a,n.length)),[])])}});function bo(){const e=ye(me),t=e?.store,l=B(()=>{var o;return(o=t?.states.fixedLeafColumnsLength.value)!=null?o:0}),n=B(()=>{var o;return(o=t?.states.rightFixedColumns.value.length)!=null?o:0}),a=B(()=>{var o;return(o=t?.states.columns.value.length)!=null?o:0}),r=B(()=>{var o;return(o=t?.states.fixedColumns.value.length)!=null?o:0}),i=B(()=>{var o;return(o=t?.states.rightFixedColumns.value.length)!=null?o:0});return{leftFixedLeafCount:l,rightFixedLeafCount:n,columnsCount:a,leftFixedCount:r,rightFixedCount:i,columns:B(()=>{var o;return(o=t?.states.columns.value)!=null?o:[]})}}function Co(e){const{columns:t}=bo(),l=pe("table");return{getCellClasses:(r,i)=>{const o=r[i],u=[l.e("cell"),o.id,o.align,o.labelClassName,...Rt(l.b(),i,o.fixed,e.store)];return o.className&&u.push(o.className),o.children||u.push(l.is("leaf")),u},getCellStyles:(r,i)=>{const o=Nt(i,r.fixed,e.store);return $e(o,"left"),$e(o,"right"),o},columns:t}}var wo=Ee({name:"ElTableFooter",props:{fixed:{type:String,default:""},store:{required:!0,type:Object},summaryMethod:Function,sumText:String,border:Boolean,defaultSort:{type:Object,default:()=>({prop:"",order:""})}},setup(e){const t=ye(me),l=pe("table"),{getCellClasses:n,getCellStyles:a,columns:r}=Co(e),{onScrollableChange:i,onColumnsChange:o}=Ft(t);return{ns:l,onScrollableChange:i,onColumnsChange:o,getCellClasses:n,getCellStyles:a,columns:r}},render(){const{columns:e,getCellStyles:t,getCellClasses:l,summaryMethod:n,sumText:a}=this,r=this.store.states.data.value;let i=[];return n?i=n({columns:e,data:r}):e.forEach((o,u)=>{if(u===0){i[u]=a;return}const s=r.map(p=>Number(p[o.property])),d=[];let f=!0;s.forEach(p=>{if(!Number.isNaN(+p)){f=!1;const v=`${p}`.split(".")[1];d.push(v?v.length:0)}});const g=Math.max.apply(null,d);f?i[u]="":i[u]=s.reduce((p,v)=>{const y=Number(v);return Number.isNaN(+y)?p:Number.parseFloat((p+v).toFixed(Math.min(g,20)))},0)}),A(A("tfoot",[A("tr",{},[...e.map((o,u)=>A("td",{key:u,colspan:o.colSpan,rowspan:o.rowSpan,class:l(e,u),style:t(o,u)},[A("div",{class:["cell",o.labelClassName]},[i[u]])]))])]))}});function So(e){return{setCurrentRow:f=>{e.commit("setCurrentRow",f)},getSelectionRows:()=>e.getSelectionRows(),toggleRowSelection:(f,g,p=!0)=>{e.toggleRowSelection(f,g,!1,p),e.updateAllSelected()},clearSelection:()=>{e.clearSelection()},clearFilter:f=>{e.clearFilter(f)},toggleAllSelection:()=>{e.commit("toggleAllSelection")},toggleRowExpansion:(f,g)=>{e.toggleRowExpansionAdapter(f,g)},clearSort:()=>{e.clearSort()},sort:(f,g)=>{e.commit("sort",{prop:f,order:g})},updateKeyChildren:(f,g)=>{e.updateKeyChildren(f,g)}}}function Eo(e,t,l,n){const a=x(!1),r=x(null),i=x(!1),o=L=>{i.value=L},u=x({width:null,height:null,headerHeight:null}),s=x(!1),d={display:"inline-block",verticalAlign:"middle"},f=x(),g=x(0),p=x(0),v=x(0),y=x(0),b=x(0);Be(()=>{var L;t.setHeight((L=e.height)!=null?L:null)}),Be(()=>{var L;t.setMaxHeight((L=e.maxHeight)!=null?L:null)}),ce(()=>[e.currentRowKey,l.states.rowKey],([L,T])=>{!le(T)||!le(L)||l.setCurrentRowKey(`${L}`)},{immediate:!0}),ce(()=>e.data,L=>{n.store.commit("setData",L)},{immediate:!0,deep:!0}),Be(()=>{e.expandRowKeys&&l.setExpandRowKeysAdapter(e.expandRowKeys)});const O=()=>{n.store.commit("setHoverRow",null),n.hoverState&&(n.hoverState=null)},N=(L,T)=>{const{pixelX:E,pixelY:k}=T;Math.abs(E)>=Math.abs(k)&&(n.refs.bodyWrapper.scrollLeft+=T.pixelX/5)},S=B(()=>e.height||e.maxHeight||l.states.fixedColumns.value.length>0||l.states.rightFixedColumns.value.length>0),c=B(()=>({width:t.bodyWidth.value?`${t.bodyWidth.value}px`:""})),m=()=>{S.value&&t.updateElsHeight(),t.updateColumnsWidth(),!(typeof window>"u")&&requestAnimationFrame(R)};Ie(async()=>{await He(),l.updateColumns(),W(),requestAnimationFrame(m);const L=n.vnode.el,T=n.refs.headerWrapper;e.flexible&&L&&L.parentElement&&(L.parentElement.style.minWidth="0"),u.value={width:f.value=L.offsetWidth,height:L.offsetHeight,headerHeight:e.showHeader&&T?T.offsetHeight:null},l.states.columns.value.forEach(E=>{E.filteredValue&&E.filteredValue.length&&n.store.commit("filterChange",{column:E,values:E.filteredValue,silent:!0})}),n.$ready=!0});const C=(L,T)=>{if(!L)return;const E=Array.from(L.classList).filter(k=>!k.startsWith("is-scrolling-"));E.push(t.scrollX.value?T:"is-scrolling-none"),L.className=E.join(" ")},h=L=>{const{tableWrapper:T}=n.refs;C(T,L)},w=L=>{const{tableWrapper:T}=n.refs;return!!(T&&T.classList.contains(L))},R=function(){if(!n.refs.scrollBarRef)return;if(!t.scrollX.value){const ee="is-scrolling-none";w(ee)||h(ee);return}const L=n.refs.scrollBarRef.wrapRef;if(!L)return;const{scrollLeft:T,offsetWidth:E,scrollWidth:k}=L,{headerWrapper:Y,footerWrapper:X}=n.refs;Y&&(Y.scrollLeft=T),X&&(X.scrollLeft=T);const G=k-E-1;T>=G?h("is-scrolling-right"):h(T===0?"is-scrolling-left":"is-scrolling-middle")},W=()=>{n.refs.scrollBarRef&&(n.refs.scrollBarRef.wrapRef&&kt(n.refs.scrollBarRef.wrapRef,"scroll",R,{passive:!0}),e.fit?At(n.vnode.el,H):kt(window,"resize",H),At(n.refs.bodyWrapper,()=>{var L,T;H(),(T=(L=n.refs)==null?void 0:L.scrollBarRef)==null||T.update()}))},H=()=>{var L,T,E,k;const Y=n.vnode.el;if(!n.$ready||!Y)return;let X=!1;const{width:G,height:ee,headerHeight:he}=u.value,J=f.value=Y.offsetWidth;G!==J&&(X=!0);const ge=Y.offsetHeight;(e.height||S.value)&&ee!==ge&&(X=!0);const Z=e.tableLayout==="fixed"?n.refs.headerWrapper:(L=n.refs.tableHeaderRef)==null?void 0:L.$el;e.showHeader&&Z?.offsetHeight!==he&&(X=!0),g.value=((T=n.refs.tableWrapper)==null?void 0:T.scrollHeight)||0,v.value=Z?.scrollHeight||0,y.value=((E=n.refs.footerWrapper)==null?void 0:E.offsetHeight)||0,b.value=((k=n.refs.appendWrapper)==null?void 0:k.offsetHeight)||0,p.value=g.value-v.value-y.value-b.value,X&&(u.value={width:J,height:ge,headerHeight:e.showHeader&&Z?.offsetHeight||0},m())},M=Rn(),z=B(()=>{const{bodyWidth:L,scrollY:T,gutterWidth:E}=t;return L.value?`${L.value-(T.value?E:0)}px`:""}),j=B(()=>e.maxHeight?"fixed":e.tableLayout),K=B(()=>{if(e.data&&e.data.length)return;let L="100%";e.height&&p.value&&(L=`${p.value}px`);const T=f.value;return{width:T?`${T}px`:"",height:L}}),I=B(()=>e.height?{height:"100%"}:e.maxHeight?Number.isNaN(Number(e.maxHeight))?{maxHeight:`calc(${e.maxHeight} - ${v.value+y.value}px)`}:{maxHeight:`${+e.maxHeight-v.value-y.value}px`}:{});return{isHidden:a,renderExpanded:r,setDragVisible:o,isGroup:s,handleMouseLeave:O,handleHeaderFooterMousewheel:N,tableSize:M,emptyBlockStyle:K,resizeProxyVisible:i,bodyWidth:z,resizeState:u,doLayout:m,tableBodyStyles:c,tableLayout:j,scrollbarViewStyle:d,scrollbarStyle:I}}function xo(e){const t=x(),l=()=>{const a=e.vnode.el.querySelector(".hidden-columns"),r={childList:!0,subtree:!0},i=e.store.states.updateOrderFns;t.value=new MutationObserver(()=>{i.forEach(o=>o())}),t.value.observe(a,r)};Ie(()=>{l()}),Ct(()=>{var n;(n=t.value)==null||n.disconnect()})}var Ro={data:{type:Array,default:()=>[]},size:ln,width:[String,Number],height:[String,Number],maxHeight:[String,Number],fit:{type:Boolean,default:!0},stripe:Boolean,border:Boolean,rowKey:[String,Function],showHeader:{type:Boolean,default:!0},showSummary:Boolean,sumText:String,summaryMethod:Function,rowClassName:[String,Function],rowStyle:[Object,Function],cellClassName:[String,Function],cellStyle:[Object,Function],headerRowClassName:[String,Function],headerRowStyle:[Object,Function],headerCellClassName:[String,Function],headerCellStyle:[Object,Function],highlightCurrentRow:Boolean,currentRowKey:[String,Number],emptyText:String,expandRowKeys:Array,defaultExpandAll:Boolean,defaultSort:Object,tooltipEffect:String,tooltipOptions:Object,spanMethod:Function,selectOnIndeterminate:{type:Boolean,default:!0},indent:{type:Number,default:16},treeProps:{type:Object,default:()=>({hasChildren:"hasChildren",children:"children",checkStrictly:!1})},lazy:Boolean,load:Function,style:{type:Object,default:()=>({})},className:{type:String,default:""},tableLayout:{type:String,default:"fixed"},scrollbarAlwaysOn:Boolean,flexible:Boolean,showOverflowTooltip:[Boolean,Object],tooltipFormatter:Function,appendFilterPanelTo:String,scrollbarTabindex:{type:[Number,String],default:void 0},allowDragLastColumn:{type:Boolean,default:!0},preserveExpandedContent:Boolean};function pl(e){const t=e.tableLayout==="auto";let l=e.columns||[];t&&l.every(({width:a})=>we(a))&&(l=[]);const n=a=>{const r={key:`${e.tableLayout}_${a.id}`,style:{},name:void 0};return t?r.style={width:`${a.width}px`}:r.name=a.id,r};return A("colgroup",{},l.map(a=>A("col",n(a))))}pl.props=["columns","tableLayout"];const No=()=>{const e=x(),t=(r,i)=>{const o=e.value;o&&o.scrollTo(r,i)},l=(r,i)=>{const o=e.value;o&&We(i)&&["Top","Left"].includes(r)&&o[`setScroll${r}`](i)};return{scrollBarRef:e,scrollTo:t,setScrollTop:r=>l("Top",r),setScrollLeft:r=>l("Left",r)}};var Kt=!1,Le,ft,ht,Ge,Qe,ml,Je,vt,pt,mt,gl,gt,yt,yl,bl;function ne(){if(!Kt){Kt=!0;var e=navigator.userAgent,t=/(?:MSIE.(\d+\.\d+))|(?:(?:Firefox|GranParadiso|Iceweasel).(\d+\.\d+))|(?:Opera(?:.+Version.|.)(\d+\.\d+))|(?:AppleWebKit.(\d+(?:\.\d+)?))|(?:Trident\/\d+\.\d+.*rv:(\d+\.\d+))/.exec(e),l=/(Mac OS X)|(Windows)|(Linux)/.exec(e);if(gt=/\b(iPhone|iP[ao]d)/.exec(e),yt=/\b(iP[ao]d)/.exec(e),mt=/Android/i.exec(e),yl=/FBAN\/\w+;/i.exec(e),bl=/Mobile/i.exec(e),gl=!!/Win64/.exec(e),t){Le=t[1]?parseFloat(t[1]):t[5]?parseFloat(t[5]):NaN,Le&&document&&document.documentMode&&(Le=document.documentMode);var n=/(?:Trident\/(\d+.\d+))/.exec(e);ml=n?parseFloat(n[1])+4:Le,ft=t[2]?parseFloat(t[2]):NaN,ht=t[3]?parseFloat(t[3]):NaN,Ge=t[4]?parseFloat(t[4]):NaN,Ge?(t=/(?:Chrome\/(\d+\.\d+))/.exec(e),Qe=t&&t[1]?parseFloat(t[1]):NaN):Qe=NaN}else Le=ft=ht=Qe=Ge=NaN;if(l){if(l[1]){var a=/(?:Mac OS X (\d+(?:[._]\d+)?))/.exec(e);Je=a?parseFloat(a[1].replace("_",".")):!0}else Je=!1;vt=!!l[2],pt=!!l[3]}else Je=vt=pt=!1}}var bt={ie:function(){return ne()||Le},ieCompatibilityMode:function(){return ne()||ml>Le},ie64:function(){return bt.ie()&&gl},firefox:function(){return ne()||ft},opera:function(){return ne()||ht},webkit:function(){return ne()||Ge},safari:function(){return bt.webkit()},chrome:function(){return ne()||Qe},windows:function(){return ne()||vt},osx:function(){return ne()||Je},linux:function(){return ne()||pt},iphone:function(){return ne()||gt},mobile:function(){return ne()||gt||yt||mt||bl},nativeApp:function(){return ne()||yl},android:function(){return ne()||mt},ipad:function(){return ne()||yt}},Lo=bt,Fo=!!(typeof window<"u"&&window.document&&window.document.createElement),Oo={canUseDOM:Fo},Cl=Oo,wl;Cl.canUseDOM&&(wl=document.implementation&&document.implementation.hasFeature&&document.implementation.hasFeature("","")!==!0);function To(e,t){if(!Cl.canUseDOM||t&&!("addEventListener"in document))return!1;var l="on"+e,n=l in document;if(!n){var a=document.createElement("div");a.setAttribute(l,"return;"),n=typeof a[l]=="function"}return!n&&wl&&e==="wheel"&&(n=document.implementation.hasFeature("Events.wheel","3.0")),n}var Wo=To,zt=10,It=40,Dt=800;function Sl(e){var t=0,l=0,n=0,a=0;return"detail"in e&&(l=e.detail),"wheelDelta"in e&&(l=-e.wheelDelta/120),"wheelDeltaY"in e&&(l=-e.wheelDeltaY/120),"wheelDeltaX"in e&&(t=-e.wheelDeltaX/120),"axis"in e&&e.axis===e.HORIZONTAL_AXIS&&(t=l,l=0),n=t*zt,a=l*zt,"deltaY"in e&&(a=e.deltaY),"deltaX"in e&&(n=e.deltaX),(n||a)&&e.deltaMode&&(e.deltaMode==1?(n*=It,a*=It):(n*=Dt,a*=Dt)),n&&!t&&(t=n<1?-1:1),a&&!l&&(l=a<1?-1:1),{spinX:t,spinY:l,pixelX:n,pixelY:a}}Sl.getEventType=function(){return Lo.firefox()?"DOMMouseScroll":Wo("wheel")?"wheel":"mousewheel"};var Mo=Sl;/**
-* Checks if an event is supported in the current execution environment.
-*
-* NOTE: This will not work correctly for non-generic events such as `change`,
-* `reset`, `load`, `error`, and `select`.
-*
-* Borrows from Modernizr.
-*
-* @param {string} eventNameSuffix Event name, e.g. "click".
-* @param {?boolean} capture Check if the capture phase is supported.
-* @return {boolean} True if the event is supported.
-* @internal
-* @license Modernizr 3.0.0pre (Custom Build) | MIT
-*/const Ho=function(e,t){if(e&&e.addEventListener){const l=function(n){const a=Mo(n);t&&Reflect.apply(t,this,[n,a])};e.addEventListener("wheel",l,{passive:!0})}},ko={beforeMount(e,t){Ho(e,t.value)}};let Ao=1;const $o=Ee({name:"ElTable",directives:{Mousewheel:ko},components:{TableHeader:uo,TableBody:yo,TableFooter:wo,ElScrollbar:Xt,hColgroup:pl},props:Ro,emits:["select","select-all","selection-change","cell-mouse-enter","cell-mouse-leave","cell-contextmenu","cell-click","cell-dblclick","row-click","row-contextmenu","row-dblclick","header-click","header-contextmenu","sort-change","filter-change","current-change","header-dragend","expand-change","scroll"],setup(e){const{t}=Zt(),l=pe("table"),n=ae();Yl(me,n);const a=Zn(n,e);n.store=a;const r=new to({store:n.store,table:n,fit:e.fit,showHeader:e.showHeader});n.layout=r;const i=B(()=>(a.states.data.value||[]).length===0),{setCurrentRow:o,getSelectionRows:u,toggleRowSelection:s,clearSelection:d,clearFilter:f,toggleAllSelection:g,toggleRowExpansion:p,clearSort:v,sort:y,updateKeyChildren:b}=So(a),{isHidden:O,renderExpanded:N,setDragVisible:S,isGroup:c,handleMouseLeave:m,handleHeaderFooterMousewheel:C,tableSize:h,emptyBlockStyle:w,resizeProxyVisible:R,bodyWidth:W,resizeState:H,doLayout:M,tableBodyStyles:z,tableLayout:j,scrollbarViewStyle:K,scrollbarStyle:I}=Eo(e,r,a,n),{scrollBarRef:L,scrollTo:T,setScrollLeft:E,setScrollTop:k}=No(),Y=tt(M,50),X=`${l.namespace.value}-table_${Ao++}`;n.tableId=X,n.state={isGroup:c,resizeState:H,doLayout:M,debouncedUpdateLayout:Y};const G=B(()=>{var J;return(J=e.sumText)!=null?J:t("el.table.sumText")}),ee=B(()=>{var J;return(J=e.emptyText)!=null?J:t("el.table.emptyText")}),he=B(()=>vl(a.states.originColumns.value)[0]);return xo(n),Ut(()=>{Y.cancel()}),{ns:l,layout:r,store:a,columns:he,handleHeaderFooterMousewheel:C,handleMouseLeave:m,tableId:X,tableSize:h,isHidden:O,isEmpty:i,renderExpanded:N,resizeProxyVisible:R,resizeState:H,isGroup:c,bodyWidth:W,tableBodyStyles:z,emptyBlockStyle:w,debouncedUpdateLayout:Y,setCurrentRow:o,getSelectionRows:u,toggleRowSelection:s,clearSelection:d,clearFilter:f,toggleAllSelection:g,toggleRowExpansion:p,clearSort:v,doLayout:M,sort:y,updateKeyChildren:b,t,setDragVisible:S,context:n,computedSumText:G,computedEmptyText:ee,tableLayout:j,scrollbarViewStyle:K,scrollbarStyle:I,scrollBarRef:L,scrollTo:T,setScrollLeft:E,setScrollTop:k,allowDragLastColumn:e.allowDragLastColumn}}});function Po(e,t,l,n,a,r){const i=ue("hColgroup"),o=ue("table-header"),u=ue("table-body"),s=ue("table-footer"),d=ue("el-scrollbar"),f=jt("mousewheel");return Q(),se("div",{ref:"tableWrapper",class:U([{[e.ns.m("fit")]:e.fit,[e.ns.m("striped")]:e.stripe,[e.ns.m("border")]:e.border||e.isGroup,[e.ns.m("hidden")]:e.isHidden,[e.ns.m("group")]:e.isGroup,[e.ns.m("fluid-height")]:e.maxHeight,[e.ns.m("scrollable-x")]:e.layout.scrollX.value,[e.ns.m("scrollable-y")]:e.layout.scrollY.value,[e.ns.m("enable-row-hover")]:!e.store.states.isComplex.value,[e.ns.m("enable-row-transition")]:(e.store.states.data.value||[]).length!==0&&(e.store.states.data.value||[]).length<100,"has-footer":e.showSummary},e.ns.m(e.tableSize),e.className,e.ns.b(),e.ns.m(`layout-${e.tableLayout}`)]),style:Pe(e.style),"data-prefix":e.ns.namespace.value,onMouseleave:e.handleMouseLeave},[re("div",{class:U(e.ns.e("inner-wrapper"))},[re("div",{ref:"hiddenColumns",class:"hidden-columns"},[Se(e.$slots,"default")],512),e.showHeader&&e.tableLayout==="fixed"?qe((Q(),se("div",{key:0,ref:"headerWrapper",class:U(e.ns.e("header-wrapper"))},[re("table",{ref:"tableHeader",class:U(e.ns.e("header")),style:Pe(e.tableBodyStyles),border:"0",cellpadding:"0",cellspacing:"0"},[ve(i,{columns:e.store.states.columns.value,"table-layout":e.tableLayout},null,8,["columns","table-layout"]),ve(o,{ref:"tableHeaderRef",border:e.border,"default-sort":e.defaultSort,store:e.store,"append-filter-panel-to":e.appendFilterPanelTo,"allow-drag-last-column":e.allowDragLastColumn,onSetDragVisible:e.setDragVisible},null,8,["border","default-sort","store","append-filter-panel-to","allow-drag-last-column","onSetDragVisible"])],6)],2)),[[f,e.handleHeaderFooterMousewheel]]):xe("v-if",!0),re("div",{ref:"bodyWrapper",class:U(e.ns.e("body-wrapper"))},[ve(d,{ref:"scrollBarRef","view-style":e.scrollbarViewStyle,"wrap-style":e.scrollbarStyle,always:e.scrollbarAlwaysOn,tabindex:e.scrollbarTabindex,onScroll:g=>e.$emit("scroll",g)},{default:Re(()=>[re("table",{ref:"tableBody",class:U(e.ns.e("body")),cellspacing:"0",cellpadding:"0",border:"0",style:Pe({width:e.bodyWidth,tableLayout:e.tableLayout})},[ve(i,{columns:e.store.states.columns.value,"table-layout":e.tableLayout},null,8,["columns","table-layout"]),e.showHeader&&e.tableLayout==="auto"?(Q(),Te(o,{key:0,ref:"tableHeaderRef",class:U(e.ns.e("body-header")),border:e.border,"default-sort":e.defaultSort,store:e.store,"append-filter-panel-to":e.appendFilterPanelTo,onSetDragVisible:e.setDragVisible},null,8,["class","border","default-sort","store","append-filter-panel-to","onSetDragVisible"])):xe("v-if",!0),ve(u,{context:e.context,highlight:e.highlightCurrentRow,"row-class-name":e.rowClassName,"tooltip-effect":e.tooltipEffect,"tooltip-options":e.tooltipOptions,"row-style":e.rowStyle,store:e.store,stripe:e.stripe},null,8,["context","highlight","row-class-name","tooltip-effect","tooltip-options","row-style","store","stripe"]),e.showSummary&&e.tableLayout==="auto"?(Q(),Te(s,{key:1,class:U(e.ns.e("body-footer")),border:e.border,"default-sort":e.defaultSort,store:e.store,"sum-text":e.computedSumText,"summary-method":e.summaryMethod},null,8,["class","border","default-sort","store","sum-text","summary-method"])):xe("v-if",!0)],6),e.isEmpty?(Q(),se("div",{key:0,ref:"emptyBlock",style:Pe(e.emptyBlockStyle),class:U(e.ns.e("empty-block"))},[re("span",{class:U(e.ns.e("empty-text"))},[Se(e.$slots,"empty",{},()=>[Yt(Oe(e.computedEmptyText),1)])],2)],6)):xe("v-if",!0),e.$slots.append?(Q(),se("div",{key:1,ref:"appendWrapper",class:U(e.ns.e("append-wrapper"))},[Se(e.$slots,"append")],2)):xe("v-if",!0)]),_:3},8,["view-style","wrap-style","always","tabindex","onScroll"])],2),e.showSummary&&e.tableLayout==="fixed"?qe((Q(),se("div",{key:1,ref:"footerWrapper",class:U(e.ns.e("footer-wrapper"))},[re("table",{class:U(e.ns.e("footer")),cellspacing:"0",cellpadding:"0",border:"0",style:Pe(e.tableBodyStyles)},[ve(i,{columns:e.store.states.columns.value,"table-layout":e.tableLayout},null,8,["columns","table-layout"]),ve(s,{border:e.border,"default-sort":e.defaultSort,store:e.store,"sum-text":e.computedSumText,"summary-method":e.summaryMethod},null,8,["border","default-sort","store","sum-text","summary-method"])],6)],2)),[[Mt,!e.isEmpty],[f,e.handleHeaderFooterMousewheel]]):xe("v-if",!0),e.border||e.isGroup?(Q(),se("div",{key:2,class:U(e.ns.e("border-left-patch"))},null,2)):xe("v-if",!0)],2),qe(re("div",{ref:"resizeProxy",class:U(e.ns.e("column-resize-proxy"))},null,2),[[Mt,e.resizeProxyVisible]])],46,["data-prefix","onMouseleave"])}var _o=wt($o,[["render",Po],["__file","table.vue"]]);const Bo={selection:"table-column--selection",expand:"table__expand-column"},Ko={default:{order:""},selection:{width:48,minWidth:48,realWidth:48,order:""},expand:{width:48,minWidth:48,realWidth:48,order:""},index:{width:48,minWidth:48,realWidth:48,order:""}},zo=e=>Bo[e]||"",Io={selection:{renderHeader({store:e,column:t}){var l;function n(){return e.states.data.value&&e.states.data.value.length===0}return A(Ae,{disabled:n(),size:e.states.tableSize.value,indeterminate:e.states.selection.value.length>0&&!e.states.isAllSelected.value,"onUpdate:modelValue":(l=e.toggleAllSelection)!=null?l:void 0,modelValue:e.states.isAllSelected.value,ariaLabel:t.label})},renderCell({row:e,column:t,store:l,$index:n}){return A(Ae,{disabled:t.selectable?!t.selectable.call(null,e,n):!1,size:l.states.tableSize.value,onChange:()=>{l.commit("rowSelectedChanged",e)},onClick:a=>a.stopPropagation(),modelValue:l.isSelected(e),ariaLabel:t.label})},sortable:!1,resizable:!1},index:{renderHeader({column:e}){return e.label||"#"},renderCell({column:e,$index:t}){let l=t+1;const n=e.index;return We(n)?l=t+n:de(n)&&(l=n(t)),A("div",{},[l])},sortable:!1},expand:{renderHeader({column:e}){return e.label||""},renderCell({column:e,row:t,store:l,expanded:n}){const{ns:a}=l,r=[a.e("expand-icon")];return!e.renderExpand&&n&&r.push(a.em("expand-icon","expanded")),A("div",{class:r,onClick:function(o){o.stopPropagation(),l.toggleRowExpansion(t)}},{default:()=>e.renderExpand?[e.renderExpand({expanded:n})]:[A(St,null,{default:()=>[A(Qt)]})]})},sortable:!1,resizable:!1}};function Do({row:e,column:t,$index:l}){var n;const a=t.property,r=a&&Jt(e,a).value;return t&&t.formatter?t.formatter(e,t,r,l):((n=r?.toString)==null?void 0:n.call(r))||""}function Vo({row:e,treeNode:t,store:l},n=!1){const{ns:a}=l;if(!t)return n?[A("span",{class:a.e("placeholder")})]:null;const r=[],i=function(o){o.stopPropagation(),!t.loading&&l.loadOrToggle(e)};if(t.indent&&r.push(A("span",{class:a.e("indent"),style:{"padding-left":`${t.indent}px`}})),Ne(t.expanded)&&!t.noLazyChildren){const o=[a.e("expand-icon"),t.expanded?a.em("expand-icon","expanded"):""];let u=Qt;t.loading&&(u=Zl),r.push(A("div",{class:o,onClick:i},{default:()=>[A(St,{class:{[a.is("loading")]:t.loading}},{default:()=>[A(u)]})]}))}else r.push(A("span",{class:a.e("placeholder")}));return r}function Vt(e,t){return e.reduce((l,n)=>(l[n]=n,l),t)}function jo(e,t){const l=ae();return{registerComplexWatchers:()=>{const r=["fixed"],i={realWidth:"width",realMinWidth:"minWidth"},o=Vt(r,i);Object.keys(o).forEach(u=>{const s=i[u];Ke(t,s)&&ce(()=>t[s],d=>{let f=d;s==="width"&&u==="realWidth"&&(f=xt(d)),s==="minWidth"&&u==="realMinWidth"&&(f=il(d)),l.columnConfig.value[s]=f,l.columnConfig.value[u]=f;const g=s==="fixed";e.value.store.scheduleLayout(g)})})},registerNormalWatchers:()=>{const r=["label","filters","filterMultiple","filteredValue","sortable","index","formatter","className","labelClassName","filterClassName","showOverflowTooltip","tooltipFormatter"],i={property:"prop",align:"realAlign",headerAlign:"realHeaderAlign"},o=Vt(r,i);Object.keys(o).forEach(u=>{const s=i[u];Ke(t,s)&&ce(()=>t[s],d=>{l.columnConfig.value[u]=d})})}}}function Yo(e,t,l){const n=ae(),a=x(""),r=x(!1),i=x(),o=x(),u=pe("table");Be(()=>{i.value=e.align?`is-${e.align}`:null,i.value}),Be(()=>{o.value=e.headerAlign?`is-${e.headerAlign}`:i.value,o.value});const s=B(()=>{let c=n.vnode.vParent||n.parent;for(;c&&!c.tableId&&!c.columnId;)c=c.vnode.vParent||c.parent;return c}),d=B(()=>{const{store:c}=n.parent;if(!c)return!1;const{treeData:m}=c.states,C=m.value;return C&&Object.keys(C).length>0}),f=x(xt(e.width)),g=x(il(e.minWidth)),p=c=>(f.value&&(c.width=f.value),g.value&&(c.minWidth=g.value),!f.value&&g.value&&(c.width=void 0),c.minWidth||(c.minWidth=80),c.realWidth=Number(we(c.width)?c.minWidth:c.width),c),v=c=>{const m=c.type,C=Io[m]||{};Object.keys(C).forEach(w=>{const R=C[w];w!=="className"&&!we(R)&&(c[w]=R)});const h=zo(m);if(h){const w=`${le(u.namespace)}-${h}`;c.className=c.className?`${c.className} ${w}`:w}return c},y=c=>{ie(c)?c.forEach(C=>m(C)):m(c);function m(C){var h;((h=C?.type)==null?void 0:h.name)==="ElTableColumn"&&(C.vParent=n)}};return{columnId:a,realAlign:i,isSubColumn:r,realHeaderAlign:o,columnOrTableParent:s,setColumnWidth:p,setColumnForcedProps:v,setColumnRenders:c=>{e.renderHeader||c.type!=="selection"&&(c.renderHeader=C=>(n.columnConfig.value.label,Se(t,"header",C,()=>[c.label]))),t["filter-icon"]&&(c.renderFilterIcon=C=>Se(t,"filter-icon",C)),t.expand&&(c.renderExpand=C=>Se(t,"expand",C));let m=c.renderCell;return c.type==="expand"?(c.renderCell=C=>A("div",{class:"cell"},[m(C)]),l.value.renderExpanded=C=>t.default?t.default(C):t.default):(m=m||Do,c.renderCell=C=>{let h=null;if(t.default){const z=t.default(C);h=z.some(j=>j.type!==ql)?z:m(C)}else h=m(C);const{columns:w}=l.value.store.states,R=w.value.findIndex(z=>z.type==="default"),W=d.value&&C.cellIndex===R,H=Vo(C,W),M={class:"cell",style:{}};return c.showOverflowTooltip&&(M.class=`${M.class} ${le(u.namespace)}-tooltip`,M.style={width:`${(C.column.realWidth||Number(C.column.width))-1}px`}),y(h),A("div",M,[H,h])}),c},getPropsData:(...c)=>c.reduce((m,C)=>(ie(C)&&C.forEach(h=>{m[h]=e[h]}),m),{}),getColumnElIndex:(c,m)=>Array.prototype.indexOf.call(c,m),updateColumnOrder:()=>{l.value.store.commit("updateColumnOrder",n.columnConfig.value)}}}var qo={type:{type:String,default:"default"},label:String,className:String,labelClassName:String,property:String,prop:String,width:{type:[String,Number],default:""},minWidth:{type:[String,Number],default:""},renderHeader:Function,sortable:{type:[Boolean,String],default:!1},sortMethod:Function,sortBy:[String,Function,Array],resizable:{type:Boolean,default:!0},columnKey:String,align:String,headerAlign:String,showOverflowTooltip:{type:[Boolean,Object],default:void 0},tooltipFormatter:Function,fixed:[Boolean,String],formatter:Function,selectable:Function,reserveSelection:Boolean,filterMethod:Function,filteredValue:Array,filters:Array,filterPlacement:String,filterMultiple:{type:Boolean,default:!0},filterClassName:String,index:[Number,Function],sortOrders:{type:Array,default:()=>["ascending","descending",null],validator:e=>e.every(t=>["ascending","descending",null].includes(t))}};let Uo=1;var El=Ee({name:"ElTableColumn",components:{ElCheckbox:Ae},props:qo,setup(e,{slots:t}){const l=ae(),n=x({}),a=B(()=>{let S=l.parent;for(;S&&!S.tableId;)S=S.parent;return S}),{registerNormalWatchers:r,registerComplexWatchers:i}=jo(a,e),{columnId:o,isSubColumn:u,realHeaderAlign:s,columnOrTableParent:d,setColumnWidth:f,setColumnForcedProps:g,setColumnRenders:p,getPropsData:v,getColumnElIndex:y,realAlign:b,updateColumnOrder:O}=Yo(e,t,a),N=d.value;o.value=`${"tableId"in N&&N.tableId||"columnId"in N&&N.columnId}_column_${Uo++}`,qt(()=>{u.value=a.value!==N;const S=e.type||"default",c=e.sortable===""?!0:e.sortable,m=S==="selection"?!1:we(e.showOverflowTooltip)?N.props.showOverflowTooltip:e.showOverflowTooltip,C=we(e.tooltipFormatter)?N.props.tooltipFormatter:e.tooltipFormatter,h={...Ko[S],id:o.value,type:S,property:e.prop||e.property,align:b,headerAlign:s,showOverflowTooltip:m,tooltipFormatter:C,filterable:e.filters||e.filterMethod,filteredValue:[],filterPlacement:"",filterClassName:"",isColumnGroup:!1,isSubColumn:!1,filterOpened:!1,sortable:c,index:e.index,rawColumnKey:l.vnode.key};let M=v(["columnKey","label","className","labelClassName","type","renderHeader","formatter","fixed","resizable"],["sortMethod","sortBy","sortOrders"],["selectable","reserveSelection"],["filterMethod","filters","filterMultiple","filterOpened","filteredValue","filterPlacement","filterClassName"]);M=zn(h,M),M=Dn(p,f,g)(M),n.value=M,r(),i()}),Ie(()=>{var S,c;const m=d.value,C=u.value?(S=m.vnode.el)==null?void 0:S.children:(c=m.refs.hiddenColumns)==null?void 0:c.children,h=()=>y(C||[],l.vnode.el);n.value.getColumnIndex=h,h()>-1&&a.value.store.commit("insertColumn",n.value,u.value?"columnConfig"in m&&m.columnConfig.value:null,O)}),Ut(()=>{const S=n.value.getColumnIndex;(S?S():-1)>-1&&a.value.store.commit("removeColumn",n.value,u.value?"columnConfig"in N&&N.columnConfig.value:null,O)}),l.columnId=o.value,l.columnConfig=n},render(){var e,t,l;try{const n=(t=(e=this.$slots).default)==null?void 0:t.call(e,{row:{},column:{},$index:-1}),a=[];if(ie(n))for(const i of n)((l=i.type)==null?void 0:l.name)==="ElTableColumn"||i.shapeFlag&2?a.push(i):i.type===rt&&ie(i.children)&&i.children.forEach(o=>{o?.patchFlag!==1024&&!fe(o?.children)&&a.push(o)});return A("div",a)}catch{return A("div",[])}}});const va=tn(_o,{TableColumn:El}),pa=en(El);export{pa as E,va as a};
+import {
+  a0 as Ke,
+  K as fe,
+  S as de,
+  a6 as ie,
+  d as ve,
+  $ as Tt,
+  J as zl,
+  a1 as Ze,
+  r as x,
+  I as ae,
+  g as le,
+  q as B,
+  i as ce,
+  Z as Il,
+  Q as He,
+  a5 as Dl,
+  L as Ee,
+  e as ue,
+  l as jt,
+  m as Te,
+  o as Q,
+  w as Re,
+  k as qe,
+  c as se,
+  p as U,
+  y as Se,
+  a as re,
+  F as rt,
+  j as Wt,
+  f as Yt,
+  t as Oe,
+  a8 as qt,
+  A as Ie,
+  a2 as Vl,
+  a9 as Ct,
+  O as ye,
+  aa as A,
+  P as jl,
+  a4 as Be,
+  x as xe,
+  N as Pe,
+  v as Mt,
+  G as Ut,
+  H as Yl,
+  ab as ql
+} from './index-DU_P6jZu.js'
+import { E as Xt } from './scrollbar-Deottvjw.js'
+import { E as Gt, u as Ul } from './popper-D0fPJ8qx.js'
+import { t as Xl } from './error-Cq9Fpw4b.js'
+import {
+  B as ke,
+  k as we,
+  g as We,
+  y as Ne,
+  h as pe,
+  _ as wt,
+  G as Gl,
+  t as Ql,
+  E as St,
+  J as Ue,
+  K as _e,
+  L as ze,
+  C as Jl,
+  M as et,
+  a as Qt,
+  A as Zl,
+  l as en,
+  w as tn
+} from './base-Bes0XUun.js'
+import { g as Jt, e as Ht, u as Zt, d as ln } from './request-FXAcKJdj.js'
+import {
+  i as nt,
+  k as nn,
+  a as on,
+  b as an,
+  S as rn
+} from './isEqual-Bfv98oY_.js'
+import {
+  i as Et,
+  c as sn,
+  e as el,
+  d as un,
+  f as dn,
+  g as st,
+  h as cn,
+  j as fn,
+  k as kt,
+  u as At
+} from './aria-CnJd5Vss.js'
+import {
+  c as hn,
+  k as tl,
+  a as vn,
+  b as pn,
+  d as mn,
+  i as gn
+} from './_initCloneObject-Czt_Nu0w.js'
+import {
+  s as yn,
+  o as bn,
+  i as Cn,
+  a as $t,
+  b as wn
+} from './index-fOI-oh1j.js'
+import { i as Sn } from './isPlainObject-DPoAC1FZ.js'
+import { b as En } from './tag-BDl_GAG7.js'
+import { c as ll } from './input-BHo3TFaK.js'
+import { d as tt } from './debounce-BUz-fiHp.js'
+import { E as Ae } from './checkbox-B8oi5Mlv.js'
+import { C as xn } from './index-Cy4a31WU.js'
+import { a as Rn } from './use-form-common-props-BOay2t_u.js'
+function Nn(e, t) {
+  return yn(bn(e, t, Cn), e + '')
+}
+function Ln(e, t, l) {
+  if (!Et(l)) return !1
+  var n = typeof t
+  return (n == 'number' ? nt(l) && sn(t, l.length) : n == 'string' && t in l)
+    ? el(l[t], e)
+    : !1
+}
+function Fn(e) {
+  return Nn(function (t, l) {
+    var n = -1,
+      a = l.length,
+      r = a > 1 ? l[a - 1] : void 0,
+      i = a > 2 ? l[2] : void 0
+    for (
+      r = e.length > 3 && typeof r == 'function' ? (a--, r) : void 0,
+        i && Ln(l[0], l[1], i) && ((r = a < 3 ? void 0 : r), (a = 1)),
+        t = Object(t);
+      ++n < a;
+
+    ) {
+      var o = l[n]
+      o && e(t, o, n, r)
+    }
+    return t
+  })
+}
+function On(e) {
+  return function (t, l, n) {
+    for (var a = -1, r = Object(t), i = n(t), o = i.length; o--; ) {
+      var u = i[++a]
+      if (l(r[u], u, r) === !1) break
+    }
+    return t
+  }
+}
+var nl = On()
+function Tn(e, t) {
+  return e && nl(e, t, nn)
+}
+function Wn(e, t) {
+  return function (l, n) {
+    if (l == null) return l
+    if (!nt(l)) return e(l, n)
+    for (
+      var a = l.length, r = -1, i = Object(l);
+      ++r < a && n(i[r], r, i) !== !1;
+
+    );
+    return l
+  }
+}
+var Mn = Wn(Tn)
+function it(e, t, l) {
+  ;((l !== void 0 && !el(e[t], l)) || (l === void 0 && !(t in e))) &&
+    un(e, t, l)
+}
+function Hn(e) {
+  return dn(e) && nt(e)
+}
+function ut(e, t) {
+  if (!(t === 'constructor' && typeof e[t] == 'function') && t != '__proto__')
+    return e[t]
+}
+function kn(e) {
+  return hn(e, tl(e))
+}
+function An(e, t, l, n, a, r, i) {
+  var o = ut(e, l),
+    u = ut(t, l),
+    s = i.get(u)
+  if (s) {
+    it(e, l, s)
+    return
+  }
+  var d = r ? r(o, u, l + '', e, t, i) : void 0,
+    f = d === void 0
+  if (f) {
+    var g = st(u),
+      p = !g && on(u),
+      v = !g && !p && an(u)
+    ;(d = u),
+      g || p || v
+        ? st(o)
+          ? (d = o)
+          : Hn(o)
+            ? (d = vn(o))
+            : p
+              ? ((f = !1), (d = pn(u, !0)))
+              : v
+                ? ((f = !1), (d = mn(u, !0)))
+                : (d = [])
+        : Sn(u) || $t(u)
+          ? ((d = o), $t(o) ? (d = kn(o)) : (!Et(o) || cn(o)) && (d = gn(u)))
+          : (f = !1)
+  }
+  f && (i.set(u, d), a(d, u, n, r, i), i.delete(u)), it(e, l, d)
+}
+function ol(e, t, l, n, a) {
+  e !== t &&
+    nl(
+      t,
+      function (r, i) {
+        if ((a || (a = new rn()), Et(r))) An(e, t, i, l, ol, n, a)
+        else {
+          var o = n ? n(ut(e, i), r, i + '', e, t, a) : void 0
+          o === void 0 && (o = r), it(e, i, o)
+        }
+      },
+      tl
+    )
+}
+function $n(e, t) {
+  var l = -1,
+    n = nt(e) ? Array(e.length) : []
+  return (
+    Mn(e, function (a, r, i) {
+      n[++l] = t(a, r, i)
+    }),
+    n
+  )
+}
+function Pn(e, t) {
+  var l = st(e) ? fn : $n
+  return l(e, En(t))
+}
+function al(e, t) {
+  return wn(Pn(e, t))
+}
+function De(e) {
+  return e === null
+}
+var rl = Fn(function (e, t, l) {
+  ol(e, t, l)
+})
+const _n = (e) => (ke ? window.requestAnimationFrame(e) : setTimeout(e, 16)),
+  ot = function (e) {
+    var t
+    return (t = e.target) == null ? void 0 : t.closest('td')
+  },
+  Bn = function (e, t, l, n, a) {
+    if (!t && !n && (!a || (ie(a) && !a.length))) return e
+    fe(l) ? (l = l === 'descending' ? -1 : 1) : (l = l && l < 0 ? -1 : 1)
+    const r = n
+        ? null
+        : function (o, u) {
+            return a
+              ? al(ll(a), (s) => (fe(s) ? Ht(o, s) : s(o, u, e)))
+              : (t !== '$key' && Ze(o) && '$value' in o && (o = o.$value),
+                [Ze(o) ? (t ? Ht(o, t) : null) : o])
+          },
+      i = function (o, u) {
+        var s, d, f, g, p, v
+        if (n) return n(o.value, u.value)
+        for (
+          let y = 0,
+            b = (d = (s = o.key) == null ? void 0 : s.length) != null ? d : 0;
+          y < b;
+          y++
+        ) {
+          if (
+            ((f = o.key) == null ? void 0 : f[y]) <
+            ((g = u.key) == null ? void 0 : g[y])
+          )
+            return -1
+          if (
+            ((p = o.key) == null ? void 0 : p[y]) >
+            ((v = u.key) == null ? void 0 : v[y])
+          )
+            return 1
+        }
+        return 0
+      }
+    return e
+      .map((o, u) => ({ value: o, index: u, key: r ? r(o, u) : null }))
+      .sort((o, u) => {
+        let s = i(o, u)
+        return s || (s = o.index - u.index), s * +l
+      })
+      .map((o) => o.value)
+  },
+  sl = function (e, t) {
+    let l = null
+    return (
+      e.columns.forEach((n) => {
+        n.id === t && (l = n)
+      }),
+      l
+    )
+  },
+  Kn = function (e, t) {
+    let l = null
+    for (let n = 0; n < e.columns.length; n++) {
+      const a = e.columns[n]
+      if (a.columnKey === t) {
+        l = a
+        break
+      }
+    }
+    return l || Xl('ElTable', `No column matching with column-key: ${t}`), l
+  },
+  Pt = function (e, t, l) {
+    const n = (t.className || '').match(new RegExp(`${l}-table_[^\\s]+`, 'gm'))
+    return n ? sl(e, n[0]) : null
+  },
+  te = (e, t, l = !1) => {
+    if (!e) throw new Error('Row is required when get row identity')
+    if (fe(t)) {
+      if (!t.includes('.')) return l ? e[t] : `${e[t]}`
+      const n = t.split('.')
+      let a = e
+      for (const r of n) a = a[r]
+      return l ? a : `${a}`
+    } else if (de(t)) return t.call(null, e)
+    return ''
+  },
+  Me = function (e, t, l = !1, n = 'children') {
+    const a = e || [],
+      r = {}
+    return (
+      a.forEach((i, o) => {
+        if (((r[te(i, t)] = { row: i, index: o }), l)) {
+          const u = i[n]
+          ie(u) && Object.assign(r, Me(u, t, !0, n))
+        }
+      }),
+      r
+    )
+  }
+function zn(e, t) {
+  const l = {}
+  let n
+  for (n in e) l[n] = e[n]
+  for (n in t)
+    if (Ke(t, n)) {
+      const a = t[n]
+      we(a) || (l[n] = a)
+    }
+  return l
+}
+function xt(e) {
+  return (
+    e === '' ||
+      we(e) ||
+      ((e = Number.parseInt(e, 10)), Number.isNaN(e) && (e = '')),
+    e
+  )
+}
+function il(e) {
+  return e === '' || we(e) || ((e = xt(e)), Number.isNaN(e) && (e = 80)), e
+}
+function In(e) {
+  return We(e)
+    ? e
+    : fe(e)
+      ? /^\d+(?:px)?$/.test(e)
+        ? Number.parseInt(e, 10)
+        : e
+      : null
+}
+function Dn(...e) {
+  return e.length === 0
+    ? (t) => t
+    : e.length === 1
+      ? e[0]
+      : e.reduce(
+          (t, l) =>
+            (...n) =>
+              t(l(...n))
+        )
+}
+function lt(e, t, l, n, a, r, i) {
+  let o = r ?? 0,
+    u = !1
+  const d = (() => {
+      if (!i) return e.indexOf(t)
+      const y = te(t, i)
+      return e.findIndex((b) => te(b, i) === y)
+    })(),
+    f = d !== -1,
+    g = a?.call(null, t, o),
+    p = (y) => {
+      y === 'add' ? e.push(t) : e.splice(d, 1), (u = !0)
+    },
+    v = (y) => {
+      let b = 0
+      const O = n?.children && y[n.children]
+      return (
+        O &&
+          ie(O) &&
+          ((b += O.length),
+          O.forEach((N) => {
+            b += v(N)
+          })),
+        b
+      )
+    }
+  return (
+    (!a || g) &&
+      (Ne(l)
+        ? l && !f
+          ? p('add')
+          : !l && f && p('remove')
+        : p(f ? 'remove' : 'add')),
+    !n?.checkStrictly &&
+      n?.children &&
+      ie(t[n.children]) &&
+      t[n.children].forEach((y) => {
+        const b = lt(e, y, l ?? !f, n, a, o + 1, i)
+        ;(o += v(y) + 1), b && (u = b)
+      }),
+    u
+  )
+}
+function Vn(e, t, l = 'children', n = 'hasChildren', a = !1) {
+  const r = (o) => !(ie(o) && o.length)
+  function i(o, u, s) {
+    t(o, u, s),
+      u.forEach((d) => {
+        if (d[n] && a) {
+          t(d, null, s + 1)
+          return
+        }
+        const f = d[l]
+        r(f) || i(d, f, s + 1)
+      })
+  }
+  e.forEach((o) => {
+    if (o[n] && a) {
+      t(o, null, 0)
+      return
+    }
+    const u = o[l]
+    r(u) || i(o, u, 0)
+  })
+}
+const jn = (e, t, l, n) => {
+  const a = { strategy: 'fixed', ...e.popperOptions },
+    r = de(n?.tooltipFormatter)
+      ? n.tooltipFormatter({
+          row: l,
+          column: n,
+          cellValue: Jt(l, n.property).value
+        })
+      : void 0
+  return zl(r)
+    ? { slotContent: r, content: null, ...e, popperOptions: a }
+    : { slotContent: null, content: r ?? t, ...e, popperOptions: a }
+}
+let oe = null
+function Yn(e, t, l, n, a, r) {
+  var i
+  const o = jn(e, t, l, n),
+    u = { ...o, slotContent: void 0 }
+  if (oe?.trigger === a) {
+    const v = (i = oe.vm) == null ? void 0 : i.component
+    rl(v?.props, u),
+      v && o.slotContent && (v.slots.content = () => [o.slotContent])
+    return
+  }
+  oe?.()
+  const s = r?.refs.tableWrapper,
+    d = s?.dataset.prefix,
+    f = ve(
+      Gt,
+      {
+        virtualTriggering: !0,
+        virtualRef: a,
+        appendTo: s,
+        placement: 'top',
+        transition: 'none',
+        offset: 0,
+        hideAfter: 0,
+        ...u
+      },
+      o.slotContent ? { content: () => o.slotContent } : void 0
+    )
+  f.appContext = { ...r.appContext, ...r }
+  const g = document.createElement('div')
+  Tt(f, g), f.component.exposed.onOpen()
+  const p = s?.querySelector(`.${d}-scrollbar__wrap`)
+  ;(oe = () => {
+    Tt(null, g), p?.removeEventListener('scroll', oe), (oe = null)
+  }),
+    (oe.trigger = a ?? void 0),
+    (oe.vm = f),
+    p?.addEventListener('scroll', oe)
+}
+function ul(e) {
+  return e.children ? al(e.children, ul) : [e]
+}
+function _t(e, t) {
+  return e + t.colSpan
+}
+const dl = (e, t, l, n) => {
+    let a = 0,
+      r = e
+    const i = l.states.columns.value
+    if (n) {
+      const u = ul(n[e])
+      ;(a = i.slice(0, i.indexOf(u[0])).reduce(_t, 0)),
+        (r = a + u.reduce(_t, 0) - 1)
+    } else a = e
+    let o
+    switch (t) {
+      case 'left':
+        r < l.states.fixedLeafColumnsLength.value && (o = 'left')
+        break
+      case 'right':
+        a >= i.length - l.states.rightFixedLeafColumnsLength.value &&
+          (o = 'right')
+        break
+      default:
+        r < l.states.fixedLeafColumnsLength.value
+          ? (o = 'left')
+          : a >= i.length - l.states.rightFixedLeafColumnsLength.value &&
+            (o = 'right')
+    }
+    return o ? { direction: o, start: a, after: r } : {}
+  },
+  Rt = (e, t, l, n, a, r = 0) => {
+    const i = [],
+      { direction: o, start: u, after: s } = dl(t, l, n, a)
+    if (o) {
+      const d = o === 'left'
+      i.push(`${e}-fixed-column--${o}`),
+        d && s + r === n.states.fixedLeafColumnsLength.value - 1
+          ? i.push('is-last-column')
+          : !d &&
+            u - r ===
+              n.states.columns.value.length -
+                n.states.rightFixedLeafColumnsLength.value &&
+            i.push('is-first-column')
+    }
+    return i
+  }
+function Bt(e, t) {
+  return (
+    e +
+    (De(t.realWidth) || Number.isNaN(t.realWidth)
+      ? Number(t.width)
+      : t.realWidth)
+  )
+}
+const Nt = (e, t, l, n) => {
+    const { direction: a, start: r = 0, after: i = 0 } = dl(e, t, l, n)
+    if (!a) return
+    const o = {},
+      u = a === 'left',
+      s = l.states.columns.value
+    return (
+      u
+        ? (o.left = s.slice(0, r).reduce(Bt, 0))
+        : (o.right = s
+            .slice(i + 1)
+            .reverse()
+            .reduce(Bt, 0)),
+      o
+    )
+  },
+  $e = (e, t) => {
+    e && (Number.isNaN(e[t]) || (e[t] = `${e[t]}px`))
+  }
+function qn(e) {
+  const t = ae(),
+    l = x(!1),
+    n = x([])
+  return {
+    updateExpandRows: () => {
+      const u = e.data.value || [],
+        s = e.rowKey.value
+      if (l.value) n.value = u.slice()
+      else if (s) {
+        const d = Me(n.value, s)
+        n.value = u.reduce((f, g) => {
+          const p = te(g, s)
+          return d[p] && f.push(g), f
+        }, [])
+      } else n.value = []
+    },
+    toggleRowExpansion: (u, s) => {
+      lt(n.value, u, s, void 0, void 0, void 0, e.rowKey.value) &&
+        t.emit('expand-change', u, n.value.slice())
+    },
+    setExpandRowKeys: (u) => {
+      t.store.assertRowKey()
+      const s = e.data.value || [],
+        d = e.rowKey.value,
+        f = Me(s, d)
+      n.value = u.reduce((g, p) => {
+        const v = f[p]
+        return v && g.push(v.row), g
+      }, [])
+    },
+    isRowExpanded: (u) => {
+      const s = e.rowKey.value
+      return s ? !!Me(n.value, s)[te(u, s)] : n.value.includes(u)
+    },
+    states: { expandRows: n, defaultExpandAll: l }
+  }
+}
+function Un(e) {
+  const t = ae(),
+    l = x(null),
+    n = x(null),
+    a = (s) => {
+      t.store.assertRowKey(), (l.value = s), i(s)
+    },
+    r = () => {
+      l.value = null
+    },
+    i = (s) => {
+      var d
+      const { data: f, rowKey: g } = e
+      let p = null
+      g.value &&
+        (p =
+          (d = (le(f) || []).find((v) => te(v, g.value) === s)) != null
+            ? d
+            : null),
+        (n.value = p ?? null),
+        t.emit('current-change', n.value, null)
+    }
+  return {
+    setCurrentRowKey: a,
+    restoreCurrentRowKey: r,
+    setCurrentRowByKey: i,
+    updateCurrentRow: (s) => {
+      const d = n.value
+      if (s && s !== d) {
+        ;(n.value = s), t.emit('current-change', n.value, d)
+        return
+      }
+      !s && d && ((n.value = null), t.emit('current-change', null, d))
+    },
+    updateCurrentRowData: () => {
+      const s = e.rowKey.value,
+        d = e.data.value || [],
+        f = n.value
+      if (f && !d.includes(f)) {
+        if (s) {
+          const g = te(f, s)
+          i(g)
+        } else n.value = null
+        De(n.value) && t.emit('current-change', null, f)
+      } else l.value && (i(l.value), r())
+    },
+    states: { _currentRowKey: l, currentRow: n }
+  }
+}
+function Xn(e) {
+  const t = x([]),
+    l = x({}),
+    n = x(16),
+    a = x(!1),
+    r = x({}),
+    i = x('hasChildren'),
+    o = x('children'),
+    u = x(!1),
+    s = ae(),
+    d = B(() => {
+      if (!e.rowKey.value) return {}
+      const c = e.data.value || []
+      return g(c)
+    }),
+    f = B(() => {
+      const c = e.rowKey.value,
+        m = Object.keys(r.value),
+        C = {}
+      return (
+        m.length &&
+          m.forEach((h) => {
+            if (r.value[h].length) {
+              const w = { children: [] }
+              r.value[h].forEach((R) => {
+                const W = te(R, c)
+                w.children.push(W),
+                  R[i.value] && !C[W] && (C[W] = { children: [] })
+              }),
+                (C[h] = w)
+            }
+          }),
+        C
+      )
+    }),
+    g = (c) => {
+      const m = e.rowKey.value,
+        C = new Map()
+      return (
+        Vn(
+          c,
+          (h, w, R) => {
+            const W = te(h, m, !0)
+            ie(w)
+              ? C.set(W, { children: w.map((H) => H[m]), level: R })
+              : a.value && C.set(W, { children: [], lazy: !0, level: R })
+          },
+          o.value,
+          i.value,
+          a.value
+        ),
+        C
+      )
+    },
+    p = (c = !1, m) => {
+      var C, h
+      m ||
+        (m = (C = s.store) == null ? void 0 : C.states.defaultExpandAll.value)
+      const w = d.value,
+        R = f.value,
+        W = {}
+      if (w instanceof Map && w.size) {
+        const H = le(l),
+          M = [],
+          z = (K, I) => {
+            if (c)
+              return t.value ? m || t.value.includes(I) : !!(m || K?.expanded)
+            {
+              const L = m || (t.value && t.value.includes(I))
+              return !!(K?.expanded || L)
+            }
+          }
+        w.forEach((K, I) => {
+          const L = H[I],
+            T = { ...w.get(I) }
+          if (((T.expanded = z(L, I)), T.lazy)) {
+            const { loaded: E = !1, loading: k = !1 } = L || {}
+            ;(T.loaded = !!E), (T.loading = !!k), M.push(I)
+          }
+          W[I] = T
+        })
+        const j = Object.keys(R)
+        a.value &&
+          j.length &&
+          M.length &&
+          j.forEach((K) => {
+            var I
+            const L = H[K],
+              T = R[K].children
+            if (M.includes(K)) {
+              if (((I = W[K].children) == null ? void 0 : I.length) !== 0)
+                throw new Error('[ElTable]children must be an empty array.')
+              W[K].children = T
+            } else {
+              const { loaded: E = !1, loading: k = !1 } = L || {}
+              W[K] = {
+                lazy: !0,
+                loaded: !!E,
+                loading: !!k,
+                expanded: z(L, K),
+                children: T,
+                level: void 0
+              }
+            }
+          })
+      }
+      ;(l.value = W), (h = s.store) == null || h.updateTableScrollY()
+    }
+  ce(
+    () => t.value,
+    () => {
+      p(!0)
+    }
+  ),
+    ce(
+      () => d.value,
+      () => {
+        p()
+      }
+    ),
+    ce(
+      () => f.value,
+      () => {
+        p()
+      }
+    )
+  const v = (c) => {
+      ;(t.value = c), p()
+    },
+    y = (c) => a.value && c && 'loaded' in c && !c.loaded,
+    b = (c, m) => {
+      s.store.assertRowKey()
+      const C = e.rowKey.value,
+        h = te(c, C),
+        w = h && l.value[h]
+      if (h && w && 'expanded' in w) {
+        const R = w.expanded
+        ;(m = we(m) ? !w.expanded : m),
+          (l.value[h].expanded = m),
+          R !== m && s.emit('expand-change', c, m),
+          y(w) && N(c, h, w),
+          s.store.updateTableScrollY()
+      }
+    },
+    O = (c) => {
+      s.store.assertRowKey()
+      const m = e.rowKey.value,
+        C = te(c, m),
+        h = l.value[C]
+      y(h) ? N(c, C, h) : b(c, void 0)
+    },
+    N = (c, m, C) => {
+      const { load: h } = s.props
+      h &&
+        !l.value[m].loaded &&
+        ((l.value[m].loading = !0),
+        h(c, C, (w) => {
+          if (!ie(w)) throw new TypeError('[ElTable] data must be an array')
+          ;(l.value[m].loading = !1),
+            (l.value[m].loaded = !0),
+            (l.value[m].expanded = !0),
+            w.length && (r.value[m] = w),
+            s.emit('expand-change', c, !0)
+        }))
+    }
+  return {
+    loadData: N,
+    loadOrToggle: O,
+    toggleTreeExpansion: b,
+    updateTreeExpandKeys: v,
+    updateTreeData: p,
+    updateKeyChildren: (c, m) => {
+      const { lazy: C, rowKey: h } = s.props
+      if (C) {
+        if (!h) throw new Error('[Table] rowKey is required in updateKeyChild')
+        r.value[c] && (r.value[c] = m)
+      }
+    },
+    normalize: g,
+    states: {
+      expandRowKeys: t,
+      treeData: l,
+      indent: n,
+      lazy: a,
+      lazyTreeNodeMap: r,
+      lazyColumnIdentifier: i,
+      childrenColumnName: o,
+      checkStrictly: u
+    }
+  }
+}
+const Gn = (e, t) => {
+    const l = t.sortingColumn
+    return !l || fe(l.sortable)
+      ? e
+      : Bn(e, t.sortProp, t.sortOrder, l.sortMethod, l.sortBy)
+  },
+  Xe = (e) => {
+    const t = []
+    return (
+      e.forEach((l) => {
+        l.children && l.children.length > 0
+          ? t.push.apply(t, Xe(l.children))
+          : t.push(l)
+      }),
+      t
+    )
+  }
+function Qn() {
+  var e
+  const t = ae(),
+    { size: l } = Il((e = t.proxy) == null ? void 0 : e.$props),
+    n = x(null),
+    a = x([]),
+    r = x([]),
+    i = x(!1),
+    o = x([]),
+    u = x([]),
+    s = x([]),
+    d = x([]),
+    f = x([]),
+    g = x([]),
+    p = x([]),
+    v = x([]),
+    y = [],
+    b = x(0),
+    O = x(0),
+    N = x(0),
+    S = x(!1),
+    c = x([]),
+    m = x(!1),
+    C = x(!1),
+    h = x(null),
+    w = x({}),
+    R = x(null),
+    W = x(null),
+    H = x(null),
+    M = x(null),
+    z = x(null),
+    j = B(() => (n.value ? Me(c.value, n.value) : void 0))
+  ce(
+    a,
+    () => {
+      var F
+      t.state &&
+        (T(!1),
+        t.props.tableLayout === 'auto' &&
+          ((F = t.refs.tableHeaderRef) == null || F.updateFixedColumnStyle()))
+    },
+    { deep: !0 }
+  )
+  const K = () => {
+      if (!n.value) throw new Error('[ElTable] prop row-key is required')
+    },
+    I = (F) => {
+      var $
+      ;($ = F.children) == null ||
+        $.forEach((_) => {
+          ;(_.fixed = F.fixed), I(_)
+        })
+    },
+    L = () => {
+      o.value.forEach((q) => {
+        I(q)
+      }),
+        (d.value = o.value.filter((q) => [!0, 'left'].includes(q.fixed)))
+      const F = o.value.find((q) => q.type === 'selection')
+      let $
+      F &&
+        F.fixed !== 'right' &&
+        !d.value.includes(F) &&
+        o.value.indexOf(F) === 0 &&
+        d.value.length &&
+        (d.value.unshift(F), ($ = !0)),
+        (f.value = o.value.filter((q) => q.fixed === 'right'))
+      const _ = o.value.filter(
+        (q) => ($ ? q.type !== 'selection' : !0) && !q.fixed
+      )
+      u.value = Array.from(d.value).concat(_).concat(f.value)
+      const P = Xe(_),
+        D = Xe(d.value),
+        V = Xe(f.value)
+      ;(b.value = P.length),
+        (O.value = D.length),
+        (N.value = V.length),
+        (s.value = Array.from(D).concat(P).concat(V)),
+        (i.value = d.value.length > 0 || f.value.length > 0)
+    },
+    T = (F, $ = !1) => {
+      F && L(), $ ? t.state.doLayout() : t.state.debouncedUpdateLayout()
+    },
+    E = (F) => (j.value ? !!j.value[te(F, n.value)] : c.value.includes(F)),
+    k = () => {
+      S.value = !1
+      const F = c.value
+      ;(c.value = []), F.length && t.emit('selection-change', [])
+    },
+    Y = () => {
+      var F, $
+      let _
+      if (n.value) {
+        _ = []
+        const P =
+            ($ = (F = t?.store) == null ? void 0 : F.states) == null
+              ? void 0
+              : $.childrenColumnName.value,
+          D = Me(a.value, n.value, !0, P)
+        for (const V in j.value)
+          Ke(j.value, V) && !D[V] && _.push(j.value[V].row)
+      } else _ = c.value.filter((P) => !a.value.includes(P))
+      if (_.length) {
+        const P = c.value.filter((D) => !_.includes(D))
+        ;(c.value = P), t.emit('selection-change', P.slice())
+      }
+    },
+    X = () => (c.value || []).slice(),
+    G = (F, $, _ = !0, P = !1) => {
+      var D, V, q, be
+      const Ce = {
+        children:
+          (V = (D = t?.store) == null ? void 0 : D.states) == null
+            ? void 0
+            : V.childrenColumnName.value,
+        checkStrictly:
+          (be = (q = t?.store) == null ? void 0 : q.states) == null
+            ? void 0
+            : be.checkStrictly.value
+      }
+      if (
+        lt(c.value, F, $, Ce, P ? void 0 : h.value, a.value.indexOf(F), n.value)
+      ) {
+        const Ye = (c.value || []).slice()
+        _ && t.emit('select', Ye, F), t.emit('selection-change', Ye)
+      }
+    },
+    ee = () => {
+      var F, $
+      const _ = C.value ? !S.value : !(S.value || c.value.length)
+      S.value = _
+      let P = !1,
+        D = 0
+      const V =
+          ($ = (F = t?.store) == null ? void 0 : F.states) == null
+            ? void 0
+            : $.rowKey.value,
+        { childrenColumnName: q } = t.store.states,
+        be = { children: q.value, checkStrictly: !1 }
+      a.value.forEach((Ce, je) => {
+        const Ye = je + D
+        lt(c.value, Ce, _, be, h.value, Ye, V) && (P = !0), (D += J(te(Ce, V)))
+      }),
+        P && t.emit('selection-change', c.value ? c.value.slice() : []),
+        t.emit('select-all', (c.value || []).slice())
+    },
+    he = () => {
+      var F
+      if (((F = a.value) == null ? void 0 : F.length) === 0) {
+        S.value = !1
+        return
+      }
+      const { childrenColumnName: $ } = t.store.states
+      let _ = 0,
+        P = 0
+      const D = (q) => {
+          var be
+          for (const Ce of q) {
+            const je = h.value && h.value.call(null, Ce, _)
+            if (E(Ce)) P++
+            else if (!h.value || je) return !1
+            if (
+              (_++, (be = Ce[$.value]) != null && be.length && !D(Ce[$.value]))
+            )
+              return !1
+          }
+          return !0
+        },
+        V = D(a.value || [])
+      S.value = P === 0 ? !1 : V
+    },
+    J = (F) => {
+      var $
+      if (!t || !t.store) return 0
+      const { treeData: _ } = t.store.states
+      let P = 0
+      const D = ($ = _.value[F]) == null ? void 0 : $.children
+      return (
+        D &&
+          ((P += D.length),
+          D.forEach((V) => {
+            P += J(V)
+          })),
+        P
+      )
+    },
+    ge = (F, $) => {
+      const _ = {}
+      return (
+        ll(F).forEach((P) => {
+          ;(w.value[P.id] = $), (_[P.columnKey || P.id] = $)
+        }),
+        _
+      )
+    },
+    Z = (F, $, _) => {
+      W.value && W.value !== F && (W.value.order = null),
+        (W.value = F),
+        (H.value = $),
+        (M.value = _)
+    },
+    Fe = () => {
+      let F = le(r)
+      Object.keys(w.value).forEach(($) => {
+        const _ = w.value[$]
+        if (!_ || _.length === 0) return
+        const P = sl({ columns: s.value }, $)
+        P &&
+          P.filterMethod &&
+          (F = F.filter((D) =>
+            _.some((V) => P.filterMethod.call(null, V, D, P))
+          ))
+      }),
+        (R.value = F)
+    },
+    Ve = () => {
+      var F
+      a.value = Gn((F = R.value) != null ? F : [], {
+        sortingColumn: W.value,
+        sortProp: H.value,
+        sortOrder: M.value
+      })
+    },
+    xl = (F = void 0) => {
+      F?.filter || Fe(), Ve()
+    },
+    Rl = (F) => {
+      const { tableHeaderRef: $ } = t.refs
+      if (!$) return
+      const _ = Object.assign({}, $.filterPanels),
+        P = Object.keys(_)
+      if (P.length)
+        if ((fe(F) && (F = [F]), ie(F))) {
+          const D = F.map((V) => Kn({ columns: s.value }, V))
+          P.forEach((V) => {
+            const q = D.find((be) => be.id === V)
+            q && (q.filteredValue = [])
+          }),
+            t.store.commit('filterChange', {
+              column: D,
+              values: [],
+              silent: !0,
+              multi: !0
+            })
+        } else
+          P.forEach((D) => {
+            const V = s.value.find((q) => q.id === D)
+            V && (V.filteredValue = [])
+          }),
+            (w.value = {}),
+            t.store.commit('filterChange', {
+              column: {},
+              values: [],
+              silent: !0
+            })
+    },
+    Nl = () => {
+      W.value &&
+        (Z(null, null, null),
+        t.store.commit('changeSortCondition', { silent: !0 }))
+    },
+    {
+      setExpandRowKeys: Ll,
+      toggleRowExpansion: Ot,
+      updateExpandRows: Fl,
+      states: Ol,
+      isRowExpanded: Tl
+    } = qn({ data: a, rowKey: n }),
+    {
+      updateTreeExpandKeys: Wl,
+      toggleTreeExpansion: Ml,
+      updateTreeData: Hl,
+      updateKeyChildren: kl,
+      loadOrToggle: Al,
+      states: $l
+    } = Xn({ data: a, rowKey: n }),
+    {
+      updateCurrentRowData: Pl,
+      updateCurrentRow: _l,
+      setCurrentRowKey: Bl,
+      states: Kl
+    } = Un({ data: a, rowKey: n })
+  return {
+    assertRowKey: K,
+    updateColumns: L,
+    scheduleLayout: T,
+    isSelected: E,
+    clearSelection: k,
+    cleanSelection: Y,
+    getSelectionRows: X,
+    toggleRowSelection: G,
+    _toggleAllSelection: ee,
+    toggleAllSelection: null,
+    updateAllSelected: he,
+    updateFilters: ge,
+    updateCurrentRow: _l,
+    updateSort: Z,
+    execFilter: Fe,
+    execSort: Ve,
+    execQuery: xl,
+    clearFilter: Rl,
+    clearSort: Nl,
+    toggleRowExpansion: Ot,
+    setExpandRowKeysAdapter: (F) => {
+      Ll(F), Wl(F)
+    },
+    setCurrentRowKey: Bl,
+    toggleRowExpansionAdapter: (F, $) => {
+      s.value.some(({ type: P }) => P === 'expand') ? Ot(F, $) : Ml(F, $)
+    },
+    isRowExpanded: Tl,
+    updateExpandRows: Fl,
+    updateCurrentRowData: Pl,
+    loadOrToggle: Al,
+    updateTreeData: Hl,
+    updateKeyChildren: kl,
+    states: {
+      tableSize: l,
+      rowKey: n,
+      data: a,
+      _data: r,
+      isComplex: i,
+      _columns: o,
+      originColumns: u,
+      columns: s,
+      fixedColumns: d,
+      rightFixedColumns: f,
+      leafColumns: g,
+      fixedLeafColumns: p,
+      rightFixedLeafColumns: v,
+      updateOrderFns: y,
+      leafColumnsLength: b,
+      fixedLeafColumnsLength: O,
+      rightFixedLeafColumnsLength: N,
+      isAllSelected: S,
+      selection: c,
+      reserveSelection: m,
+      selectOnIndeterminate: C,
+      selectable: h,
+      filters: w,
+      filteredData: R,
+      sortingColumn: W,
+      sortProp: H,
+      sortOrder: M,
+      hoverRow: z,
+      ...Ol,
+      ...$l,
+      ...Kl
+    }
+  }
+}
+function dt(e, t) {
+  return e.map((l) => {
+    var n
+    return l.id === t.id
+      ? t
+      : ((n = l.children) != null &&
+          n.length &&
+          (l.children = dt(l.children, t)),
+        l)
+  })
+}
+function ct(e) {
+  e.forEach((t) => {
+    var l, n
+    ;(t.no = (l = t.getColumnIndex) == null ? void 0 : l.call(t)),
+      (n = t.children) != null && n.length && ct(t.children)
+  }),
+    e.sort((t, l) => t.no - l.no)
+}
+function Jn() {
+  const e = ae(),
+    t = Qn()
+  return {
+    ns: pe('table'),
+    ...t,
+    mutations: {
+      setData(i, o) {
+        const u = le(i._data) !== o
+        ;(i.data.value = o),
+          (i._data.value = o),
+          e.store.execQuery(),
+          e.store.updateCurrentRowData(),
+          e.store.updateExpandRows(),
+          e.store.updateTreeData(e.store.states.defaultExpandAll.value),
+          le(i.reserveSelection)
+            ? e.store.assertRowKey()
+            : u
+              ? e.store.clearSelection()
+              : e.store.cleanSelection(),
+          e.store.updateAllSelected(),
+          e.$ready && e.store.scheduleLayout()
+      },
+      insertColumn(i, o, u, s) {
+        var d
+        const f = le(i._columns)
+        let g = []
+        u
+          ? (u && !u.children && (u.children = []),
+            (d = u.children) == null || d.push(o),
+            (g = dt(f, u)))
+          : (f.push(o), (g = f)),
+          ct(g),
+          (i._columns.value = g),
+          i.updateOrderFns.push(s),
+          o.type === 'selection' &&
+            ((i.selectable.value = o.selectable),
+            (i.reserveSelection.value = o.reserveSelection)),
+          e.$ready && (e.store.updateColumns(), e.store.scheduleLayout())
+      },
+      updateColumnOrder(i, o) {
+        var u
+        ;((u = o.getColumnIndex) == null ? void 0 : u.call(o)) !== o.no &&
+          (ct(i._columns.value), e.$ready && e.store.updateColumns())
+      },
+      removeColumn(i, o, u, s) {
+        var d
+        const f = le(i._columns) || []
+        if (u)
+          (d = u.children) == null ||
+            d.splice(
+              u.children.findIndex((p) => p.id === o.id),
+              1
+            ),
+            He(() => {
+              var p
+              ;((p = u.children) == null ? void 0 : p.length) === 0 &&
+                delete u.children
+            }),
+            (i._columns.value = dt(f, u))
+        else {
+          const p = f.indexOf(o)
+          p > -1 && (f.splice(p, 1), (i._columns.value = f))
+        }
+        const g = i.updateOrderFns.indexOf(s)
+        g > -1 && i.updateOrderFns.splice(g, 1),
+          e.$ready && (e.store.updateColumns(), e.store.scheduleLayout())
+      },
+      sort(i, o) {
+        const { prop: u, order: s, init: d } = o
+        if (u) {
+          const f = le(i.columns).find((g) => g.property === u)
+          f &&
+            ((f.order = s),
+            e.store.updateSort(f, u, s),
+            e.store.commit('changeSortCondition', { init: d }))
+        }
+      },
+      changeSortCondition(i, o) {
+        const { sortingColumn: u, sortProp: s, sortOrder: d } = i,
+          f = le(u),
+          g = le(s),
+          p = le(d)
+        De(p) && ((i.sortingColumn.value = null), (i.sortProp.value = null))
+        const v = { filter: !0 }
+        e.store.execQuery(v),
+          (!o || !(o.silent || o.init)) &&
+            e.emit('sort-change', { column: f, prop: g, order: p }),
+          e.store.updateTableScrollY()
+      },
+      filterChange(i, o) {
+        const { column: u, values: s, silent: d } = o,
+          f = e.store.updateFilters(u, s)
+        e.store.execQuery(),
+          d || e.emit('filter-change', f),
+          e.store.updateTableScrollY()
+      },
+      toggleAllSelection() {
+        var i, o
+        ;(o = (i = e.store).toggleAllSelection) == null || o.call(i)
+      },
+      rowSelectedChanged(i, o) {
+        e.store.toggleRowSelection(o), e.store.updateAllSelected()
+      },
+      setHoverRow(i, o) {
+        i.hoverRow.value = o
+      },
+      setCurrentRow(i, o) {
+        e.store.updateCurrentRow(o)
+      }
+    },
+    commit: function (i, ...o) {
+      const u = e.store.mutations
+      if (u[i]) u[i].apply(e, [e.store.states, ...o])
+      else throw new Error(`Action not found: ${i}`)
+    },
+    updateTableScrollY: function () {
+      He(() => e.layout.updateScrollY.apply(e.layout))
+    }
+  }
+}
+const Lt = {
+  rowKey: 'rowKey',
+  defaultExpandAll: 'defaultExpandAll',
+  selectOnIndeterminate: 'selectOnIndeterminate',
+  indent: 'indent',
+  lazy: 'lazy',
+  data: 'data',
+  'treeProps.hasChildren': {
+    key: 'lazyColumnIdentifier',
+    default: 'hasChildren'
+  },
+  'treeProps.children': { key: 'childrenColumnName', default: 'children' },
+  'treeProps.checkStrictly': { key: 'checkStrictly', default: !1 }
+}
+function Zn(e, t) {
+  if (!e) throw new Error('Table is required.')
+  const l = Jn()
+  return (
+    (l.toggleAllSelection = tt(l._toggleAllSelection, 10)),
+    Object.keys(Lt).forEach((n) => {
+      cl(fl(t, n), n, l)
+    }),
+    eo(l, t),
+    l
+  )
+}
+function eo(e, t) {
+  Object.keys(Lt).forEach((l) => {
+    ce(
+      () => fl(t, l),
+      (n) => {
+        cl(n, l, e)
+      }
+    )
+  })
+}
+function cl(e, t, l) {
+  let n = e,
+    a = Lt[t]
+  Ze(a) && ((n = n || a.default), (a = a.key)), (l.states[a].value = n)
+}
+function fl(e, t) {
+  if (t.includes('.')) {
+    const l = t.split('.')
+    let n = e
+    return (
+      l.forEach((a) => {
+        n = n[a]
+      }),
+      n
+    )
+  } else return e[t]
+}
+class to {
+  constructor(t) {
+    ;(this.observers = []),
+      (this.table = null),
+      (this.store = null),
+      (this.columns = []),
+      (this.fit = !0),
+      (this.showHeader = !0),
+      (this.height = x(null)),
+      (this.scrollX = x(!1)),
+      (this.scrollY = x(!1)),
+      (this.bodyWidth = x(null)),
+      (this.fixedWidth = x(null)),
+      (this.rightFixedWidth = x(null)),
+      (this.gutterWidth = 0)
+    for (const l in t)
+      Ke(t, l) && (Dl(this[l]) ? (this[l].value = t[l]) : (this[l] = t[l]))
+    if (!this.table) throw new Error('Table is required for Table Layout')
+    if (!this.store) throw new Error('Store is required for Table Layout')
+  }
+  updateScrollY() {
+    const t = this.height.value
+    if (De(t)) return !1
+    const l = this.table.refs.scrollBarRef
+    if (this.table.vnode.el && l?.wrapRef) {
+      let n = !0
+      const a = this.scrollY.value
+      return (
+        (n = l.wrapRef.scrollHeight > l.wrapRef.clientHeight),
+        (this.scrollY.value = n),
+        a !== n
+      )
+    }
+    return !1
+  }
+  setHeight(t, l = 'height') {
+    if (!ke) return
+    const n = this.table.vnode.el
+    if (((t = In(t)), (this.height.value = Number(t)), !n && (t || t === 0))) {
+      He(() => this.setHeight(t, l))
+      return
+    }
+    n && We(t)
+      ? ((n.style[l] = `${t}px`), this.updateElsHeight())
+      : n && fe(t) && ((n.style[l] = t), this.updateElsHeight())
+  }
+  setMaxHeight(t) {
+    this.setHeight(t, 'max-height')
+  }
+  getFlattenColumns() {
+    const t = []
+    return (
+      this.table.store.states.columns.value.forEach((n) => {
+        n.isColumnGroup ? t.push.apply(t, n.columns) : t.push(n)
+      }),
+      t
+    )
+  }
+  updateElsHeight() {
+    this.updateScrollY(), this.notifyObservers('scrollable')
+  }
+  headerDisplayNone(t) {
+    if (!t) return !0
+    let l = t
+    for (; l.tagName !== 'DIV'; ) {
+      if (getComputedStyle(l).display === 'none') return !0
+      l = l.parentElement
+    }
+    return !1
+  }
+  updateColumnsWidth() {
+    var t
+    if (!ke) return
+    const l = this.fit,
+      n = (t = this.table.vnode.el) == null ? void 0 : t.clientWidth
+    let a = 0
+    const r = this.getFlattenColumns(),
+      i = r.filter((s) => !We(s.width))
+    if (
+      (r.forEach((s) => {
+        We(s.width) && s.realWidth && (s.realWidth = null)
+      }),
+      i.length > 0 && l)
+    ) {
+      if (
+        (r.forEach((s) => {
+          a += Number(s.width || s.minWidth || 80)
+        }),
+        a <= n)
+      ) {
+        this.scrollX.value = !1
+        const s = n - a
+        if (i.length === 1) i[0].realWidth = Number(i[0].minWidth || 80) + s
+        else {
+          const d = i.reduce((p, v) => p + Number(v.minWidth || 80), 0),
+            f = s / d
+          let g = 0
+          i.forEach((p, v) => {
+            if (v === 0) return
+            const y = Math.floor(Number(p.minWidth || 80) * f)
+            ;(g += y), (p.realWidth = Number(p.minWidth || 80) + y)
+          }),
+            (i[0].realWidth = Number(i[0].minWidth || 80) + s - g)
+        }
+      } else
+        (this.scrollX.value = !0),
+          i.forEach((s) => {
+            s.realWidth = Number(s.minWidth)
+          })
+      ;(this.bodyWidth.value = Math.max(a, n)),
+        (this.table.state.resizeState.value.width = this.bodyWidth.value)
+    } else
+      r.forEach((s) => {
+        !s.width && !s.minWidth
+          ? (s.realWidth = 80)
+          : (s.realWidth = Number(s.width || s.minWidth)),
+          (a += s.realWidth)
+      }),
+        (this.scrollX.value = a > n),
+        (this.bodyWidth.value = a)
+    const o = this.store.states.fixedColumns.value
+    if (o.length > 0) {
+      let s = 0
+      o.forEach((d) => {
+        s += Number(d.realWidth || d.width)
+      }),
+        (this.fixedWidth.value = s)
+    }
+    const u = this.store.states.rightFixedColumns.value
+    if (u.length > 0) {
+      let s = 0
+      u.forEach((d) => {
+        s += Number(d.realWidth || d.width)
+      }),
+        (this.rightFixedWidth.value = s)
+    }
+    this.notifyObservers('columns')
+  }
+  addObserver(t) {
+    this.observers.push(t)
+  }
+  removeObserver(t) {
+    const l = this.observers.indexOf(t)
+    l !== -1 && this.observers.splice(l, 1)
+  }
+  notifyObservers(t) {
+    this.observers.forEach((n) => {
+      var a, r
+      switch (t) {
+        case 'columns':
+          ;(a = n.state) == null || a.onColumnsChange(this)
+          break
+        case 'scrollable':
+          ;(r = n.state) == null || r.onScrollableChange(this)
+          break
+        default:
+          throw new Error(`Table Layout don't have event ${t}.`)
+      }
+    })
+  }
+}
+const { CheckboxGroup: lo } = Ae,
+  no = Ee({
+    name: 'ElTableFilterPanel',
+    components: {
+      ElCheckbox: Ae,
+      ElCheckboxGroup: lo,
+      ElScrollbar: Xt,
+      ElTooltip: Gt,
+      ElIcon: St,
+      ArrowDown: Ql,
+      ArrowUp: Gl
+    },
+    directives: { ClickOutside: xn },
+    props: {
+      placement: { type: String, default: 'bottom-start' },
+      store: { type: Object },
+      column: { type: Object },
+      upDataColumn: { type: Function },
+      appendTo: Ul.appendTo
+    },
+    setup(e) {
+      const t = ae(),
+        { t: l } = Zt(),
+        n = pe('table-filter'),
+        a = t?.parent
+      e.column &&
+        !a.filterPanels.value[e.column.id] &&
+        (a.filterPanels.value[e.column.id] = t)
+      const r = x(!1),
+        i = x(null),
+        o = B(() => e.column && e.column.filters),
+        u = B(() =>
+          e.column && e.column.filterClassName
+            ? `${n.b()} ${e.column.filterClassName}`
+            : n.b()
+        ),
+        s = B({
+          get: () => {
+            var m
+            return (((m = e.column) == null ? void 0 : m.filteredValue) ||
+              [])[0]
+          },
+          set: (m) => {
+            d.value && (Ue(m) ? d.value.splice(0, 1) : d.value.splice(0, 1, m))
+          }
+        }),
+        d = B({
+          get() {
+            return e.column ? e.column.filteredValue || [] : []
+          },
+          set(m) {
+            var C
+            e.column &&
+              ((C = e.upDataColumn) == null || C.call(e, 'filteredValue', m))
+          }
+        }),
+        f = B(() => (e.column ? e.column.filterMultiple : !0)),
+        g = (m) => m.value === s.value,
+        p = () => {
+          r.value = !1
+        },
+        v = (m) => {
+          m.stopPropagation(), (r.value = !r.value)
+        },
+        y = () => {
+          r.value = !1
+        },
+        b = () => {
+          S(d.value), p()
+        },
+        O = () => {
+          ;(d.value = []), S(d.value), p()
+        },
+        N = (m) => {
+          ;(s.value = m), Ue(m) ? S([]) : S(d.value), p()
+        },
+        S = (m) => {
+          var C, h
+          ;(C = e.store) == null ||
+            C.commit('filterChange', { column: e.column, values: m }),
+            (h = e.store) == null || h.updateAllSelected()
+        }
+      ce(
+        r,
+        (m) => {
+          var C
+          e.column &&
+            ((C = e.upDataColumn) == null || C.call(e, 'filterOpened', m))
+        },
+        { immediate: !0 }
+      )
+      const c = B(() => {
+        var m, C
+        return (C = (m = i.value) == null ? void 0 : m.popperRef) == null
+          ? void 0
+          : C.contentRef
+      })
+      return {
+        tooltipVisible: r,
+        multiple: f,
+        filterClassName: u,
+        filteredValue: d,
+        filterValue: s,
+        filters: o,
+        handleConfirm: b,
+        handleReset: O,
+        handleSelect: N,
+        isPropAbsent: Ue,
+        isActive: g,
+        t: l,
+        ns: n,
+        showFilterPanel: v,
+        hideFilterPanel: y,
+        popperPaneRef: c,
+        tooltip: i
+      }
+    }
+  })
+function oo(e, t, l, n, a, r) {
+  const i = ue('el-checkbox'),
+    o = ue('el-checkbox-group'),
+    u = ue('el-scrollbar'),
+    s = ue('arrow-up'),
+    d = ue('arrow-down'),
+    f = ue('el-icon'),
+    g = ue('el-tooltip'),
+    p = jt('click-outside')
+  return (
+    Q(),
+    Te(
+      g,
+      {
+        ref: 'tooltip',
+        visible: e.tooltipVisible,
+        offset: 0,
+        placement: e.placement,
+        'show-arrow': !1,
+        'stop-popper-mouse-event': !1,
+        teleported: '',
+        effect: 'light',
+        pure: '',
+        'popper-class': e.filterClassName,
+        persistent: '',
+        'append-to': e.appendTo
+      },
+      {
+        content: Re(() => [
+          e.multiple
+            ? (Q(),
+              se('div', { key: 0 }, [
+                re(
+                  'div',
+                  { class: U(e.ns.e('content')) },
+                  [
+                    ve(
+                      u,
+                      { 'wrap-class': e.ns.e('wrap') },
+                      {
+                        default: Re(() => [
+                          ve(
+                            o,
+                            {
+                              modelValue: e.filteredValue,
+                              'onUpdate:modelValue': (v) =>
+                                (e.filteredValue = v),
+                              class: U(e.ns.e('checkbox-group'))
+                            },
+                            {
+                              default: Re(() => [
+                                (Q(!0),
+                                se(
+                                  rt,
+                                  null,
+                                  Wt(
+                                    e.filters,
+                                    (v) => (
+                                      Q(),
+                                      Te(
+                                        i,
+                                        { key: v.value, value: v.value },
+                                        {
+                                          default: Re(() => [
+                                            Yt(Oe(v.text), 1)
+                                          ]),
+                                          _: 2
+                                        },
+                                        1032,
+                                        ['value']
+                                      )
+                                    )
+                                  ),
+                                  128
+                                ))
+                              ]),
+                              _: 1
+                            },
+                            8,
+                            ['modelValue', 'onUpdate:modelValue', 'class']
+                          )
+                        ]),
+                        _: 1
+                      },
+                      8,
+                      ['wrap-class']
+                    )
+                  ],
+                  2
+                ),
+                re(
+                  'div',
+                  { class: U(e.ns.e('bottom')) },
+                  [
+                    re(
+                      'button',
+                      {
+                        class: U({
+                          [e.ns.is('disabled')]: e.filteredValue.length === 0
+                        }),
+                        disabled: e.filteredValue.length === 0,
+                        type: 'button',
+                        onClick: e.handleConfirm
+                      },
+                      Oe(e.t('el.table.confirmFilter')),
+                      11,
+                      ['disabled', 'onClick']
+                    ),
+                    re(
+                      'button',
+                      { type: 'button', onClick: e.handleReset },
+                      Oe(e.t('el.table.resetFilter')),
+                      9,
+                      ['onClick']
+                    )
+                  ],
+                  2
+                )
+              ]))
+            : (Q(),
+              se(
+                'ul',
+                { key: 1, class: U(e.ns.e('list')) },
+                [
+                  re(
+                    'li',
+                    {
+                      class: U([
+                        e.ns.e('list-item'),
+                        { [e.ns.is('active')]: e.isPropAbsent(e.filterValue) }
+                      ]),
+                      onClick: (v) => e.handleSelect(null)
+                    },
+                    Oe(e.t('el.table.clearFilter')),
+                    11,
+                    ['onClick']
+                  ),
+                  (Q(!0),
+                  se(
+                    rt,
+                    null,
+                    Wt(
+                      e.filters,
+                      (v) => (
+                        Q(),
+                        se(
+                          'li',
+                          {
+                            key: v.value,
+                            class: U([
+                              e.ns.e('list-item'),
+                              e.ns.is('active', e.isActive(v))
+                            ]),
+                            label: v.value,
+                            onClick: (y) => e.handleSelect(v.value)
+                          },
+                          Oe(v.text),
+                          11,
+                          ['label', 'onClick']
+                        )
+                      )
+                    ),
+                    128
+                  ))
+                ],
+                2
+              ))
+        ]),
+        default: Re(() => [
+          qe(
+            (Q(),
+            se(
+              'span',
+              {
+                class: U([
+                  `${e.ns.namespace.value}-table__column-filter-trigger`,
+                  `${e.ns.namespace.value}-none-outline`
+                ]),
+                onClick: e.showFilterPanel
+              },
+              [
+                ve(f, null, {
+                  default: Re(() => [
+                    Se(e.$slots, 'filter-icon', {}, () => {
+                      var v
+                      return [
+                        (v = e.column) != null && v.filterOpened
+                          ? (Q(), Te(s, { key: 0 }))
+                          : (Q(), Te(d, { key: 1 }))
+                      ]
+                    })
+                  ]),
+                  _: 3
+                })
+              ],
+              10,
+              ['onClick']
+            )),
+            [[p, e.hideFilterPanel, e.popperPaneRef]]
+          )
+        ]),
+        _: 3
+      },
+      8,
+      ['visible', 'placement', 'popper-class', 'append-to']
+    )
+  )
+}
+var ao = wt(no, [
+  ['render', oo],
+  ['__file', 'filter-panel.vue']
+])
+function Ft(e) {
+  const t = ae()
+  qt(() => {
+    l.value.addObserver(t)
+  }),
+    Ie(() => {
+      n(l.value), a(l.value)
+    }),
+    Vl(() => {
+      n(l.value), a(l.value)
+    }),
+    Ct(() => {
+      l.value.removeObserver(t)
+    })
+  const l = B(() => {
+      const r = e.layout
+      if (!r) throw new Error('Can not find table layout.')
+      return r
+    }),
+    n = (r) => {
+      var i
+      const o =
+        ((i = e.vnode.el) == null
+          ? void 0
+          : i.querySelectorAll('colgroup > col')) || []
+      if (!o.length) return
+      const u = r.getFlattenColumns(),
+        s = {}
+      u.forEach((d) => {
+        s[d.id] = d
+      })
+      for (let d = 0, f = o.length; d < f; d++) {
+        const g = o[d],
+          p = g.getAttribute('name'),
+          v = s[p]
+        v && g.setAttribute('width', v.realWidth || v.width)
+      }
+    },
+    a = (r) => {
+      var i, o
+      const u =
+        ((i = e.vnode.el) == null
+          ? void 0
+          : i.querySelectorAll('colgroup > col[name=gutter]')) || []
+      for (let d = 0, f = u.length; d < f; d++)
+        u[d].setAttribute('width', r.scrollY.value ? r.gutterWidth : '0')
+      const s =
+        ((o = e.vnode.el) == null ? void 0 : o.querySelectorAll('th.gutter')) ||
+        []
+      for (let d = 0, f = s.length; d < f; d++) {
+        const g = s[d]
+        ;(g.style.width = r.scrollY.value ? `${r.gutterWidth}px` : '0'),
+          (g.style.display = r.scrollY.value ? '' : 'none')
+      }
+    }
+  return { tableLayout: l.value, onColumnsChange: n, onScrollableChange: a }
+}
+const me = Symbol('ElTable')
+function ro(e, t) {
+  const l = ae(),
+    n = ye(me),
+    a = (y) => {
+      y.stopPropagation()
+    },
+    r = (y, b) => {
+      !b.filters && b.sortable
+        ? v(y, b, !1)
+        : b.filterable && !b.sortable && a(y),
+        n?.emit('header-click', b, y)
+    },
+    i = (y, b) => {
+      n?.emit('header-contextmenu', b, y)
+    },
+    o = x(null),
+    u = x(!1),
+    s = x(),
+    d = (y, b) => {
+      var O, N
+      if (ke && !(b.children && b.children.length > 0) && o.value && e.border) {
+        u.value = !0
+        const S = n
+        t('set-drag-visible', !0)
+        const c = S?.vnode.el,
+          m = c?.getBoundingClientRect().left,
+          C =
+            (N = (O = l?.vnode) == null ? void 0 : O.el) == null
+              ? void 0
+              : N.querySelector(`th.${b.id}`),
+          h = C.getBoundingClientRect(),
+          w = h.left - m + 30
+        et(C, 'noclick'),
+          (s.value = {
+            startMouseLeft: y.clientX,
+            startLeft: h.right - m,
+            startColumnLeft: h.left - m,
+            tableLeft: m
+          })
+        const R = S?.refs.resizeProxy
+        ;(R.style.left = `${s.value.startLeft}px`),
+          (document.onselectstart = function () {
+            return !1
+          }),
+          (document.ondragstart = function () {
+            return !1
+          })
+        const W = (M) => {
+            const z = M.clientX - s.value.startMouseLeft,
+              j = s.value.startLeft + z
+            R.style.left = `${Math.max(w, j)}px`
+          },
+          H = () => {
+            if (u.value) {
+              const { startColumnLeft: M, startLeft: z } = s.value,
+                K = Number.parseInt(R.style.left, 10) - M
+              ;(b.width = b.realWidth = K),
+                S?.emit('header-dragend', b.width, z - M, b, y),
+                requestAnimationFrame(() => {
+                  e.store.scheduleLayout(!1, !0)
+                }),
+                (document.body.style.cursor = ''),
+                (u.value = !1),
+                (o.value = null),
+                (s.value = void 0),
+                t('set-drag-visible', !1)
+            }
+            document.removeEventListener('mousemove', W),
+              document.removeEventListener('mouseup', H),
+              (document.onselectstart = null),
+              (document.ondragstart = null),
+              setTimeout(() => {
+                ze(C, 'noclick')
+              }, 0)
+          }
+        document.addEventListener('mousemove', W),
+          document.addEventListener('mouseup', H)
+      }
+    },
+    f = (y, b) => {
+      var O
+      if (b.children && b.children.length > 0) return
+      const N = y.target
+      if (!Jl(N)) return
+      const S = N?.closest('th')
+      if (!(!b || !b.resizable || !S) && !u.value && e.border) {
+        const c = S.getBoundingClientRect(),
+          m = document.body.style,
+          C = ((O = S.parentNode) == null ? void 0 : O.lastElementChild) === S,
+          h = e.allowDragLastColumn || !C
+        c.width > 12 && c.right - y.clientX < 8 && h
+          ? ((m.cursor = 'col-resize'),
+            _e(S, 'is-sortable') && (S.style.cursor = 'col-resize'),
+            (o.value = b))
+          : u.value ||
+            ((m.cursor = ''),
+            _e(S, 'is-sortable') && (S.style.cursor = 'pointer'),
+            (o.value = null))
+      }
+    },
+    g = () => {
+      ke && (document.body.style.cursor = '')
+    },
+    p = ({ order: y, sortOrders: b }) => {
+      if (y === '') return b[0]
+      const O = b.indexOf(y || null)
+      return b[O > b.length - 2 ? 0 : O + 1]
+    },
+    v = (y, b, O) => {
+      var N
+      y.stopPropagation()
+      const S = b.order === O ? null : O || p(b),
+        c = (N = y.target) == null ? void 0 : N.closest('th')
+      if (c && _e(c, 'noclick')) {
+        ze(c, 'noclick')
+        return
+      }
+      if (!b.sortable) return
+      const m = y.currentTarget
+      if (
+        ['ascending', 'descending'].some(
+          (W) => _e(m, W) && !b.sortOrders.includes(W)
+        )
+      )
+        return
+      const C = e.store.states
+      let h = C.sortProp.value,
+        w
+      const R = C.sortingColumn.value
+      ;(R !== b || (R === b && De(R.order))) &&
+        (R && (R.order = null), (C.sortingColumn.value = b), (h = b.property)),
+        S ? (w = b.order = S) : (w = b.order = null),
+        (C.sortProp.value = h),
+        (C.sortOrder.value = w),
+        n?.store.commit('changeSortCondition')
+    }
+  return {
+    handleHeaderClick: r,
+    handleHeaderContextMenu: i,
+    handleMouseDown: d,
+    handleMouseMove: f,
+    handleMouseOut: g,
+    handleSortClick: v,
+    handleFilterClick: a
+  }
+}
+function so(e) {
+  const t = ye(me),
+    l = pe('table')
+  return {
+    getHeaderRowStyle: (o) => {
+      const u = t?.props.headerRowStyle
+      return de(u) ? u.call(null, { rowIndex: o }) : u
+    },
+    getHeaderRowClass: (o) => {
+      const u = [],
+        s = t?.props.headerRowClassName
+      return (
+        fe(s) ? u.push(s) : de(s) && u.push(s.call(null, { rowIndex: o })),
+        u.join(' ')
+      )
+    },
+    getHeaderCellStyle: (o, u, s, d) => {
+      var f
+      let g = (f = t?.props.headerCellStyle) != null ? f : {}
+      de(g) &&
+        (g = g.call(null, { rowIndex: o, columnIndex: u, row: s, column: d }))
+      const p = Nt(u, d.fixed, e.store, s)
+      return $e(p, 'left'), $e(p, 'right'), Object.assign({}, g, p)
+    },
+    getHeaderCellClass: (o, u, s, d) => {
+      const f = Rt(l.b(), u, d.fixed, e.store, s),
+        g = [d.id, d.order, d.headerAlign, d.className, d.labelClassName, ...f]
+      d.children || g.push('is-leaf'), d.sortable && g.push('is-sortable')
+      const p = t?.props.headerCellClassName
+      return (
+        fe(p)
+          ? g.push(p)
+          : de(p) &&
+            g.push(
+              p.call(null, { rowIndex: o, columnIndex: u, row: s, column: d })
+            ),
+        g.push(l.e('cell')),
+        g.filter((v) => !!v).join(' ')
+      )
+    }
+  }
+}
+const hl = (e) => {
+    const t = []
+    return (
+      e.forEach((l) => {
+        l.children ? (t.push(l), t.push.apply(t, hl(l.children))) : t.push(l)
+      }),
+      t
+    )
+  },
+  vl = (e) => {
+    let t = 1
+    const l = (r, i) => {
+      if (
+        (i && ((r.level = i.level + 1), t < r.level && (t = r.level)),
+        r.children)
+      ) {
+        let o = 0
+        r.children.forEach((u) => {
+          l(u, r), (o += u.colSpan)
+        }),
+          (r.colSpan = o)
+      } else r.colSpan = 1
+    }
+    e.forEach((r) => {
+      ;(r.level = 1), l(r, void 0)
+    })
+    const n = []
+    for (let r = 0; r < t; r++) n.push([])
+    return (
+      hl(e).forEach((r) => {
+        r.children
+          ? ((r.rowSpan = 1), r.children.forEach((i) => (i.isSubColumn = !0)))
+          : (r.rowSpan = t - r.level + 1),
+          n[r.level - 1].push(r)
+      }),
+      n
+    )
+  }
+function io(e) {
+  const t = ye(me),
+    l = B(() => vl(e.store.states.originColumns.value))
+  return {
+    isGroup: B(() => {
+      const r = l.value.length > 1
+      return r && t && (t.state.isGroup.value = !0), r
+    }),
+    toggleAllSelection: (r) => {
+      r.stopPropagation(), t?.store.commit('toggleAllSelection')
+    },
+    columnRows: l
+  }
+}
+var uo = Ee({
+  name: 'ElTableHeader',
+  components: { ElCheckbox: Ae },
+  props: {
+    fixed: { type: String, default: '' },
+    store: { required: !0, type: Object },
+    border: Boolean,
+    defaultSort: { type: Object, default: () => ({ prop: '', order: '' }) },
+    appendFilterPanelTo: { type: String },
+    allowDragLastColumn: { type: Boolean }
+  },
+  setup(e, { emit: t }) {
+    const l = ae(),
+      n = ye(me),
+      a = pe('table'),
+      r = x({}),
+      { onColumnsChange: i, onScrollableChange: o } = Ft(n),
+      u = n?.props.tableLayout === 'auto',
+      s = jl(new Map()),
+      d = x(),
+      f = () => {
+        setTimeout(() => {
+          s.size > 0 &&
+            (s.forEach((W, H) => {
+              const M = d.value.querySelector(`.${H.replace(/\s/g, '.')}`)
+              if (M) {
+                const z = M.getBoundingClientRect().width
+                W.width = z
+              }
+            }),
+            s.clear())
+        })
+      }
+    ce(s, f),
+      Ie(async () => {
+        await He(), await He()
+        const { prop: W, order: H } = e.defaultSort
+        n?.store.commit('sort', { prop: W, order: H, init: !0 }), f()
+      })
+    const {
+        handleHeaderClick: g,
+        handleHeaderContextMenu: p,
+        handleMouseDown: v,
+        handleMouseMove: y,
+        handleMouseOut: b,
+        handleSortClick: O,
+        handleFilterClick: N
+      } = ro(e, t),
+      {
+        getHeaderRowStyle: S,
+        getHeaderRowClass: c,
+        getHeaderCellStyle: m,
+        getHeaderCellClass: C
+      } = so(e),
+      { isGroup: h, toggleAllSelection: w, columnRows: R } = io(e)
+    return (
+      (l.state = { onColumnsChange: i, onScrollableChange: o }),
+      (l.filterPanels = r),
+      {
+        ns: a,
+        filterPanels: r,
+        onColumnsChange: i,
+        onScrollableChange: o,
+        columnRows: R,
+        getHeaderRowClass: c,
+        getHeaderRowStyle: S,
+        getHeaderCellClass: C,
+        getHeaderCellStyle: m,
+        handleHeaderClick: g,
+        handleHeaderContextMenu: p,
+        handleMouseDown: v,
+        handleMouseMove: y,
+        handleMouseOut: b,
+        handleSortClick: O,
+        handleFilterClick: N,
+        isGroup: h,
+        toggleAllSelection: w,
+        saveIndexSelection: s,
+        isTableLayoutAuto: u,
+        theadRef: d,
+        updateFixedColumnStyle: f
+      }
+    )
+  },
+  render() {
+    const {
+      ns: e,
+      isGroup: t,
+      columnRows: l,
+      getHeaderCellStyle: n,
+      getHeaderCellClass: a,
+      getHeaderRowClass: r,
+      getHeaderRowStyle: i,
+      handleHeaderClick: o,
+      handleHeaderContextMenu: u,
+      handleMouseDown: s,
+      handleMouseMove: d,
+      handleSortClick: f,
+      handleMouseOut: g,
+      store: p,
+      $parent: v,
+      saveIndexSelection: y,
+      isTableLayoutAuto: b
+    } = this
+    let O = 1
+    return A(
+      'thead',
+      { ref: 'theadRef', class: { [e.is('group')]: t } },
+      l.map((N, S) =>
+        A(
+          'tr',
+          { class: r(S), key: S, style: i(S) },
+          N.map((c, m) => {
+            c.rowSpan > O && (O = c.rowSpan)
+            const C = a(S, m, N, c)
+            return (
+              b && c.fixed && y.set(C, c),
+              A(
+                'th',
+                {
+                  class: C,
+                  colspan: c.colSpan,
+                  key: `${c.id}-thead`,
+                  rowspan: c.rowSpan,
+                  style: n(S, m, N, c),
+                  onClick: (h) => {
+                    var w
+                    ;((w = h.currentTarget) != null &&
+                      w.classList.contains('noclick')) ||
+                      o(h, c)
+                  },
+                  onContextmenu: (h) => u(h, c),
+                  onMousedown: (h) => s(h, c),
+                  onMousemove: (h) => d(h, c),
+                  onMouseout: g
+                },
+                [
+                  A(
+                    'div',
+                    {
+                      class: [
+                        'cell',
+                        c.filteredValue && c.filteredValue.length > 0
+                          ? 'highlight'
+                          : ''
+                      ]
+                    },
+                    [
+                      c.renderHeader
+                        ? c.renderHeader({
+                            column: c,
+                            $index: m,
+                            store: p,
+                            _self: v
+                          })
+                        : c.label,
+                      c.sortable &&
+                        A(
+                          'span',
+                          { onClick: (h) => f(h, c), class: 'caret-wrapper' },
+                          [
+                            A('i', {
+                              onClick: (h) => f(h, c, 'ascending'),
+                              class: 'sort-caret ascending'
+                            }),
+                            A('i', {
+                              onClick: (h) => f(h, c, 'descending'),
+                              class: 'sort-caret descending'
+                            })
+                          ]
+                        ),
+                      c.filterable &&
+                        A(
+                          ao,
+                          {
+                            store: p,
+                            placement: c.filterPlacement || 'bottom-start',
+                            appendTo: v?.appendFilterPanelTo,
+                            column: c,
+                            upDataColumn: (h, w) => {
+                              c[h] = w
+                            }
+                          },
+                          {
+                            'filter-icon': () =>
+                              c.renderFilterIcon
+                                ? c.renderFilterIcon({
+                                    filterOpened: c.filterOpened
+                                  })
+                                : null
+                          }
+                        )
+                    ]
+                  )
+                ]
+              )
+            )
+          })
+        )
+      )
+    )
+  }
+})
+function at(e, t, l = 0.03) {
+  return e - t > l
+}
+function co(e) {
+  const t = ye(me),
+    l = x(''),
+    n = x(A('div')),
+    a = (v, y, b) => {
+      var O, N, S
+      const c = t,
+        m = ot(v)
+      let C = null
+      const h = (O = c?.vnode.el) == null ? void 0 : O.dataset.prefix
+      m &&
+        ((C = Pt(
+          {
+            columns:
+              (S = (N = e.store) == null ? void 0 : N.states.columns.value) !=
+              null
+                ? S
+                : []
+          },
+          m,
+          h
+        )),
+        C && c?.emit(`cell-${b}`, y, C, m, v)),
+        c?.emit(`row-${b}`, y, C, v)
+    },
+    r = (v, y) => {
+      a(v, y, 'dblclick')
+    },
+    i = (v, y) => {
+      var b
+      ;(b = e.store) == null || b.commit('setCurrentRow', y), a(v, y, 'click')
+    },
+    o = (v, y) => {
+      a(v, y, 'contextmenu')
+    },
+    u = tt((v) => {
+      var y
+      ;(y = e.store) == null || y.commit('setHoverRow', v)
+    }, 30),
+    s = tt(() => {
+      var v
+      ;(v = e.store) == null || v.commit('setHoverRow', null)
+    }, 30),
+    d = (v) => {
+      const y = window.getComputedStyle(v, null),
+        b = Number.parseInt(y.paddingLeft, 10) || 0,
+        O = Number.parseInt(y.paddingRight, 10) || 0,
+        N = Number.parseInt(y.paddingTop, 10) || 0,
+        S = Number.parseInt(y.paddingBottom, 10) || 0
+      return { left: b, right: O, top: N, bottom: S }
+    },
+    f = (v, y, b) => {
+      var O
+      let N = (O = y?.target) == null ? void 0 : O.parentNode
+      for (; v > 1 && ((N = N?.nextSibling), !(!N || N.nodeName !== 'TR')); )
+        b(N, 'hover-row hover-fixed-row'), v--
+    }
+  return {
+    handleDoubleClick: r,
+    handleClick: i,
+    handleContextMenu: o,
+    handleMouseEnter: u,
+    handleMouseLeave: s,
+    handleCellMouseEnter: (v, y, b) => {
+      var O, N, S, c, m, C
+      if (!t) return
+      const h = t,
+        w = ot(v),
+        R = (O = h?.vnode.el) == null ? void 0 : O.dataset.prefix
+      let W = null
+      if (w) {
+        if (
+          ((W = Pt(
+            {
+              columns:
+                (S = (N = e.store) == null ? void 0 : N.states.columns.value) !=
+                null
+                  ? S
+                  : []
+            },
+            w,
+            R
+          )),
+          !W)
+        )
+          return
+        w.rowSpan > 1 && f(w.rowSpan, v, et)
+        const G = (h.hoverState = { cell: w, column: W, row: y })
+        h?.emit('cell-mouse-enter', G.row, G.column, G.cell, v)
+      }
+      if (!b) return
+      const H = v.target.querySelector('.cell')
+      if (!(_e(H, `${R}-tooltip`) && H.childNodes.length)) return
+      const M = document.createRange()
+      M.setStart(H, 0), M.setEnd(H, H.childNodes.length)
+      const { width: z, height: j } = M.getBoundingClientRect(),
+        { width: K, height: I } = H.getBoundingClientRect(),
+        { top: L, left: T, right: E, bottom: k } = d(H),
+        Y = T + E,
+        X = L + k
+      at(z + Y, K) || at(j + X, I) || at(H.scrollWidth, K)
+        ? Yn(
+            b,
+            (c = w?.innerText || w?.textContent) != null ? c : '',
+            y,
+            W,
+            w,
+            h
+          )
+        : ((m = oe) == null ? void 0 : m.trigger) === w &&
+          ((C = oe) == null || C())
+    },
+    handleCellMouseLeave: (v) => {
+      const y = ot(v)
+      if (!y) return
+      y.rowSpan > 1 && f(y.rowSpan, v, ze)
+      const b = t?.hoverState
+      t?.emit('cell-mouse-leave', b?.row, b?.column, b?.cell, v)
+    },
+    tooltipContent: l,
+    tooltipTrigger: n
+  }
+}
+function fo(e) {
+  const t = ye(me),
+    l = pe('table')
+  return {
+    getRowStyle: (s, d) => {
+      const f = t?.props.rowStyle
+      return de(f) ? f.call(null, { row: s, rowIndex: d }) : f || null
+    },
+    getRowClass: (s, d) => {
+      var f
+      const g = [l.e('row')]
+      t?.props.highlightCurrentRow &&
+        s === ((f = e.store) == null ? void 0 : f.states.currentRow.value) &&
+        g.push('current-row'),
+        e.stripe && d % 2 === 1 && g.push(l.em('row', 'striped'))
+      const p = t?.props.rowClassName
+      return (
+        fe(p)
+          ? g.push(p)
+          : de(p) && g.push(p.call(null, { row: s, rowIndex: d })),
+        g
+      )
+    },
+    getCellStyle: (s, d, f, g) => {
+      const p = t?.props.cellStyle
+      let v = p ?? {}
+      de(p) &&
+        (v = p.call(null, { rowIndex: s, columnIndex: d, row: f, column: g }))
+      const y = Nt(d, e?.fixed, e.store)
+      return $e(y, 'left'), $e(y, 'right'), Object.assign({}, v, y)
+    },
+    getCellClass: (s, d, f, g, p) => {
+      const v = Rt(l.b(), d, e?.fixed, e.store, void 0, p),
+        y = [g.id, g.align, g.className, ...v],
+        b = t?.props.cellClassName
+      return (
+        fe(b)
+          ? y.push(b)
+          : de(b) &&
+            y.push(
+              b.call(null, { rowIndex: s, columnIndex: d, row: f, column: g })
+            ),
+        y.push(l.e('cell')),
+        y.filter((O) => !!O).join(' ')
+      )
+    },
+    getSpan: (s, d, f, g) => {
+      let p = 1,
+        v = 1
+      const y = t?.props.spanMethod
+      if (de(y)) {
+        const b = y({ row: s, column: d, rowIndex: f, columnIndex: g })
+        ie(b)
+          ? ((p = b[0]), (v = b[1]))
+          : Ze(b) && ((p = b.rowspan), (v = b.colspan))
+      }
+      return { rowspan: p, colspan: v }
+    },
+    getColspanRealWidth: (s, d, f) => {
+      if (d < 1) return s[f].realWidth
+      const g = s.map(({ realWidth: p, width: v }) => p || v).slice(f, f + d)
+      return Number(g.reduce((p, v) => Number(p) + Number(v), -1))
+    }
+  }
+}
+const ho = Ee({ name: 'TableTdWrapper' }),
+  vo = Ee({
+    ...ho,
+    props: {
+      colspan: { type: Number, default: 1 },
+      rowspan: { type: Number, default: 1 }
+    },
+    setup(e) {
+      return (t, l) => (
+        Q(),
+        se(
+          'td',
+          { colspan: e.colspan, rowspan: e.rowspan },
+          [Se(t.$slots, 'default')],
+          8,
+          ['colspan', 'rowspan']
+        )
+      )
+    }
+  })
+var po = wt(vo, [['__file', 'td-wrapper.vue']])
+function mo(e) {
+  const t = ye(me),
+    l = pe('table'),
+    {
+      handleDoubleClick: n,
+      handleClick: a,
+      handleContextMenu: r,
+      handleMouseEnter: i,
+      handleMouseLeave: o,
+      handleCellMouseEnter: u,
+      handleCellMouseLeave: s,
+      tooltipContent: d,
+      tooltipTrigger: f
+    } = co(e),
+    {
+      getRowStyle: g,
+      getRowClass: p,
+      getCellStyle: v,
+      getCellClass: y,
+      getSpan: b,
+      getColspanRealWidth: O
+    } = fo(e),
+    N = B(() => {
+      var h
+      return (h = e.store) == null
+        ? void 0
+        : h.states.columns.value.findIndex(({ type: w }) => w === 'default')
+    }),
+    S = (h, w) => {
+      var R
+      const W = (R = t?.props) == null ? void 0 : R.rowKey
+      return W ? te(h, W) : w
+    },
+    c = (h, w, R, W = !1) => {
+      const { tooltipEffect: H, tooltipOptions: M, store: z } = e,
+        { indent: j, columns: K } = z.states,
+        I = p(h, w)
+      let L = !0
+      return (
+        R && (I.push(l.em('row', `level-${R.level}`)), (L = !!R.display)),
+        A(
+          'tr',
+          {
+            style: [L ? null : { display: 'none' }, g(h, w)],
+            class: I,
+            key: S(h, w),
+            onDblclick: (E) => n(E, h),
+            onClick: (E) => a(E, h),
+            onContextmenu: (E) => r(E, h),
+            onMouseenter: () => i(w),
+            onMouseleave: o
+          },
+          K.value.map((E, k) => {
+            const { rowspan: Y, colspan: X } = b(h, E, w, k)
+            if (!Y || !X) return null
+            const G = Object.assign({}, E)
+            G.realWidth = O(K.value, X, k)
+            const ee = {
+              store: z,
+              _self: e.context || t,
+              column: G,
+              row: h,
+              $index: w,
+              cellIndex: k,
+              expanded: W
+            }
+            k === N.value &&
+              R &&
+              ((ee.treeNode = {
+                indent: R.level && R.level * j.value,
+                level: R.level
+              }),
+              Ne(R.expanded) &&
+                ((ee.treeNode.expanded = R.expanded),
+                'loading' in R && (ee.treeNode.loading = R.loading),
+                'noLazyChildren' in R &&
+                  (ee.treeNode.noLazyChildren = R.noLazyChildren)))
+            const he = `${S(h, w)},${k}`,
+              J = G.columnKey || G.rawColumnKey || '',
+              ge =
+                E.showOverflowTooltip &&
+                rl({ effect: H }, M, E.showOverflowTooltip)
+            return A(
+              po,
+              {
+                style: v(w, k, h, E),
+                class: y(w, k, h, E, X - 1),
+                key: `${J}${he}`,
+                rowspan: Y,
+                colspan: X,
+                onMouseenter: (Z) => u(Z, h, ge),
+                onMouseleave: s
+              },
+              { default: () => m(k, E, ee) }
+            )
+          })
+        )
+      )
+    },
+    m = (h, w, R) => w.renderCell(R)
+  return {
+    wrappedRowRender: (h, w) => {
+      const R = e.store,
+        { isRowExpanded: W, assertRowKey: H } = R,
+        {
+          treeData: M,
+          lazyTreeNodeMap: z,
+          childrenColumnName: j,
+          rowKey: K
+        } = R.states,
+        I = R.states.columns.value
+      if (I.some(({ type: T }) => T === 'expand')) {
+        const T = W(h),
+          E = c(h, w, void 0, T),
+          k = t?.renderExpanded
+        if (!k)
+          return console.error('[Element Error]renderExpanded is required.'), E
+        const Y = [[E]]
+        return (
+          (t.props.preserveExpandedContent || T) &&
+            Y[0].push(
+              A(
+                'tr',
+                {
+                  key: `expanded-row__${E.key}`,
+                  style: { display: T ? '' : 'none' }
+                },
+                [
+                  A(
+                    'td',
+                    {
+                      colspan: I.length,
+                      class: `${l.e('cell')} ${l.e('expanded-cell')}`
+                    },
+                    [k({ row: h, $index: w, store: R, expanded: T })]
+                  )
+                ]
+              )
+            ),
+          Y
+        )
+      } else if (Object.keys(M.value).length) {
+        H()
+        const T = te(h, K.value)
+        let E = M.value[T],
+          k = null
+        E &&
+          ((k = {
+            expanded: E.expanded,
+            level: E.level,
+            display: !0,
+            noLazyChildren: void 0,
+            loading: void 0
+          }),
+          Ne(E.lazy) &&
+            (k &&
+              Ne(E.loaded) &&
+              E.loaded &&
+              (k.noLazyChildren = !(E.children && E.children.length)),
+            (k.loading = E.loading)))
+        const Y = [c(h, w, k ?? void 0)]
+        if (E) {
+          let X = 0
+          const G = (he, J) => {
+            he &&
+              he.length &&
+              J &&
+              he.forEach((ge) => {
+                const Z = {
+                    display: J.display && J.expanded,
+                    level: J.level + 1,
+                    expanded: !1,
+                    noLazyChildren: !1,
+                    loading: !1
+                  },
+                  Fe = te(ge, K.value)
+                if (Ue(Fe))
+                  throw new Error('For nested data item, row-key is required.')
+                if (
+                  ((E = { ...M.value[Fe] }),
+                  E &&
+                    ((Z.expanded = E.expanded),
+                    (E.level = E.level || Z.level),
+                    (E.display = !!(E.expanded && Z.display)),
+                    Ne(E.lazy) &&
+                      (Ne(E.loaded) &&
+                        E.loaded &&
+                        (Z.noLazyChildren = !(E.children && E.children.length)),
+                      (Z.loading = E.loading))),
+                  X++,
+                  Y.push(c(ge, w + X, Z)),
+                  E)
+                ) {
+                  const Ve = z.value[Fe] || ge[j.value]
+                  G(Ve, E)
+                }
+              })
+          }
+          E.display = !0
+          const ee = z.value[T] || h[j.value]
+          G(ee, E)
+        }
+        return Y
+      } else return c(h, w, void 0)
+    },
+    tooltipContent: d,
+    tooltipTrigger: f
+  }
+}
+const go = {
+  store: { required: !0, type: Object },
+  stripe: Boolean,
+  tooltipEffect: String,
+  tooltipOptions: { type: Object },
+  context: { default: () => ({}), type: Object },
+  rowClassName: [String, Function],
+  rowStyle: [Object, Function],
+  fixed: { type: String, default: '' },
+  highlight: Boolean
+}
+var yo = Ee({
+  name: 'ElTableBody',
+  props: go,
+  setup(e) {
+    var t
+    const l = ae(),
+      n = ye(me),
+      a = pe('table'),
+      { wrappedRowRender: r, tooltipContent: i, tooltipTrigger: o } = mo(e),
+      { onColumnsChange: u, onScrollableChange: s } = Ft(n),
+      d = []
+    return (
+      ce((t = e.store) == null ? void 0 : t.states.hoverRow, (f, g) => {
+        var p, v
+        const y = l?.vnode.el,
+          b = Array.from(y?.children || []).filter((S) =>
+            S?.classList.contains(`${a.e('row')}`)
+          )
+        let O = f
+        const N = (p = b[O]) == null ? void 0 : p.childNodes
+        if (N?.length) {
+          let S = 0
+          Array.from(N)
+            .reduce((m, C, h) => {
+              var w, R
+              return (
+                ((w = N[h]) == null ? void 0 : w.colSpan) > 1 &&
+                  (S = (R = N[h]) == null ? void 0 : R.colSpan),
+                C.nodeName !== 'TD' && S === 0 && m.push(h),
+                S > 0 && S--,
+                m
+              )
+            }, [])
+            .forEach((m) => {
+              var C
+              for (O = f; O > 0; ) {
+                const h = (C = b[O - 1]) == null ? void 0 : C.childNodes
+                if (h[m] && h[m].nodeName === 'TD' && h[m].rowSpan > 1) {
+                  et(h[m], 'hover-cell'), d.push(h[m])
+                  break
+                }
+                O--
+              }
+            })
+        } else d.forEach((S) => ze(S, 'hover-cell')), (d.length = 0)
+        !((v = e.store) != null && v.states.isComplex.value) ||
+          !ke ||
+          _n(() => {
+            const S = b[g],
+              c = b[f]
+            S && !S.classList.contains('hover-fixed-row') && ze(S, 'hover-row'),
+              c && et(c, 'hover-row')
+          })
+      }),
+      Ct(() => {
+        var f
+        ;(f = oe) == null || f()
+      }),
+      {
+        ns: a,
+        onColumnsChange: u,
+        onScrollableChange: s,
+        wrappedRowRender: r,
+        tooltipContent: i,
+        tooltipTrigger: o
+      }
+    )
+  },
+  render() {
+    const { wrappedRowRender: e, store: t } = this,
+      l = t?.states.data.value || []
+    return A('tbody', { tabIndex: -1 }, [
+      l.reduce((n, a) => n.concat(e(a, n.length)), [])
+    ])
+  }
+})
+function bo() {
+  const e = ye(me),
+    t = e?.store,
+    l = B(() => {
+      var o
+      return (o = t?.states.fixedLeafColumnsLength.value) != null ? o : 0
+    }),
+    n = B(() => {
+      var o
+      return (o = t?.states.rightFixedColumns.value.length) != null ? o : 0
+    }),
+    a = B(() => {
+      var o
+      return (o = t?.states.columns.value.length) != null ? o : 0
+    }),
+    r = B(() => {
+      var o
+      return (o = t?.states.fixedColumns.value.length) != null ? o : 0
+    }),
+    i = B(() => {
+      var o
+      return (o = t?.states.rightFixedColumns.value.length) != null ? o : 0
+    })
+  return {
+    leftFixedLeafCount: l,
+    rightFixedLeafCount: n,
+    columnsCount: a,
+    leftFixedCount: r,
+    rightFixedCount: i,
+    columns: B(() => {
+      var o
+      return (o = t?.states.columns.value) != null ? o : []
+    })
+  }
+}
+function Co(e) {
+  const { columns: t } = bo(),
+    l = pe('table')
+  return {
+    getCellClasses: (r, i) => {
+      const o = r[i],
+        u = [
+          l.e('cell'),
+          o.id,
+          o.align,
+          o.labelClassName,
+          ...Rt(l.b(), i, o.fixed, e.store)
+        ]
+      return (
+        o.className && u.push(o.className),
+        o.children || u.push(l.is('leaf')),
+        u
+      )
+    },
+    getCellStyles: (r, i) => {
+      const o = Nt(i, r.fixed, e.store)
+      return $e(o, 'left'), $e(o, 'right'), o
+    },
+    columns: t
+  }
+}
+var wo = Ee({
+  name: 'ElTableFooter',
+  props: {
+    fixed: { type: String, default: '' },
+    store: { required: !0, type: Object },
+    summaryMethod: Function,
+    sumText: String,
+    border: Boolean,
+    defaultSort: { type: Object, default: () => ({ prop: '', order: '' }) }
+  },
+  setup(e) {
+    const t = ye(me),
+      l = pe('table'),
+      { getCellClasses: n, getCellStyles: a, columns: r } = Co(e),
+      { onScrollableChange: i, onColumnsChange: o } = Ft(t)
+    return {
+      ns: l,
+      onScrollableChange: i,
+      onColumnsChange: o,
+      getCellClasses: n,
+      getCellStyles: a,
+      columns: r
+    }
+  },
+  render() {
+    const {
+        columns: e,
+        getCellStyles: t,
+        getCellClasses: l,
+        summaryMethod: n,
+        sumText: a
+      } = this,
+      r = this.store.states.data.value
+    let i = []
+    return (
+      n
+        ? (i = n({ columns: e, data: r }))
+        : e.forEach((o, u) => {
+            if (u === 0) {
+              i[u] = a
+              return
+            }
+            const s = r.map((p) => Number(p[o.property])),
+              d = []
+            let f = !0
+            s.forEach((p) => {
+              if (!Number.isNaN(+p)) {
+                f = !1
+                const v = `${p}`.split('.')[1]
+                d.push(v ? v.length : 0)
+              }
+            })
+            const g = Math.max.apply(null, d)
+            f
+              ? (i[u] = '')
+              : (i[u] = s.reduce((p, v) => {
+                  const y = Number(v)
+                  return Number.isNaN(+y)
+                    ? p
+                    : Number.parseFloat((p + v).toFixed(Math.min(g, 20)))
+                }, 0))
+          }),
+      A(
+        A('tfoot', [
+          A('tr', {}, [
+            ...e.map((o, u) =>
+              A(
+                'td',
+                {
+                  key: u,
+                  colspan: o.colSpan,
+                  rowspan: o.rowSpan,
+                  class: l(e, u),
+                  style: t(o, u)
+                },
+                [A('div', { class: ['cell', o.labelClassName] }, [i[u]])]
+              )
+            )
+          ])
+        ])
+      )
+    )
+  }
+})
+function So(e) {
+  return {
+    setCurrentRow: (f) => {
+      e.commit('setCurrentRow', f)
+    },
+    getSelectionRows: () => e.getSelectionRows(),
+    toggleRowSelection: (f, g, p = !0) => {
+      e.toggleRowSelection(f, g, !1, p), e.updateAllSelected()
+    },
+    clearSelection: () => {
+      e.clearSelection()
+    },
+    clearFilter: (f) => {
+      e.clearFilter(f)
+    },
+    toggleAllSelection: () => {
+      e.commit('toggleAllSelection')
+    },
+    toggleRowExpansion: (f, g) => {
+      e.toggleRowExpansionAdapter(f, g)
+    },
+    clearSort: () => {
+      e.clearSort()
+    },
+    sort: (f, g) => {
+      e.commit('sort', { prop: f, order: g })
+    },
+    updateKeyChildren: (f, g) => {
+      e.updateKeyChildren(f, g)
+    }
+  }
+}
+function Eo(e, t, l, n) {
+  const a = x(!1),
+    r = x(null),
+    i = x(!1),
+    o = (L) => {
+      i.value = L
+    },
+    u = x({ width: null, height: null, headerHeight: null }),
+    s = x(!1),
+    d = { display: 'inline-block', verticalAlign: 'middle' },
+    f = x(),
+    g = x(0),
+    p = x(0),
+    v = x(0),
+    y = x(0),
+    b = x(0)
+  Be(() => {
+    var L
+    t.setHeight((L = e.height) != null ? L : null)
+  }),
+    Be(() => {
+      var L
+      t.setMaxHeight((L = e.maxHeight) != null ? L : null)
+    }),
+    ce(
+      () => [e.currentRowKey, l.states.rowKey],
+      ([L, T]) => {
+        !le(T) || !le(L) || l.setCurrentRowKey(`${L}`)
+      },
+      { immediate: !0 }
+    ),
+    ce(
+      () => e.data,
+      (L) => {
+        n.store.commit('setData', L)
+      },
+      { immediate: !0, deep: !0 }
+    ),
+    Be(() => {
+      e.expandRowKeys && l.setExpandRowKeysAdapter(e.expandRowKeys)
+    })
+  const O = () => {
+      n.store.commit('setHoverRow', null), n.hoverState && (n.hoverState = null)
+    },
+    N = (L, T) => {
+      const { pixelX: E, pixelY: k } = T
+      Math.abs(E) >= Math.abs(k) &&
+        (n.refs.bodyWrapper.scrollLeft += T.pixelX / 5)
+    },
+    S = B(
+      () =>
+        e.height ||
+        e.maxHeight ||
+        l.states.fixedColumns.value.length > 0 ||
+        l.states.rightFixedColumns.value.length > 0
+    ),
+    c = B(() => ({ width: t.bodyWidth.value ? `${t.bodyWidth.value}px` : '' })),
+    m = () => {
+      S.value && t.updateElsHeight(),
+        t.updateColumnsWidth(),
+        !(typeof window > 'u') && requestAnimationFrame(R)
+    }
+  Ie(async () => {
+    await He(), l.updateColumns(), W(), requestAnimationFrame(m)
+    const L = n.vnode.el,
+      T = n.refs.headerWrapper
+    e.flexible &&
+      L &&
+      L.parentElement &&
+      (L.parentElement.style.minWidth = '0'),
+      (u.value = {
+        width: (f.value = L.offsetWidth),
+        height: L.offsetHeight,
+        headerHeight: e.showHeader && T ? T.offsetHeight : null
+      }),
+      l.states.columns.value.forEach((E) => {
+        E.filteredValue &&
+          E.filteredValue.length &&
+          n.store.commit('filterChange', {
+            column: E,
+            values: E.filteredValue,
+            silent: !0
+          })
+      }),
+      (n.$ready = !0)
+  })
+  const C = (L, T) => {
+      if (!L) return
+      const E = Array.from(L.classList).filter(
+        (k) => !k.startsWith('is-scrolling-')
+      )
+      E.push(t.scrollX.value ? T : 'is-scrolling-none'),
+        (L.className = E.join(' '))
+    },
+    h = (L) => {
+      const { tableWrapper: T } = n.refs
+      C(T, L)
+    },
+    w = (L) => {
+      const { tableWrapper: T } = n.refs
+      return !!(T && T.classList.contains(L))
+    },
+    R = function () {
+      if (!n.refs.scrollBarRef) return
+      if (!t.scrollX.value) {
+        const ee = 'is-scrolling-none'
+        w(ee) || h(ee)
+        return
+      }
+      const L = n.refs.scrollBarRef.wrapRef
+      if (!L) return
+      const { scrollLeft: T, offsetWidth: E, scrollWidth: k } = L,
+        { headerWrapper: Y, footerWrapper: X } = n.refs
+      Y && (Y.scrollLeft = T), X && (X.scrollLeft = T)
+      const G = k - E - 1
+      T >= G
+        ? h('is-scrolling-right')
+        : h(T === 0 ? 'is-scrolling-left' : 'is-scrolling-middle')
+    },
+    W = () => {
+      n.refs.scrollBarRef &&
+        (n.refs.scrollBarRef.wrapRef &&
+          kt(n.refs.scrollBarRef.wrapRef, 'scroll', R, { passive: !0 }),
+        e.fit ? At(n.vnode.el, H) : kt(window, 'resize', H),
+        At(n.refs.bodyWrapper, () => {
+          var L, T
+          H(),
+            (T = (L = n.refs) == null ? void 0 : L.scrollBarRef) == null ||
+              T.update()
+        }))
+    },
+    H = () => {
+      var L, T, E, k
+      const Y = n.vnode.el
+      if (!n.$ready || !Y) return
+      let X = !1
+      const { width: G, height: ee, headerHeight: he } = u.value,
+        J = (f.value = Y.offsetWidth)
+      G !== J && (X = !0)
+      const ge = Y.offsetHeight
+      ;(e.height || S.value) && ee !== ge && (X = !0)
+      const Z =
+        e.tableLayout === 'fixed'
+          ? n.refs.headerWrapper
+          : (L = n.refs.tableHeaderRef) == null
+            ? void 0
+            : L.$el
+      e.showHeader && Z?.offsetHeight !== he && (X = !0),
+        (g.value =
+          ((T = n.refs.tableWrapper) == null ? void 0 : T.scrollHeight) || 0),
+        (v.value = Z?.scrollHeight || 0),
+        (y.value =
+          ((E = n.refs.footerWrapper) == null ? void 0 : E.offsetHeight) || 0),
+        (b.value =
+          ((k = n.refs.appendWrapper) == null ? void 0 : k.offsetHeight) || 0),
+        (p.value = g.value - v.value - y.value - b.value),
+        X &&
+          ((u.value = {
+            width: J,
+            height: ge,
+            headerHeight: (e.showHeader && Z?.offsetHeight) || 0
+          }),
+          m())
+    },
+    M = Rn(),
+    z = B(() => {
+      const { bodyWidth: L, scrollY: T, gutterWidth: E } = t
+      return L.value ? `${L.value - (T.value ? E : 0)}px` : ''
+    }),
+    j = B(() => (e.maxHeight ? 'fixed' : e.tableLayout)),
+    K = B(() => {
+      if (e.data && e.data.length) return
+      let L = '100%'
+      e.height && p.value && (L = `${p.value}px`)
+      const T = f.value
+      return { width: T ? `${T}px` : '', height: L }
+    }),
+    I = B(() =>
+      e.height
+        ? { height: '100%' }
+        : e.maxHeight
+          ? Number.isNaN(Number(e.maxHeight))
+            ? { maxHeight: `calc(${e.maxHeight} - ${v.value + y.value}px)` }
+            : { maxHeight: `${+e.maxHeight - v.value - y.value}px` }
+          : {}
+    )
+  return {
+    isHidden: a,
+    renderExpanded: r,
+    setDragVisible: o,
+    isGroup: s,
+    handleMouseLeave: O,
+    handleHeaderFooterMousewheel: N,
+    tableSize: M,
+    emptyBlockStyle: K,
+    resizeProxyVisible: i,
+    bodyWidth: z,
+    resizeState: u,
+    doLayout: m,
+    tableBodyStyles: c,
+    tableLayout: j,
+    scrollbarViewStyle: d,
+    scrollbarStyle: I
+  }
+}
+function xo(e) {
+  const t = x(),
+    l = () => {
+      const a = e.vnode.el.querySelector('.hidden-columns'),
+        r = { childList: !0, subtree: !0 },
+        i = e.store.states.updateOrderFns
+      ;(t.value = new MutationObserver(() => {
+        i.forEach((o) => o())
+      })),
+        t.value.observe(a, r)
+    }
+  Ie(() => {
+    l()
+  }),
+    Ct(() => {
+      var n
+      ;(n = t.value) == null || n.disconnect()
+    })
+}
+var Ro = {
+  data: { type: Array, default: () => [] },
+  size: ln,
+  width: [String, Number],
+  height: [String, Number],
+  maxHeight: [String, Number],
+  fit: { type: Boolean, default: !0 },
+  stripe: Boolean,
+  border: Boolean,
+  rowKey: [String, Function],
+  showHeader: { type: Boolean, default: !0 },
+  showSummary: Boolean,
+  sumText: String,
+  summaryMethod: Function,
+  rowClassName: [String, Function],
+  rowStyle: [Object, Function],
+  cellClassName: [String, Function],
+  cellStyle: [Object, Function],
+  headerRowClassName: [String, Function],
+  headerRowStyle: [Object, Function],
+  headerCellClassName: [String, Function],
+  headerCellStyle: [Object, Function],
+  highlightCurrentRow: Boolean,
+  currentRowKey: [String, Number],
+  emptyText: String,
+  expandRowKeys: Array,
+  defaultExpandAll: Boolean,
+  defaultSort: Object,
+  tooltipEffect: String,
+  tooltipOptions: Object,
+  spanMethod: Function,
+  selectOnIndeterminate: { type: Boolean, default: !0 },
+  indent: { type: Number, default: 16 },
+  treeProps: {
+    type: Object,
+    default: () => ({
+      hasChildren: 'hasChildren',
+      children: 'children',
+      checkStrictly: !1
+    })
+  },
+  lazy: Boolean,
+  load: Function,
+  style: { type: Object, default: () => ({}) },
+  className: { type: String, default: '' },
+  tableLayout: { type: String, default: 'fixed' },
+  scrollbarAlwaysOn: Boolean,
+  flexible: Boolean,
+  showOverflowTooltip: [Boolean, Object],
+  tooltipFormatter: Function,
+  appendFilterPanelTo: String,
+  scrollbarTabindex: { type: [Number, String], default: void 0 },
+  allowDragLastColumn: { type: Boolean, default: !0 },
+  preserveExpandedContent: Boolean
+}
+function pl(e) {
+  const t = e.tableLayout === 'auto'
+  let l = e.columns || []
+  t && l.every(({ width: a }) => we(a)) && (l = [])
+  const n = (a) => {
+    const r = { key: `${e.tableLayout}_${a.id}`, style: {}, name: void 0 }
+    return t ? (r.style = { width: `${a.width}px` }) : (r.name = a.id), r
+  }
+  return A(
+    'colgroup',
+    {},
+    l.map((a) => A('col', n(a)))
+  )
+}
+pl.props = ['columns', 'tableLayout']
+const No = () => {
+  const e = x(),
+    t = (r, i) => {
+      const o = e.value
+      o && o.scrollTo(r, i)
+    },
+    l = (r, i) => {
+      const o = e.value
+      o && We(i) && ['Top', 'Left'].includes(r) && o[`setScroll${r}`](i)
+    }
+  return {
+    scrollBarRef: e,
+    scrollTo: t,
+    setScrollTop: (r) => l('Top', r),
+    setScrollLeft: (r) => l('Left', r)
+  }
+}
+var Kt = !1,
+  Le,
+  ft,
+  ht,
+  Ge,
+  Qe,
+  ml,
+  Je,
+  vt,
+  pt,
+  mt,
+  gl,
+  gt,
+  yt,
+  yl,
+  bl
+function ne() {
+  if (!Kt) {
+    Kt = !0
+    var e = navigator.userAgent,
+      t =
+        /(?:MSIE.(\d+\.\d+))|(?:(?:Firefox|GranParadiso|Iceweasel).(\d+\.\d+))|(?:Opera(?:.+Version.|.)(\d+\.\d+))|(?:AppleWebKit.(\d+(?:\.\d+)?))|(?:Trident\/\d+\.\d+.*rv:(\d+\.\d+))/.exec(
+          e
+        ),
+      l = /(Mac OS X)|(Windows)|(Linux)/.exec(e)
+    if (
+      ((gt = /\b(iPhone|iP[ao]d)/.exec(e)),
+      (yt = /\b(iP[ao]d)/.exec(e)),
+      (mt = /Android/i.exec(e)),
+      (yl = /FBAN\/\w+;/i.exec(e)),
+      (bl = /Mobile/i.exec(e)),
+      (gl = !!/Win64/.exec(e)),
+      t)
+    ) {
+      ;(Le = t[1] ? parseFloat(t[1]) : t[5] ? parseFloat(t[5]) : NaN),
+        Le && document && document.documentMode && (Le = document.documentMode)
+      var n = /(?:Trident\/(\d+.\d+))/.exec(e)
+      ;(ml = n ? parseFloat(n[1]) + 4 : Le),
+        (ft = t[2] ? parseFloat(t[2]) : NaN),
+        (ht = t[3] ? parseFloat(t[3]) : NaN),
+        (Ge = t[4] ? parseFloat(t[4]) : NaN),
+        Ge
+          ? ((t = /(?:Chrome\/(\d+\.\d+))/.exec(e)),
+            (Qe = t && t[1] ? parseFloat(t[1]) : NaN))
+          : (Qe = NaN)
+    } else Le = ft = ht = Qe = Ge = NaN
+    if (l) {
+      if (l[1]) {
+        var a = /(?:Mac OS X (\d+(?:[._]\d+)?))/.exec(e)
+        Je = a ? parseFloat(a[1].replace('_', '.')) : !0
+      } else Je = !1
+      ;(vt = !!l[2]), (pt = !!l[3])
+    } else Je = vt = pt = !1
+  }
+}
+var bt = {
+    ie: function () {
+      return ne() || Le
+    },
+    ieCompatibilityMode: function () {
+      return ne() || ml > Le
+    },
+    ie64: function () {
+      return bt.ie() && gl
+    },
+    firefox: function () {
+      return ne() || ft
+    },
+    opera: function () {
+      return ne() || ht
+    },
+    webkit: function () {
+      return ne() || Ge
+    },
+    safari: function () {
+      return bt.webkit()
+    },
+    chrome: function () {
+      return ne() || Qe
+    },
+    windows: function () {
+      return ne() || vt
+    },
+    osx: function () {
+      return ne() || Je
+    },
+    linux: function () {
+      return ne() || pt
+    },
+    iphone: function () {
+      return ne() || gt
+    },
+    mobile: function () {
+      return ne() || gt || yt || mt || bl
+    },
+    nativeApp: function () {
+      return ne() || yl
+    },
+    android: function () {
+      return ne() || mt
+    },
+    ipad: function () {
+      return ne() || yt
+    }
+  },
+  Lo = bt,
+  Fo = !!(
+    typeof window < 'u' &&
+    window.document &&
+    window.document.createElement
+  ),
+  Oo = { canUseDOM: Fo },
+  Cl = Oo,
+  wl
+Cl.canUseDOM &&
+  (wl =
+    document.implementation &&
+    document.implementation.hasFeature &&
+    document.implementation.hasFeature('', '') !== !0)
+function To(e, t) {
+  if (!Cl.canUseDOM || (t && !('addEventListener' in document))) return !1
+  var l = 'on' + e,
+    n = l in document
+  if (!n) {
+    var a = document.createElement('div')
+    a.setAttribute(l, 'return;'), (n = typeof a[l] == 'function')
+  }
+  return (
+    !n &&
+      wl &&
+      e === 'wheel' &&
+      (n = document.implementation.hasFeature('Events.wheel', '3.0')),
+    n
+  )
+}
+var Wo = To,
+  zt = 10,
+  It = 40,
+  Dt = 800
+function Sl(e) {
+  var t = 0,
+    l = 0,
+    n = 0,
+    a = 0
+  return (
+    'detail' in e && (l = e.detail),
+    'wheelDelta' in e && (l = -e.wheelDelta / 120),
+    'wheelDeltaY' in e && (l = -e.wheelDeltaY / 120),
+    'wheelDeltaX' in e && (t = -e.wheelDeltaX / 120),
+    'axis' in e && e.axis === e.HORIZONTAL_AXIS && ((t = l), (l = 0)),
+    (n = t * zt),
+    (a = l * zt),
+    'deltaY' in e && (a = e.deltaY),
+    'deltaX' in e && (n = e.deltaX),
+    (n || a) &&
+      e.deltaMode &&
+      (e.deltaMode == 1 ? ((n *= It), (a *= It)) : ((n *= Dt), (a *= Dt))),
+    n && !t && (t = n < 1 ? -1 : 1),
+    a && !l && (l = a < 1 ? -1 : 1),
+    { spinX: t, spinY: l, pixelX: n, pixelY: a }
+  )
+}
+Sl.getEventType = function () {
+  return Lo.firefox() ? 'DOMMouseScroll' : Wo('wheel') ? 'wheel' : 'mousewheel'
+}
+var Mo = Sl
+/**
+ * Checks if an event is supported in the current execution environment.
+ *
+ * NOTE: This will not work correctly for non-generic events such as `change`,
+ * `reset`, `load`, `error`, and `select`.
+ *
+ * Borrows from Modernizr.
+ *
+ * @param {string} eventNameSuffix Event name, e.g. "click".
+ * @param {?boolean} capture Check if the capture phase is supported.
+ * @return {boolean} True if the event is supported.
+ * @internal
+ * @license Modernizr 3.0.0pre (Custom Build) | MIT
+ */ const Ho = function (e, t) {
+    if (e && e.addEventListener) {
+      const l = function (n) {
+        const a = Mo(n)
+        t && Reflect.apply(t, this, [n, a])
+      }
+      e.addEventListener('wheel', l, { passive: !0 })
+    }
+  },
+  ko = {
+    beforeMount(e, t) {
+      Ho(e, t.value)
+    }
+  }
+let Ao = 1
+const $o = Ee({
+  name: 'ElTable',
+  directives: { Mousewheel: ko },
+  components: {
+    TableHeader: uo,
+    TableBody: yo,
+    TableFooter: wo,
+    ElScrollbar: Xt,
+    hColgroup: pl
+  },
+  props: Ro,
+  emits: [
+    'select',
+    'select-all',
+    'selection-change',
+    'cell-mouse-enter',
+    'cell-mouse-leave',
+    'cell-contextmenu',
+    'cell-click',
+    'cell-dblclick',
+    'row-click',
+    'row-contextmenu',
+    'row-dblclick',
+    'header-click',
+    'header-contextmenu',
+    'sort-change',
+    'filter-change',
+    'current-change',
+    'header-dragend',
+    'expand-change',
+    'scroll'
+  ],
+  setup(e) {
+    const { t } = Zt(),
+      l = pe('table'),
+      n = ae()
+    Yl(me, n)
+    const a = Zn(n, e)
+    n.store = a
+    const r = new to({
+      store: n.store,
+      table: n,
+      fit: e.fit,
+      showHeader: e.showHeader
+    })
+    n.layout = r
+    const i = B(() => (a.states.data.value || []).length === 0),
+      {
+        setCurrentRow: o,
+        getSelectionRows: u,
+        toggleRowSelection: s,
+        clearSelection: d,
+        clearFilter: f,
+        toggleAllSelection: g,
+        toggleRowExpansion: p,
+        clearSort: v,
+        sort: y,
+        updateKeyChildren: b
+      } = So(a),
+      {
+        isHidden: O,
+        renderExpanded: N,
+        setDragVisible: S,
+        isGroup: c,
+        handleMouseLeave: m,
+        handleHeaderFooterMousewheel: C,
+        tableSize: h,
+        emptyBlockStyle: w,
+        resizeProxyVisible: R,
+        bodyWidth: W,
+        resizeState: H,
+        doLayout: M,
+        tableBodyStyles: z,
+        tableLayout: j,
+        scrollbarViewStyle: K,
+        scrollbarStyle: I
+      } = Eo(e, r, a, n),
+      {
+        scrollBarRef: L,
+        scrollTo: T,
+        setScrollLeft: E,
+        setScrollTop: k
+      } = No(),
+      Y = tt(M, 50),
+      X = `${l.namespace.value}-table_${Ao++}`
+    ;(n.tableId = X),
+      (n.state = {
+        isGroup: c,
+        resizeState: H,
+        doLayout: M,
+        debouncedUpdateLayout: Y
+      })
+    const G = B(() => {
+        var J
+        return (J = e.sumText) != null ? J : t('el.table.sumText')
+      }),
+      ee = B(() => {
+        var J
+        return (J = e.emptyText) != null ? J : t('el.table.emptyText')
+      }),
+      he = B(() => vl(a.states.originColumns.value)[0])
+    return (
+      xo(n),
+      Ut(() => {
+        Y.cancel()
+      }),
+      {
+        ns: l,
+        layout: r,
+        store: a,
+        columns: he,
+        handleHeaderFooterMousewheel: C,
+        handleMouseLeave: m,
+        tableId: X,
+        tableSize: h,
+        isHidden: O,
+        isEmpty: i,
+        renderExpanded: N,
+        resizeProxyVisible: R,
+        resizeState: H,
+        isGroup: c,
+        bodyWidth: W,
+        tableBodyStyles: z,
+        emptyBlockStyle: w,
+        debouncedUpdateLayout: Y,
+        setCurrentRow: o,
+        getSelectionRows: u,
+        toggleRowSelection: s,
+        clearSelection: d,
+        clearFilter: f,
+        toggleAllSelection: g,
+        toggleRowExpansion: p,
+        clearSort: v,
+        doLayout: M,
+        sort: y,
+        updateKeyChildren: b,
+        t,
+        setDragVisible: S,
+        context: n,
+        computedSumText: G,
+        computedEmptyText: ee,
+        tableLayout: j,
+        scrollbarViewStyle: K,
+        scrollbarStyle: I,
+        scrollBarRef: L,
+        scrollTo: T,
+        setScrollLeft: E,
+        setScrollTop: k,
+        allowDragLastColumn: e.allowDragLastColumn
+      }
+    )
+  }
+})
+function Po(e, t, l, n, a, r) {
+  const i = ue('hColgroup'),
+    o = ue('table-header'),
+    u = ue('table-body'),
+    s = ue('table-footer'),
+    d = ue('el-scrollbar'),
+    f = jt('mousewheel')
+  return (
+    Q(),
+    se(
+      'div',
+      {
+        ref: 'tableWrapper',
+        class: U([
+          {
+            [e.ns.m('fit')]: e.fit,
+            [e.ns.m('striped')]: e.stripe,
+            [e.ns.m('border')]: e.border || e.isGroup,
+            [e.ns.m('hidden')]: e.isHidden,
+            [e.ns.m('group')]: e.isGroup,
+            [e.ns.m('fluid-height')]: e.maxHeight,
+            [e.ns.m('scrollable-x')]: e.layout.scrollX.value,
+            [e.ns.m('scrollable-y')]: e.layout.scrollY.value,
+            [e.ns.m('enable-row-hover')]: !e.store.states.isComplex.value,
+            [e.ns.m('enable-row-transition')]:
+              (e.store.states.data.value || []).length !== 0 &&
+              (e.store.states.data.value || []).length < 100,
+            'has-footer': e.showSummary
+          },
+          e.ns.m(e.tableSize),
+          e.className,
+          e.ns.b(),
+          e.ns.m(`layout-${e.tableLayout}`)
+        ]),
+        style: Pe(e.style),
+        'data-prefix': e.ns.namespace.value,
+        onMouseleave: e.handleMouseLeave
+      },
+      [
+        re(
+          'div',
+          { class: U(e.ns.e('inner-wrapper')) },
+          [
+            re(
+              'div',
+              { ref: 'hiddenColumns', class: 'hidden-columns' },
+              [Se(e.$slots, 'default')],
+              512
+            ),
+            e.showHeader && e.tableLayout === 'fixed'
+              ? qe(
+                  (Q(),
+                  se(
+                    'div',
+                    {
+                      key: 0,
+                      ref: 'headerWrapper',
+                      class: U(e.ns.e('header-wrapper'))
+                    },
+                    [
+                      re(
+                        'table',
+                        {
+                          ref: 'tableHeader',
+                          class: U(e.ns.e('header')),
+                          style: Pe(e.tableBodyStyles),
+                          border: '0',
+                          cellpadding: '0',
+                          cellspacing: '0'
+                        },
+                        [
+                          ve(
+                            i,
+                            {
+                              columns: e.store.states.columns.value,
+                              'table-layout': e.tableLayout
+                            },
+                            null,
+                            8,
+                            ['columns', 'table-layout']
+                          ),
+                          ve(
+                            o,
+                            {
+                              ref: 'tableHeaderRef',
+                              border: e.border,
+                              'default-sort': e.defaultSort,
+                              store: e.store,
+                              'append-filter-panel-to': e.appendFilterPanelTo,
+                              'allow-drag-last-column': e.allowDragLastColumn,
+                              onSetDragVisible: e.setDragVisible
+                            },
+                            null,
+                            8,
+                            [
+                              'border',
+                              'default-sort',
+                              'store',
+                              'append-filter-panel-to',
+                              'allow-drag-last-column',
+                              'onSetDragVisible'
+                            ]
+                          )
+                        ],
+                        6
+                      )
+                    ],
+                    2
+                  )),
+                  [[f, e.handleHeaderFooterMousewheel]]
+                )
+              : xe('v-if', !0),
+            re(
+              'div',
+              { ref: 'bodyWrapper', class: U(e.ns.e('body-wrapper')) },
+              [
+                ve(
+                  d,
+                  {
+                    ref: 'scrollBarRef',
+                    'view-style': e.scrollbarViewStyle,
+                    'wrap-style': e.scrollbarStyle,
+                    always: e.scrollbarAlwaysOn,
+                    tabindex: e.scrollbarTabindex,
+                    onScroll: (g) => e.$emit('scroll', g)
+                  },
+                  {
+                    default: Re(() => [
+                      re(
+                        'table',
+                        {
+                          ref: 'tableBody',
+                          class: U(e.ns.e('body')),
+                          cellspacing: '0',
+                          cellpadding: '0',
+                          border: '0',
+                          style: Pe({
+                            width: e.bodyWidth,
+                            tableLayout: e.tableLayout
+                          })
+                        },
+                        [
+                          ve(
+                            i,
+                            {
+                              columns: e.store.states.columns.value,
+                              'table-layout': e.tableLayout
+                            },
+                            null,
+                            8,
+                            ['columns', 'table-layout']
+                          ),
+                          e.showHeader && e.tableLayout === 'auto'
+                            ? (Q(),
+                              Te(
+                                o,
+                                {
+                                  key: 0,
+                                  ref: 'tableHeaderRef',
+                                  class: U(e.ns.e('body-header')),
+                                  border: e.border,
+                                  'default-sort': e.defaultSort,
+                                  store: e.store,
+                                  'append-filter-panel-to':
+                                    e.appendFilterPanelTo,
+                                  onSetDragVisible: e.setDragVisible
+                                },
+                                null,
+                                8,
+                                [
+                                  'class',
+                                  'border',
+                                  'default-sort',
+                                  'store',
+                                  'append-filter-panel-to',
+                                  'onSetDragVisible'
+                                ]
+                              ))
+                            : xe('v-if', !0),
+                          ve(
+                            u,
+                            {
+                              context: e.context,
+                              highlight: e.highlightCurrentRow,
+                              'row-class-name': e.rowClassName,
+                              'tooltip-effect': e.tooltipEffect,
+                              'tooltip-options': e.tooltipOptions,
+                              'row-style': e.rowStyle,
+                              store: e.store,
+                              stripe: e.stripe
+                            },
+                            null,
+                            8,
+                            [
+                              'context',
+                              'highlight',
+                              'row-class-name',
+                              'tooltip-effect',
+                              'tooltip-options',
+                              'row-style',
+                              'store',
+                              'stripe'
+                            ]
+                          ),
+                          e.showSummary && e.tableLayout === 'auto'
+                            ? (Q(),
+                              Te(
+                                s,
+                                {
+                                  key: 1,
+                                  class: U(e.ns.e('body-footer')),
+                                  border: e.border,
+                                  'default-sort': e.defaultSort,
+                                  store: e.store,
+                                  'sum-text': e.computedSumText,
+                                  'summary-method': e.summaryMethod
+                                },
+                                null,
+                                8,
+                                [
+                                  'class',
+                                  'border',
+                                  'default-sort',
+                                  'store',
+                                  'sum-text',
+                                  'summary-method'
+                                ]
+                              ))
+                            : xe('v-if', !0)
+                        ],
+                        6
+                      ),
+                      e.isEmpty
+                        ? (Q(),
+                          se(
+                            'div',
+                            {
+                              key: 0,
+                              ref: 'emptyBlock',
+                              style: Pe(e.emptyBlockStyle),
+                              class: U(e.ns.e('empty-block'))
+                            },
+                            [
+                              re(
+                                'span',
+                                { class: U(e.ns.e('empty-text')) },
+                                [
+                                  Se(e.$slots, 'empty', {}, () => [
+                                    Yt(Oe(e.computedEmptyText), 1)
+                                  ])
+                                ],
+                                2
+                              )
+                            ],
+                            6
+                          ))
+                        : xe('v-if', !0),
+                      e.$slots.append
+                        ? (Q(),
+                          se(
+                            'div',
+                            {
+                              key: 1,
+                              ref: 'appendWrapper',
+                              class: U(e.ns.e('append-wrapper'))
+                            },
+                            [Se(e.$slots, 'append')],
+                            2
+                          ))
+                        : xe('v-if', !0)
+                    ]),
+                    _: 3
+                  },
+                  8,
+                  ['view-style', 'wrap-style', 'always', 'tabindex', 'onScroll']
+                )
+              ],
+              2
+            ),
+            e.showSummary && e.tableLayout === 'fixed'
+              ? qe(
+                  (Q(),
+                  se(
+                    'div',
+                    {
+                      key: 1,
+                      ref: 'footerWrapper',
+                      class: U(e.ns.e('footer-wrapper'))
+                    },
+                    [
+                      re(
+                        'table',
+                        {
+                          class: U(e.ns.e('footer')),
+                          cellspacing: '0',
+                          cellpadding: '0',
+                          border: '0',
+                          style: Pe(e.tableBodyStyles)
+                        },
+                        [
+                          ve(
+                            i,
+                            {
+                              columns: e.store.states.columns.value,
+                              'table-layout': e.tableLayout
+                            },
+                            null,
+                            8,
+                            ['columns', 'table-layout']
+                          ),
+                          ve(
+                            s,
+                            {
+                              border: e.border,
+                              'default-sort': e.defaultSort,
+                              store: e.store,
+                              'sum-text': e.computedSumText,
+                              'summary-method': e.summaryMethod
+                            },
+                            null,
+                            8,
+                            [
+                              'border',
+                              'default-sort',
+                              'store',
+                              'sum-text',
+                              'summary-method'
+                            ]
+                          )
+                        ],
+                        6
+                      )
+                    ],
+                    2
+                  )),
+                  [
+                    [Mt, !e.isEmpty],
+                    [f, e.handleHeaderFooterMousewheel]
+                  ]
+                )
+              : xe('v-if', !0),
+            e.border || e.isGroup
+              ? (Q(),
+                se(
+                  'div',
+                  { key: 2, class: U(e.ns.e('border-left-patch')) },
+                  null,
+                  2
+                ))
+              : xe('v-if', !0)
+          ],
+          2
+        ),
+        qe(
+          re(
+            'div',
+            { ref: 'resizeProxy', class: U(e.ns.e('column-resize-proxy')) },
+            null,
+            2
+          ),
+          [[Mt, e.resizeProxyVisible]]
+        )
+      ],
+      46,
+      ['data-prefix', 'onMouseleave']
+    )
+  )
+}
+var _o = wt($o, [
+  ['render', Po],
+  ['__file', 'table.vue']
+])
+const Bo = {
+    selection: 'table-column--selection',
+    expand: 'table__expand-column'
+  },
+  Ko = {
+    default: { order: '' },
+    selection: { width: 48, minWidth: 48, realWidth: 48, order: '' },
+    expand: { width: 48, minWidth: 48, realWidth: 48, order: '' },
+    index: { width: 48, minWidth: 48, realWidth: 48, order: '' }
+  },
+  zo = (e) => Bo[e] || '',
+  Io = {
+    selection: {
+      renderHeader({ store: e, column: t }) {
+        var l
+        function n() {
+          return e.states.data.value && e.states.data.value.length === 0
+        }
+        return A(Ae, {
+          disabled: n(),
+          size: e.states.tableSize.value,
+          indeterminate:
+            e.states.selection.value.length > 0 &&
+            !e.states.isAllSelected.value,
+          'onUpdate:modelValue':
+            (l = e.toggleAllSelection) != null ? l : void 0,
+          modelValue: e.states.isAllSelected.value,
+          ariaLabel: t.label
+        })
+      },
+      renderCell({ row: e, column: t, store: l, $index: n }) {
+        return A(Ae, {
+          disabled: t.selectable ? !t.selectable.call(null, e, n) : !1,
+          size: l.states.tableSize.value,
+          onChange: () => {
+            l.commit('rowSelectedChanged', e)
+          },
+          onClick: (a) => a.stopPropagation(),
+          modelValue: l.isSelected(e),
+          ariaLabel: t.label
+        })
+      },
+      sortable: !1,
+      resizable: !1
+    },
+    index: {
+      renderHeader({ column: e }) {
+        return e.label || '#'
+      },
+      renderCell({ column: e, $index: t }) {
+        let l = t + 1
+        const n = e.index
+        return We(n) ? (l = t + n) : de(n) && (l = n(t)), A('div', {}, [l])
+      },
+      sortable: !1
+    },
+    expand: {
+      renderHeader({ column: e }) {
+        return e.label || ''
+      },
+      renderCell({ column: e, row: t, store: l, expanded: n }) {
+        const { ns: a } = l,
+          r = [a.e('expand-icon')]
+        return (
+          !e.renderExpand && n && r.push(a.em('expand-icon', 'expanded')),
+          A(
+            'div',
+            {
+              class: r,
+              onClick: function (o) {
+                o.stopPropagation(), l.toggleRowExpansion(t)
+              }
+            },
+            {
+              default: () =>
+                e.renderExpand
+                  ? [e.renderExpand({ expanded: n })]
+                  : [A(St, null, { default: () => [A(Qt)] })]
+            }
+          )
+        )
+      },
+      sortable: !1,
+      resizable: !1
+    }
+  }
+function Do({ row: e, column: t, $index: l }) {
+  var n
+  const a = t.property,
+    r = a && Jt(e, a).value
+  return t && t.formatter
+    ? t.formatter(e, t, r, l)
+    : ((n = r?.toString) == null ? void 0 : n.call(r)) || ''
+}
+function Vo({ row: e, treeNode: t, store: l }, n = !1) {
+  const { ns: a } = l
+  if (!t) return n ? [A('span', { class: a.e('placeholder') })] : null
+  const r = [],
+    i = function (o) {
+      o.stopPropagation(), !t.loading && l.loadOrToggle(e)
+    }
+  if (
+    (t.indent &&
+      r.push(
+        A('span', {
+          class: a.e('indent'),
+          style: { 'padding-left': `${t.indent}px` }
+        })
+      ),
+    Ne(t.expanded) && !t.noLazyChildren)
+  ) {
+    const o = [
+      a.e('expand-icon'),
+      t.expanded ? a.em('expand-icon', 'expanded') : ''
+    ]
+    let u = Qt
+    t.loading && (u = Zl),
+      r.push(
+        A(
+          'div',
+          { class: o, onClick: i },
+          {
+            default: () => [
+              A(
+                St,
+                { class: { [a.is('loading')]: t.loading } },
+                { default: () => [A(u)] }
+              )
+            ]
+          }
+        )
+      )
+  } else r.push(A('span', { class: a.e('placeholder') }))
+  return r
+}
+function Vt(e, t) {
+  return e.reduce((l, n) => ((l[n] = n), l), t)
+}
+function jo(e, t) {
+  const l = ae()
+  return {
+    registerComplexWatchers: () => {
+      const r = ['fixed'],
+        i = { realWidth: 'width', realMinWidth: 'minWidth' },
+        o = Vt(r, i)
+      Object.keys(o).forEach((u) => {
+        const s = i[u]
+        Ke(t, s) &&
+          ce(
+            () => t[s],
+            (d) => {
+              let f = d
+              s === 'width' && u === 'realWidth' && (f = xt(d)),
+                s === 'minWidth' && u === 'realMinWidth' && (f = il(d)),
+                (l.columnConfig.value[s] = f),
+                (l.columnConfig.value[u] = f)
+              const g = s === 'fixed'
+              e.value.store.scheduleLayout(g)
+            }
+          )
+      })
+    },
+    registerNormalWatchers: () => {
+      const r = [
+          'label',
+          'filters',
+          'filterMultiple',
+          'filteredValue',
+          'sortable',
+          'index',
+          'formatter',
+          'className',
+          'labelClassName',
+          'filterClassName',
+          'showOverflowTooltip',
+          'tooltipFormatter'
+        ],
+        i = {
+          property: 'prop',
+          align: 'realAlign',
+          headerAlign: 'realHeaderAlign'
+        },
+        o = Vt(r, i)
+      Object.keys(o).forEach((u) => {
+        const s = i[u]
+        Ke(t, s) &&
+          ce(
+            () => t[s],
+            (d) => {
+              l.columnConfig.value[u] = d
+            }
+          )
+      })
+    }
+  }
+}
+function Yo(e, t, l) {
+  const n = ae(),
+    a = x(''),
+    r = x(!1),
+    i = x(),
+    o = x(),
+    u = pe('table')
+  Be(() => {
+    ;(i.value = e.align ? `is-${e.align}` : null), i.value
+  }),
+    Be(() => {
+      ;(o.value = e.headerAlign ? `is-${e.headerAlign}` : i.value), o.value
+    })
+  const s = B(() => {
+      let c = n.vnode.vParent || n.parent
+      for (; c && !c.tableId && !c.columnId; ) c = c.vnode.vParent || c.parent
+      return c
+    }),
+    d = B(() => {
+      const { store: c } = n.parent
+      if (!c) return !1
+      const { treeData: m } = c.states,
+        C = m.value
+      return C && Object.keys(C).length > 0
+    }),
+    f = x(xt(e.width)),
+    g = x(il(e.minWidth)),
+    p = (c) => (
+      f.value && (c.width = f.value),
+      g.value && (c.minWidth = g.value),
+      !f.value && g.value && (c.width = void 0),
+      c.minWidth || (c.minWidth = 80),
+      (c.realWidth = Number(we(c.width) ? c.minWidth : c.width)),
+      c
+    ),
+    v = (c) => {
+      const m = c.type,
+        C = Io[m] || {}
+      Object.keys(C).forEach((w) => {
+        const R = C[w]
+        w !== 'className' && !we(R) && (c[w] = R)
+      })
+      const h = zo(m)
+      if (h) {
+        const w = `${le(u.namespace)}-${h}`
+        c.className = c.className ? `${c.className} ${w}` : w
+      }
+      return c
+    },
+    y = (c) => {
+      ie(c) ? c.forEach((C) => m(C)) : m(c)
+      function m(C) {
+        var h
+        ;((h = C?.type) == null ? void 0 : h.name) === 'ElTableColumn' &&
+          (C.vParent = n)
+      }
+    }
+  return {
+    columnId: a,
+    realAlign: i,
+    isSubColumn: r,
+    realHeaderAlign: o,
+    columnOrTableParent: s,
+    setColumnWidth: p,
+    setColumnForcedProps: v,
+    setColumnRenders: (c) => {
+      e.renderHeader ||
+        (c.type !== 'selection' &&
+          (c.renderHeader = (C) => (
+            n.columnConfig.value.label, Se(t, 'header', C, () => [c.label])
+          ))),
+        t['filter-icon'] &&
+          (c.renderFilterIcon = (C) => Se(t, 'filter-icon', C)),
+        t.expand && (c.renderExpand = (C) => Se(t, 'expand', C))
+      let m = c.renderCell
+      return (
+        c.type === 'expand'
+          ? ((c.renderCell = (C) => A('div', { class: 'cell' }, [m(C)])),
+            (l.value.renderExpanded = (C) =>
+              t.default ? t.default(C) : t.default))
+          : ((m = m || Do),
+            (c.renderCell = (C) => {
+              let h = null
+              if (t.default) {
+                const z = t.default(C)
+                h = z.some((j) => j.type !== ql) ? z : m(C)
+              } else h = m(C)
+              const { columns: w } = l.value.store.states,
+                R = w.value.findIndex((z) => z.type === 'default'),
+                W = d.value && C.cellIndex === R,
+                H = Vo(C, W),
+                M = { class: 'cell', style: {} }
+              return (
+                c.showOverflowTooltip &&
+                  ((M.class = `${M.class} ${le(u.namespace)}-tooltip`),
+                  (M.style = {
+                    width: `${(C.column.realWidth || Number(C.column.width)) - 1}px`
+                  })),
+                y(h),
+                A('div', M, [H, h])
+              )
+            })),
+        c
+      )
+    },
+    getPropsData: (...c) =>
+      c.reduce(
+        (m, C) => (
+          ie(C) &&
+            C.forEach((h) => {
+              m[h] = e[h]
+            }),
+          m
+        ),
+        {}
+      ),
+    getColumnElIndex: (c, m) => Array.prototype.indexOf.call(c, m),
+    updateColumnOrder: () => {
+      l.value.store.commit('updateColumnOrder', n.columnConfig.value)
+    }
+  }
+}
+var qo = {
+  type: { type: String, default: 'default' },
+  label: String,
+  className: String,
+  labelClassName: String,
+  property: String,
+  prop: String,
+  width: { type: [String, Number], default: '' },
+  minWidth: { type: [String, Number], default: '' },
+  renderHeader: Function,
+  sortable: { type: [Boolean, String], default: !1 },
+  sortMethod: Function,
+  sortBy: [String, Function, Array],
+  resizable: { type: Boolean, default: !0 },
+  columnKey: String,
+  align: String,
+  headerAlign: String,
+  showOverflowTooltip: { type: [Boolean, Object], default: void 0 },
+  tooltipFormatter: Function,
+  fixed: [Boolean, String],
+  formatter: Function,
+  selectable: Function,
+  reserveSelection: Boolean,
+  filterMethod: Function,
+  filteredValue: Array,
+  filters: Array,
+  filterPlacement: String,
+  filterMultiple: { type: Boolean, default: !0 },
+  filterClassName: String,
+  index: [Number, Function],
+  sortOrders: {
+    type: Array,
+    default: () => ['ascending', 'descending', null],
+    validator: (e) =>
+      e.every((t) => ['ascending', 'descending', null].includes(t))
+  }
+}
+let Uo = 1
+var El = Ee({
+  name: 'ElTableColumn',
+  components: { ElCheckbox: Ae },
+  props: qo,
+  setup(e, { slots: t }) {
+    const l = ae(),
+      n = x({}),
+      a = B(() => {
+        let S = l.parent
+        for (; S && !S.tableId; ) S = S.parent
+        return S
+      }),
+      { registerNormalWatchers: r, registerComplexWatchers: i } = jo(a, e),
+      {
+        columnId: o,
+        isSubColumn: u,
+        realHeaderAlign: s,
+        columnOrTableParent: d,
+        setColumnWidth: f,
+        setColumnForcedProps: g,
+        setColumnRenders: p,
+        getPropsData: v,
+        getColumnElIndex: y,
+        realAlign: b,
+        updateColumnOrder: O
+      } = Yo(e, t, a),
+      N = d.value
+    ;(o.value = `${('tableId' in N && N.tableId) || ('columnId' in N && N.columnId)}_column_${Uo++}`),
+      qt(() => {
+        u.value = a.value !== N
+        const S = e.type || 'default',
+          c = e.sortable === '' ? !0 : e.sortable,
+          m =
+            S === 'selection'
+              ? !1
+              : we(e.showOverflowTooltip)
+                ? N.props.showOverflowTooltip
+                : e.showOverflowTooltip,
+          C = we(e.tooltipFormatter)
+            ? N.props.tooltipFormatter
+            : e.tooltipFormatter,
+          h = {
+            ...Ko[S],
+            id: o.value,
+            type: S,
+            property: e.prop || e.property,
+            align: b,
+            headerAlign: s,
+            showOverflowTooltip: m,
+            tooltipFormatter: C,
+            filterable: e.filters || e.filterMethod,
+            filteredValue: [],
+            filterPlacement: '',
+            filterClassName: '',
+            isColumnGroup: !1,
+            isSubColumn: !1,
+            filterOpened: !1,
+            sortable: c,
+            index: e.index,
+            rawColumnKey: l.vnode.key
+          }
+        let M = v(
+          [
+            'columnKey',
+            'label',
+            'className',
+            'labelClassName',
+            'type',
+            'renderHeader',
+            'formatter',
+            'fixed',
+            'resizable'
+          ],
+          ['sortMethod', 'sortBy', 'sortOrders'],
+          ['selectable', 'reserveSelection'],
+          [
+            'filterMethod',
+            'filters',
+            'filterMultiple',
+            'filterOpened',
+            'filteredValue',
+            'filterPlacement',
+            'filterClassName'
+          ]
+        )
+        ;(M = zn(h, M)), (M = Dn(p, f, g)(M)), (n.value = M), r(), i()
+      }),
+      Ie(() => {
+        var S, c
+        const m = d.value,
+          C = u.value
+            ? (S = m.vnode.el) == null
+              ? void 0
+              : S.children
+            : (c = m.refs.hiddenColumns) == null
+              ? void 0
+              : c.children,
+          h = () => y(C || [], l.vnode.el)
+        ;(n.value.getColumnIndex = h),
+          h() > -1 &&
+            a.value.store.commit(
+              'insertColumn',
+              n.value,
+              u.value ? 'columnConfig' in m && m.columnConfig.value : null,
+              O
+            )
+      }),
+      Ut(() => {
+        const S = n.value.getColumnIndex
+        ;(S ? S() : -1) > -1 &&
+          a.value.store.commit(
+            'removeColumn',
+            n.value,
+            u.value ? 'columnConfig' in N && N.columnConfig.value : null,
+            O
+          )
+      }),
+      (l.columnId = o.value),
+      (l.columnConfig = n)
+  },
+  render() {
+    var e, t, l
+    try {
+      const n =
+          (t = (e = this.$slots).default) == null
+            ? void 0
+            : t.call(e, { row: {}, column: {}, $index: -1 }),
+        a = []
+      if (ie(n))
+        for (const i of n)
+          ((l = i.type) == null ? void 0 : l.name) === 'ElTableColumn' ||
+          i.shapeFlag & 2
+            ? a.push(i)
+            : i.type === rt &&
+              ie(i.children) &&
+              i.children.forEach((o) => {
+                o?.patchFlag !== 1024 && !fe(o?.children) && a.push(o)
+              })
+      return A('div', a)
+    } catch {
+      return A('div', [])
+    }
+  }
+})
+const va = tn(_o, { TableColumn: El }),
+  pa = en(El)
+export { pa as E, va as a }
