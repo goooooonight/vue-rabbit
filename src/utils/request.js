@@ -3,7 +3,7 @@ import router from '@/router'
 import { ElMessage } from 'element-plus'
 import { useUserStore } from '@/stores'
 
-const baseURL = 'http://pcapi-xiaotuxian-front-devtest.itheima.net'
+const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net'
 
 const instance = axios.create({
   // 基地址
