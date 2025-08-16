@@ -1,0 +1,873 @@
+import { E as ut, N as ct, O as lt } from './base-BSl8DOKd.js'
+import { _ as dt, E as ft } from './OrderCard-xLZXMi5x.js'
+import { E as mt } from './link-CpvB9aQF.js'
+import { E as pt, a as ht } from './breadcrumb-item-DgelPev1.js'
+import { a as $t } from './order-B5MOrzrg.js'
+import {
+  r as J,
+  q as vt,
+  a9 as _t,
+  B as yt,
+  A as xt,
+  _ as gt,
+  c as B,
+  d as S,
+  k as bt,
+  m as Mt,
+  x as et,
+  w as I,
+  l as Dt,
+  g as y,
+  a as c,
+  t as nt,
+  a5 as wt,
+  o as W,
+  f as F
+} from './index-62YaKhWX.js'
+import './index-SbFAmMDn.js'
+import './vnode-CiKbLLZx.js'
+import './error-Cq9Fpw4b.js'
+import './scroll-3lXb5zxa.js'
+import './index-Dog6wp49.js'
+import './aria-BmU_cfaq.js'
+import './aria-DW8X8pJS.js'
+import './request-B0GuyAcH.js'
+import './event-BB_Ol6Sd.js'
+import './index-Cq-mCDaI.js'
+import './index-CdlSpGPi.js'
+function St($) {
+  return $ && $.__esModule && Object.prototype.hasOwnProperty.call($, 'default')
+    ? $.default
+    : $
+}
+var Z = { exports: {} },
+  kt = Z.exports,
+  rt
+function Ot() {
+  return (
+    rt ||
+      ((rt = 1),
+      (function ($, M) {
+        ;(function (D, v) {
+          $.exports = v()
+        })(kt, function () {
+          var D = 1e3,
+            v = 6e4,
+            k = 36e5,
+            O = 'millisecond',
+            L = 'second',
+            o = 'minute',
+            x = 'hour',
+            w = 'day',
+            C = 'week',
+            p = 'month',
+            N = 'quarter',
+            g = 'year',
+            j = 'date',
+            K = 'Invalid Date',
+            st =
+              /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/,
+            at =
+              /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,
+            it = {
+              name: 'en',
+              weekdays:
+                'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split(
+                  '_'
+                ),
+              months:
+                'January_February_March_April_May_June_July_August_September_October_November_December'.split(
+                  '_'
+                ),
+              ordinal: function (s) {
+                var n = ['th', 'st', 'nd', 'rd'],
+                  t = s % 100
+                return '[' + s + (n[(t - 20) % 10] || n[t] || n[0]) + ']'
+              }
+            },
+            X = function (s, n, t) {
+              var r = String(s)
+              return !r || r.length >= n
+                ? s
+                : '' + Array(n + 1 - r.length).join(t) + s
+            },
+            ot = {
+              s: X,
+              z: function (s) {
+                var n = -s.utcOffset(),
+                  t = Math.abs(n),
+                  r = Math.floor(t / 60),
+                  e = t % 60
+                return (n <= 0 ? '+' : '-') + X(r, 2, '0') + ':' + X(e, 2, '0')
+              },
+              m: function s(n, t) {
+                if (n.date() < t.date()) return -s(t, n)
+                var r = 12 * (t.year() - n.year()) + (t.month() - n.month()),
+                  e = n.clone().add(r, p),
+                  a = t - e < 0,
+                  i = n.clone().add(r + (a ? -1 : 1), p)
+                return +(-(r + (t - e) / (a ? e - i : i - e)) || 0)
+              },
+              a: function (s) {
+                return s < 0 ? Math.ceil(s) || 0 : Math.floor(s)
+              },
+              p: function (s) {
+                return (
+                  {
+                    M: p,
+                    y: g,
+                    w: C,
+                    d: w,
+                    D: j,
+                    h: x,
+                    m: o,
+                    s: L,
+                    ms: O,
+                    Q: N
+                  }[s] ||
+                  String(s || '')
+                    .toLowerCase()
+                    .replace(/s$/, '')
+                )
+              },
+              u: function (s) {
+                return s === void 0
+              }
+            },
+            P = 'en',
+            E = {}
+          E[P] = it
+          var Q = '$isDayjsObject',
+            G = function (s) {
+              return s instanceof q || !(!s || !s[Q])
+            },
+            R = function s(n, t, r) {
+              var e
+              if (!n) return P
+              if (typeof n == 'string') {
+                var a = n.toLowerCase()
+                E[a] && (e = a), t && ((E[a] = t), (e = a))
+                var i = n.split('-')
+                if (!e && i.length > 1) return s(i[0])
+              } else {
+                var l = n.name
+                ;(E[l] = n), (e = l)
+              }
+              return !r && e && (P = e), e || (!r && P)
+            },
+            f = function (s, n) {
+              if (G(s)) return s.clone()
+              var t = typeof n == 'object' ? n : {}
+              return (t.date = s), (t.args = arguments), new q(t)
+            },
+            u = ot
+          ;(u.l = R),
+            (u.i = G),
+            (u.w = function (s, n) {
+              return f(s, {
+                locale: n.$L,
+                utc: n.$u,
+                x: n.$x,
+                $offset: n.$offset
+              })
+            })
+          var q = (function () {
+              function s(t) {
+                ;(this.$L = R(t.locale, null, !0)),
+                  this.parse(t),
+                  (this.$x = this.$x || t.x || {}),
+                  (this[Q] = !0)
+              }
+              var n = s.prototype
+              return (
+                (n.parse = function (t) {
+                  ;(this.$d = (function (r) {
+                    var e = r.date,
+                      a = r.utc
+                    if (e === null) return new Date(NaN)
+                    if (u.u(e)) return new Date()
+                    if (e instanceof Date) return new Date(e)
+                    if (typeof e == 'string' && !/Z$/i.test(e)) {
+                      var i = e.match(st)
+                      if (i) {
+                        var l = i[2] - 1 || 0,
+                          d = (i[7] || '0').substring(0, 3)
+                        return a
+                          ? new Date(
+                              Date.UTC(
+                                i[1],
+                                l,
+                                i[3] || 1,
+                                i[4] || 0,
+                                i[5] || 0,
+                                i[6] || 0,
+                                d
+                              )
+                            )
+                          : new Date(
+                              i[1],
+                              l,
+                              i[3] || 1,
+                              i[4] || 0,
+                              i[5] || 0,
+                              i[6] || 0,
+                              d
+                            )
+                      }
+                    }
+                    return new Date(e)
+                  })(t)),
+                    this.init()
+                }),
+                (n.init = function () {
+                  var t = this.$d
+                  ;(this.$y = t.getFullYear()),
+                    (this.$M = t.getMonth()),
+                    (this.$D = t.getDate()),
+                    (this.$W = t.getDay()),
+                    (this.$H = t.getHours()),
+                    (this.$m = t.getMinutes()),
+                    (this.$s = t.getSeconds()),
+                    (this.$ms = t.getMilliseconds())
+                }),
+                (n.$utils = function () {
+                  return u
+                }),
+                (n.isValid = function () {
+                  return this.$d.toString() !== K
+                }),
+                (n.isSame = function (t, r) {
+                  var e = f(t)
+                  return this.startOf(r) <= e && e <= this.endOf(r)
+                }),
+                (n.isAfter = function (t, r) {
+                  return f(t) < this.startOf(r)
+                }),
+                (n.isBefore = function (t, r) {
+                  return this.endOf(r) < f(t)
+                }),
+                (n.$g = function (t, r, e) {
+                  return u.u(t) ? this[r] : this.set(e, t)
+                }),
+                (n.unix = function () {
+                  return Math.floor(this.valueOf() / 1e3)
+                }),
+                (n.valueOf = function () {
+                  return this.$d.getTime()
+                }),
+                (n.startOf = function (t, r) {
+                  var e = this,
+                    a = !!u.u(r) || r,
+                    i = u.p(t),
+                    l = function (U, _) {
+                      var T = u.w(
+                        e.$u ? Date.UTC(e.$y, _, U) : new Date(e.$y, _, U),
+                        e
+                      )
+                      return a ? T : T.endOf(w)
+                    },
+                    d = function (U, _) {
+                      return u.w(
+                        e
+                          .toDate()
+                          [
+                            U
+                          ].apply(e.toDate('s'), (a ? [0, 0, 0, 0] : [23, 59,
+                                  59, 999]).slice(_)),
+                        e
+                      )
+                    },
+                    m = this.$W,
+                    h = this.$M,
+                    b = this.$D,
+                    Y = 'set' + (this.$u ? 'UTC' : '')
+                  switch (i) {
+                    case g:
+                      return a ? l(1, 0) : l(31, 11)
+                    case p:
+                      return a ? l(1, h) : l(0, h + 1)
+                    case C:
+                      var H = this.$locale().weekStart || 0,
+                        V = (m < H ? m + 7 : m) - H
+                      return l(a ? b - V : b + (6 - V), h)
+                    case w:
+                    case j:
+                      return d(Y + 'Hours', 0)
+                    case x:
+                      return d(Y + 'Minutes', 1)
+                    case o:
+                      return d(Y + 'Seconds', 2)
+                    case L:
+                      return d(Y + 'Milliseconds', 3)
+                    default:
+                      return this.clone()
+                  }
+                }),
+                (n.endOf = function (t) {
+                  return this.startOf(t, !1)
+                }),
+                (n.$set = function (t, r) {
+                  var e,
+                    a = u.p(t),
+                    i = 'set' + (this.$u ? 'UTC' : ''),
+                    l = ((e = {}),
+                    (e[w] = i + 'Date'),
+                    (e[j] = i + 'Date'),
+                    (e[p] = i + 'Month'),
+                    (e[g] = i + 'FullYear'),
+                    (e[x] = i + 'Hours'),
+                    (e[o] = i + 'Minutes'),
+                    (e[L] = i + 'Seconds'),
+                    (e[O] = i + 'Milliseconds'),
+                    e)[a],
+                    d = a === w ? this.$D + (r - this.$W) : r
+                  if (a === p || a === g) {
+                    var m = this.clone().set(j, 1)
+                    m.$d[l](d),
+                      m.init(),
+                      (this.$d = m.set(
+                        j,
+                        Math.min(this.$D, m.daysInMonth())
+                      ).$d)
+                  } else l && this.$d[l](d)
+                  return this.init(), this
+                }),
+                (n.set = function (t, r) {
+                  return this.clone().$set(t, r)
+                }),
+                (n.get = function (t) {
+                  return this[u.p(t)]()
+                }),
+                (n.add = function (t, r) {
+                  var e,
+                    a = this
+                  t = Number(t)
+                  var i = u.p(r),
+                    l = function (h) {
+                      var b = f(a)
+                      return u.w(b.date(b.date() + Math.round(h * t)), a)
+                    }
+                  if (i === p) return this.set(p, this.$M + t)
+                  if (i === g) return this.set(g, this.$y + t)
+                  if (i === w) return l(1)
+                  if (i === C) return l(7)
+                  var d =
+                      ((e = {}), (e[o] = v), (e[x] = k), (e[L] = D), e)[i] || 1,
+                    m = this.$d.getTime() + t * d
+                  return u.w(m, this)
+                }),
+                (n.subtract = function (t, r) {
+                  return this.add(-1 * t, r)
+                }),
+                (n.format = function (t) {
+                  var r = this,
+                    e = this.$locale()
+                  if (!this.isValid()) return e.invalidDate || K
+                  var a = t || 'YYYY-MM-DDTHH:mm:ssZ',
+                    i = u.z(this),
+                    l = this.$H,
+                    d = this.$m,
+                    m = this.$M,
+                    h = e.weekdays,
+                    b = e.months,
+                    Y = e.meridiem,
+                    H = function (_, T, A, z) {
+                      return (_ && (_[T] || _(r, a))) || A[T].slice(0, z)
+                    },
+                    V = function (_) {
+                      return u.s(l % 12 || 12, _, '0')
+                    },
+                    U =
+                      Y ||
+                      function (_, T, A) {
+                        var z = _ < 12 ? 'AM' : 'PM'
+                        return A ? z.toLowerCase() : z
+                      }
+                  return a.replace(at, function (_, T) {
+                    return (
+                      T ||
+                      (function (A) {
+                        switch (A) {
+                          case 'YY':
+                            return String(r.$y).slice(-2)
+                          case 'YYYY':
+                            return u.s(r.$y, 4, '0')
+                          case 'M':
+                            return m + 1
+                          case 'MM':
+                            return u.s(m + 1, 2, '0')
+                          case 'MMM':
+                            return H(e.monthsShort, m, b, 3)
+                          case 'MMMM':
+                            return H(b, m)
+                          case 'D':
+                            return r.$D
+                          case 'DD':
+                            return u.s(r.$D, 2, '0')
+                          case 'd':
+                            return String(r.$W)
+                          case 'dd':
+                            return H(e.weekdaysMin, r.$W, h, 2)
+                          case 'ddd':
+                            return H(e.weekdaysShort, r.$W, h, 3)
+                          case 'dddd':
+                            return h[r.$W]
+                          case 'H':
+                            return String(l)
+                          case 'HH':
+                            return u.s(l, 2, '0')
+                          case 'h':
+                            return V(1)
+                          case 'hh':
+                            return V(2)
+                          case 'a':
+                            return U(l, d, !0)
+                          case 'A':
+                            return U(l, d, !1)
+                          case 'm':
+                            return String(d)
+                          case 'mm':
+                            return u.s(d, 2, '0')
+                          case 's':
+                            return String(r.$s)
+                          case 'ss':
+                            return u.s(r.$s, 2, '0')
+                          case 'SSS':
+                            return u.s(r.$ms, 3, '0')
+                          case 'Z':
+                            return i
+                        }
+                        return null
+                      })(_) ||
+                      i.replace(':', '')
+                    )
+                  })
+                }),
+                (n.utcOffset = function () {
+                  return 15 * -Math.round(this.$d.getTimezoneOffset() / 15)
+                }),
+                (n.diff = function (t, r, e) {
+                  var a,
+                    i = this,
+                    l = u.p(r),
+                    d = f(t),
+                    m = (d.utcOffset() - this.utcOffset()) * v,
+                    h = this - d,
+                    b = function () {
+                      return u.m(i, d)
+                    }
+                  switch (l) {
+                    case g:
+                      a = b() / 12
+                      break
+                    case p:
+                      a = b()
+                      break
+                    case N:
+                      a = b() / 3
+                      break
+                    case C:
+                      a = (h - m) / 6048e5
+                      break
+                    case w:
+                      a = (h - m) / 864e5
+                      break
+                    case x:
+                      a = h / k
+                      break
+                    case o:
+                      a = h / v
+                      break
+                    case L:
+                      a = h / D
+                      break
+                    default:
+                      a = h
+                  }
+                  return e ? a : u.a(a)
+                }),
+                (n.daysInMonth = function () {
+                  return this.endOf(p).$D
+                }),
+                (n.$locale = function () {
+                  return E[this.$L]
+                }),
+                (n.locale = function (t, r) {
+                  if (!t) return this.$L
+                  var e = this.clone(),
+                    a = R(t, r, !0)
+                  return a && (e.$L = a), e
+                }),
+                (n.clone = function () {
+                  return u.w(this.$d, this)
+                }),
+                (n.toDate = function () {
+                  return new Date(this.valueOf())
+                }),
+                (n.toJSON = function () {
+                  return this.isValid() ? this.toISOString() : null
+                }),
+                (n.toISOString = function () {
+                  return this.$d.toISOString()
+                }),
+                (n.toString = function () {
+                  return this.$d.toUTCString()
+                }),
+                s
+              )
+            })(),
+            tt = q.prototype
+          return (
+            (f.prototype = tt),
+            [
+              ['$ms', O],
+              ['$s', L],
+              ['$m', o],
+              ['$H', x],
+              ['$W', w],
+              ['$M', p],
+              ['$y', g],
+              ['$D', j]
+            ].forEach(function (s) {
+              tt[s[1]] = function (n) {
+                return this.$g(n, s[0], s[1])
+              }
+            }),
+            (f.extend = function (s, n) {
+              return s.$i || (s(n, q, f), (s.$i = !0)), f
+            }),
+            (f.locale = R),
+            (f.isDayjs = G),
+            (f.unix = function (s) {
+              return f(1e3 * s)
+            }),
+            (f.en = E[P]),
+            (f.Ls = E),
+            (f.p = {}),
+            f
+          )
+        })
+      })(Z)),
+    Z.exports
+  )
+}
+var jt = Ot()
+const It = St(jt),
+  Lt = ($) => It($).format('mm分ss秒'),
+  Ct = () => {
+    let $ = null
+    const M = J(0),
+      D = vt(() => Lt(M.value * 1e3)),
+      v = (k) => {
+        ;(M.value = k),
+          ($ = setInterval(() => {
+            M.value--
+          }, 1e3))
+      }
+    return (
+      _t(() => {
+        $ && clearInterval($)
+      }),
+      { timeFormat: D, start: v }
+    )
+  },
+  Tt = () => {
+    const M = yt().query.orderId,
+      D = J(!0),
+      { timeFormat: v, start: k } = Ct(),
+      O = J({}),
+      L = async () => {
+        D.value = !0
+        const {
+          data: { result: g }
+        } = await $t(M)
+        ;(O.value = g), (D.value = !1), k(O.value.countdown)
+      }
+    xt(() => L())
+    const o = J(!1),
+      x = 'http://pcapi-xiaotuxian-front-devtest.itheima.net/',
+      C = encodeURIComponent('http://localhost:5173/paycallback'),
+      p = `${x}pay/aliPay?orderId=${M}&redirect=${C}`
+    return {
+      orderId: M,
+      isLoading: D,
+      timeFormat: v,
+      orderInfo: O,
+      isWaiting: o,
+      aliPay: () => {
+        window.open(p), (o.value = !0)
+      }
+    }
+  },
+  Et = '/vue-rabbit/assets/load-Kd8Hln8x.gif',
+  Ht = { class: 'xtx-container' },
+  Ut = { class: 'h-[240px] px-[80px] bg-white flex items-center' },
+  Yt = { key: 0, class: 'flex items-center' },
+  Wt = { class: 'flex flex-col gap-[6px]' },
+  Nt = { class: 'text-[16px] text-[#999]' },
+  Pt = { key: 1, class: 'w-full flex justify-center items-center' },
+  Vt = { key: 2, class: 'ml-auto' },
+  At = { class: 'price text-[20px]' },
+  Bt = { class: 'mt-[20px] flex gap-[30px]' },
+  Ft = { class: 'h-[260px] px-[80px] flex items-center justify-between' },
+  Rt = ['src'],
+  qt = { class: 'flex flex-col gap-[30px]' },
+  zt = {
+    __name: 'XtxPay',
+    setup($) {
+      const {
+        isLoading: M,
+        timeFormat: D,
+        orderInfo: v,
+        isWaiting: k,
+        aliPay: O
+      } = Tt()
+      return (L, o) => {
+        const x = ht,
+          w = pt,
+          C = ut,
+          p = mt,
+          N = ft,
+          g = Dt('load')
+        return (
+          W(),
+          B('div', Ht, [
+            S(
+              w,
+              { separator: '>', class: 'mx-2 my-10' },
+              {
+                default: I(() => [
+                  S(
+                    x,
+                    { to: '/' },
+                    {
+                      default: I(() => o[2] || (o[2] = [F('首页')])),
+                      _: 1,
+                      __: [2]
+                    }
+                  ),
+                  S(
+                    x,
+                    { to: '/cart' },
+                    {
+                      default: I(() => o[3] || (o[3] = [F(' 购物车 ')])),
+                      _: 1,
+                      __: [3]
+                    }
+                  ),
+                  S(x, null, {
+                    default: I(() => o[4] || (o[4] = [F(' 支付订单 ')])),
+                    _: 1,
+                    __: [4]
+                  })
+                ]),
+                _: 1
+              }
+            ),
+            bt(
+              (W(),
+              B('div', Ut, [
+                y(v).countdown != -1
+                  ? (W(),
+                    B('div', Yt, [
+                      S(
+                        C,
+                        { color: '#1dc779', size: '80', class: 'mr-[14px]' },
+                        { default: I(() => [S(y(ct))]), _: 1 }
+                      ),
+                      c('div', Wt, [
+                        o[5] ||
+                          (o[5] = c(
+                            'p',
+                            { class: 'text-[20px]' },
+                            '订单提交成功！请尽快完成支付。',
+                            -1
+                          )),
+                        c(
+                          'p',
+                          Nt,
+                          ' 支付还剩' + nt(y(D)) + '，超时后将取消订单 ',
+                          1
+                        )
+                      ])
+                    ]))
+                  : (W(),
+                    B('div', Pt, [
+                      S(
+                        C,
+                        { color: '#f56c6c', size: '80', class: 'mr-[14px]' },
+                        { default: I(() => [S(y(lt))]), _: 1 }
+                      ),
+                      o[6] ||
+                        (o[6] = c(
+                          'div',
+                          { class: 'flex flex-col gap-[6px]' },
+                          [
+                            c(
+                              'p',
+                              { class: 'text-[20px]' },
+                              '订单超时，已自动取消!'
+                            )
+                          ],
+                          -1
+                        ))
+                    ])),
+                y(v).countdown != -1
+                  ? (W(),
+                    B('div', Vt, [
+                      o[7] ||
+                        (o[7] = c(
+                          'span',
+                          { class: 'text-[16px] text-[#999]' },
+                          '应付总额：',
+                          -1
+                        )),
+                      c('span', At, '￥' + nt(y(v).totalMoney), 1)
+                    ]))
+                  : et('', !0)
+              ])),
+              [[g, y(M)]]
+            ),
+            !y(M) && y(v).countdown != -1
+              ? (W(),
+                Mt(
+                  dt,
+                  { key: 0, title: '选择以下支付方式付款', class: 'mt-6' },
+                  {
+                    default: I(() => [
+                      c('div', null, [
+                        o[9] ||
+                          (o[9] = c(
+                            'h4',
+                            { class: 'text-[16px]' },
+                            '支付平台',
+                            -1
+                          )),
+                        c('div', Bt, [
+                          o[8] ||
+                            (o[8] = c(
+                              'a',
+                              {
+                                href: 'javascript:;',
+                                class:
+                                  'my-btn bg-[url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c66f98cff8649bd5ba722c2e8067c6ca.jpg)] bg-cover'
+                              },
+                              null,
+                              -1
+                            )),
+                          c('a', {
+                            href: 'javascript:;',
+                            class:
+                              'my-btn bg-[url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7b6b02396368c9314528c0bbd85a2e06.png)] bg-cover',
+                            onClick:
+                              o[0] || (o[0] = (...j) => y(O) && y(O)(...j))
+                          })
+                        ])
+                      ]),
+                      o[10] ||
+                        (o[10] = c(
+                          'div',
+                          { class: 'mt-[20px]' },
+                          [
+                            c('h4', { class: 'text-[16px]' }, '支付方式'),
+                            c('div', { class: 'mt-[20px] flex gap-[30px]' }, [
+                              c(
+                                'a',
+                                { href: 'javascript:;', class: 'my-btn' },
+                                '招商银行'
+                              ),
+                              c(
+                                'a',
+                                { href: 'javascript:;', class: 'my-btn' },
+                                '工商银行'
+                              ),
+                              c(
+                                'a',
+                                { href: 'javascript:;', class: 'my-btn' },
+                                '建设银行'
+                              ),
+                              c(
+                                'a',
+                                { href: 'javascript:;', class: 'my-btn' },
+                                '中国银行'
+                              ),
+                              c(
+                                'a',
+                                { href: 'javascript:;', class: 'my-btn' },
+                                '交通银行'
+                              )
+                            ])
+                          ],
+                          -1
+                        ))
+                    ]),
+                    _: 1,
+                    __: [10]
+                  }
+                ))
+              : et('', !0),
+            S(
+              N,
+              {
+                modelValue: y(k),
+                'onUpdate:modelValue':
+                  o[1] || (o[1] = (j) => (wt(k) ? (k.value = j) : null)),
+                title: '正在支付',
+                width: '600'
+              },
+              {
+                default: I(() => [
+                  c('div', Ft, [
+                    c('img', { src: y(Et), alt: '' }, null, 8, Rt),
+                    c('div', qt, [
+                      c('div', null, [
+                        o[12] || (o[12] = c('p', null, '如果支付成功：', -1)),
+                        S(
+                          p,
+                          {
+                            class: 'custom-link',
+                            type: 'primary',
+                            underline: 'never'
+                          },
+                          {
+                            default: I(
+                              () => o[11] || (o[11] = [F('查看订单详细>')])
+                            ),
+                            _: 1,
+                            __: [11]
+                          }
+                        )
+                      ]),
+                      c('div', null, [
+                        o[14] || (o[14] = c('p', null, '如果支付失败：', -1)),
+                        S(
+                          p,
+                          {
+                            class: 'custom-link',
+                            type: 'primary',
+                            underline: 'never'
+                          },
+                          {
+                            default: I(
+                              () => o[13] || (o[13] = [F('查看相关疑问>')])
+                            ),
+                            _: 1,
+                            __: [13]
+                          }
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _: 1
+              },
+              8,
+              ['modelValue']
+            )
+          ])
+        )
+      }
+    }
+  },
+  de = gt(zt, [['__scopeId', 'data-v-c919ceb1']])
+export { de as default }

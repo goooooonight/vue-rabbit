@@ -1,0 +1,79 @@
+import { z as h, h as y, q as o, r as A } from './index-62YaKhWX.js'
+import { i as u } from './request-B0GuyAcH.js'
+const L = (r) => u.post('/member/cart/merge', r),
+  w = () => u.get('/member/cart'),
+  i = (r) => u.delete('/member/cart', { data: { ids: r } }),
+  P = (r) => u.post('/member/cart', r),
+  d = (r, c) => u.put(`/member/cart/${r}`, c),
+  S = (r) => u.put('/member/cart/selected', r),
+  q = h(
+    'rabbit-cart',
+    () => {
+      const r = y(),
+        c = o(() => r.userInfo.token),
+        a = A([]),
+        m = async (e) => {
+          if (c.value) await P({ skuId: e.skuId, count: e.count }), l()
+          else {
+            const t = a.value.find((s) => s.skuId === e.skuId)
+            t ? (t.count += e.count) : a.value.unshift(e)
+          }
+        },
+        v = async (e) => {
+          if (c.value) await i([e]), l()
+          else {
+            const t = a.value.findIndex((s) => s.skuId === e)
+            t !== -1 && a.value.splice(t, 1)
+          }
+        },
+        f = async () => {
+          if (c.value) {
+            const e = a.value.filter((t) => t.selected).map((t) => t.skuId)
+            await i(e), l()
+          } else a.value = a.value.filter((e) => !e.selected)
+        },
+        C = async (e, t) => {
+          const s = a.value.find((n) => n.skuId === e)
+          if (((s.selected = t), c.value)) {
+            const n = s.count
+            await d(e, { selected: t, count: n })
+          }
+        },
+        I = async (e) => {
+          const t = a.value.filter((s) => s.selected != e).map((s) => s.skuId)
+          a.value.forEach((s) => (s.selected = e)),
+            c.value && (await S({ selected: e, ids: t }))
+        },
+        p = o(() => a.value.length > 0 && a.value.every((e) => e.selected)),
+        k = async (e, t) => {
+          const s = a.value.find((n) => n.skuId === e)
+          if (((s.count = t), c.value)) {
+            const n = s.selected
+            await d(e, { selected: n, count: t })
+          }
+        },
+        b = () => {
+          a.value = []
+        },
+        l = async () => {
+          const {
+            data: { result: e }
+          } = await w()
+          a.value = e
+        }
+      return {
+        cartList: a,
+        addCart: m,
+        removeCart: v,
+        removeSelectedCart: f,
+        singleCheck: C,
+        allCheck: I,
+        isAllCheck: p,
+        editCount: k,
+        clearCart: b,
+        getCartFromServer: l
+      }
+    },
+    { persist: !0 }
+  )
+export { L as m, q as u }

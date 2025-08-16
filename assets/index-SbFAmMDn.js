@@ -1,0 +1,208 @@
+import {
+  ae as g,
+  L as z,
+  d as H,
+  aa as X,
+  y as L,
+  A as W,
+  a4 as I,
+  G as D,
+  a5 as N,
+  q as A,
+  i as $,
+  af as j
+} from './index-62YaKhWX.js'
+import { P as E } from './vnode-CiKbLLZx.js'
+import {
+  f as K,
+  h as S,
+  x,
+  r as k,
+  B as U,
+  K as P,
+  M as q,
+  R as F,
+  L as G
+} from './base-BSl8DOKd.js'
+import { t as V } from './error-Cq9Fpw4b.js'
+import { a as J } from './scroll-3lXb5zxa.js'
+const Q = (e) => {
+    if (!e) return { onClick: g, onMousedown: g, onMouseup: g }
+    let n = !1,
+      s = !1
+    return {
+      onClick: (t) => {
+        n && s && e(t), (n = s = !1)
+      },
+      onMousedown: (t) => {
+        n = t.target === t.currentTarget
+      },
+      onMouseup: (t) => {
+        s = t.target === t.currentTarget
+      }
+    }
+  },
+  Z = K({
+    mask: { type: Boolean, default: !0 },
+    customMaskEvent: Boolean,
+    overlayClass: { type: x([String, Array, Object]) },
+    zIndex: { type: x([String, Number]) }
+  }),
+  _ = { click: (e) => e instanceof MouseEvent },
+  R = 'overlay'
+var ee = z({
+  name: 'ElOverlay',
+  props: Z,
+  emits: _,
+  setup(e, { slots: n, emit: s }) {
+    const a = S(R),
+      o = (d) => {
+        s('click', d)
+      },
+      {
+        onClick: c,
+        onMousedown: t,
+        onMouseup: l
+      } = Q(e.customMaskEvent ? void 0 : o)
+    return () =>
+      e.mask
+        ? H(
+            'div',
+            {
+              class: [a.b(), e.overlayClass],
+              style: { zIndex: e.zIndex },
+              onClick: c,
+              onMousedown: t,
+              onMouseup: l
+            },
+            [L(n, 'default')],
+            E.STYLE | E.CLASS | E.PROPS,
+            ['onClick', 'onMouseup', 'onMousedown']
+          )
+        : X(
+            'div',
+            {
+              class: e.overlayClass,
+              style: {
+                zIndex: e.zIndex,
+                position: 'fixed',
+                top: '0px',
+                right: '0px',
+                bottom: '0px',
+                left: '0px'
+              }
+            },
+            [L(n, 'default')]
+          )
+  }
+})
+const ce = ee,
+  ue = (e, n, s, a) => {
+    const o = { offsetX: 0, offsetY: 0 },
+      c = (u, i) => {
+        if (e.value) {
+          const { offsetX: p, offsetY: y } = o,
+            r = e.value.getBoundingClientRect(),
+            f = r.left,
+            v = r.top,
+            h = r.width,
+            w = r.height,
+            b = document.documentElement.clientWidth,
+            C = document.documentElement.clientHeight,
+            T = -f + p,
+            Y = -v + y,
+            O = b - f - h + p,
+            B = C - v - (w < C ? w : 0) + y
+          a?.value ||
+            ((u = Math.min(Math.max(u, T), O)),
+            (i = Math.min(Math.max(i, Y), B))),
+            (o.offsetX = u),
+            (o.offsetY = i),
+            (e.value.style.transform = `translate(${k(u)}, ${k(i)})`)
+        }
+      },
+      t = (u) => {
+        const i = u.clientX,
+          p = u.clientY,
+          { offsetX: y, offsetY: r } = o,
+          f = (h) => {
+            const w = y + h.clientX - i,
+              b = r + h.clientY - p
+            c(w, b)
+          },
+          v = () => {
+            document.removeEventListener('mousemove', f),
+              document.removeEventListener('mouseup', v)
+          }
+        document.addEventListener('mousemove', f),
+          document.addEventListener('mouseup', v)
+      },
+      l = () => {
+        n.value &&
+          e.value &&
+          (n.value.addEventListener('mousedown', t),
+          window.addEventListener('resize', m))
+      },
+      d = () => {
+        n.value &&
+          e.value &&
+          (n.value.removeEventListener('mousedown', t),
+          window.removeEventListener('resize', m))
+      },
+      M = () => {
+        ;(o.offsetX = 0),
+          (o.offsetY = 0),
+          e.value && (e.value.style.transform = '')
+      },
+      m = () => {
+        const { offsetX: u, offsetY: i } = o
+        c(u, i)
+      }
+    return (
+      W(() => {
+        I(() => {
+          s.value ? l() : d()
+        })
+      }),
+      D(() => {
+        d()
+      }),
+      { resetPosition: M, updatePosition: m }
+    )
+  },
+  ie = (e, n = {}) => {
+    N(e) ||
+      V('[useLockscreen]', 'You need to pass a ref param to this function')
+    const s = n.ns || S('popup'),
+      a = A(() => s.bm('parent', 'hidden'))
+    if (!U || P(document.body, a.value)) return
+    let o = 0,
+      c = !1,
+      t = '0'
+    const l = () => {
+      setTimeout(() => {
+        typeof document > 'u' ||
+          (c &&
+            document &&
+            ((document.body.style.width = t), G(document.body, a.value)))
+      }, 200)
+    }
+    $(e, (d) => {
+      if (!d) {
+        l()
+        return
+      }
+      ;(c = !P(document.body, a.value)),
+        c && ((t = document.body.style.width), q(document.body, a.value)),
+        (o = J(s.namespace.value))
+      const M =
+          document.documentElement.clientHeight < document.body.scrollHeight,
+        m = F(document.body, 'overflowY')
+      o > 0 &&
+        (M || m === 'scroll') &&
+        c &&
+        (document.body.style.width = `calc(100% - ${o}px)`)
+    }),
+      j(() => l())
+  }
+export { ce as E, ie as a, Q as b, ue as u }

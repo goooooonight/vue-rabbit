@@ -1,0 +1,635 @@
+import {
+  S as Y,
+  L as ae,
+  r as he,
+  P as Ne,
+  q as I,
+  i as ge,
+  A as Ee,
+  a2 as ye,
+  c as h,
+  o as v,
+  k as J,
+  x as Q,
+  d as z,
+  g as u,
+  X as F,
+  p as S,
+  y as x,
+  w as C,
+  m as M,
+  a3 as Ve,
+  M as O,
+  K as _e,
+  _ as Ie,
+  F as X,
+  j as Z,
+  a as ee,
+  t as te,
+  a4 as Se
+} from './index-62YaKhWX.js'
+import { E as we } from './index-Dlng04ZD.js'
+import {
+  g,
+  D as w,
+  f as ke,
+  x as Ae,
+  _ as Pe,
+  h as Fe,
+  k as T,
+  t as xe,
+  F as Ce,
+  E as ne,
+  G as Me,
+  H as Te,
+  w as $e
+} from './base-BSl8DOKd.js'
+import { d as De, u as Be, i as oe } from './request-B0GuyAcH.js'
+import { u as Le } from './index-n_Z_joOJ.js'
+import { U as y, I as $, C as le } from './event-BB_Ol6Sd.js'
+import { u as Ge, a as Re, b as Ke } from './use-form-common-props-9xqr1Sov.js'
+import { d as se, t as ze } from './error-Cq9Fpw4b.js'
+const Oe = 100,
+  Xe = 600,
+  re = {
+    beforeMount(t, i) {
+      const a = i.value,
+        { interval: n = Oe, delay: f = Xe } = Y(a) ? {} : a
+      let o, c
+      const r = () => (Y(a) ? a() : a.handler()),
+        p = () => {
+          c && (clearTimeout(c), (c = void 0)),
+            o && (clearInterval(o), (o = void 0))
+        }
+      t.addEventListener('mousedown', (E) => {
+        E.button === 0 &&
+          (p(),
+          r(),
+          document.addEventListener('mouseup', () => p(), { once: !0 }),
+          (c = setTimeout(() => {
+            o = setInterval(() => {
+              r()
+            }, n)
+          }, f)))
+      })
+    }
+  },
+  je = ke({
+    id: { type: String, default: void 0 },
+    step: { type: Number, default: 1 },
+    stepStrictly: Boolean,
+    max: { type: Number, default: Number.MAX_SAFE_INTEGER },
+    min: { type: Number, default: Number.MIN_SAFE_INTEGER },
+    modelValue: { type: [Number, null] },
+    readonly: Boolean,
+    disabled: Boolean,
+    size: De,
+    controls: { type: Boolean, default: !0 },
+    controlsPosition: { type: String, default: '', values: ['', 'right'] },
+    valueOnClear: {
+      type: [String, Number, null],
+      validator: (t) => t === null || g(t) || ['min', 'max'].includes(t),
+      default: null
+    },
+    name: String,
+    placeholder: String,
+    precision: {
+      type: Number,
+      validator: (t) => t >= 0 && t === Number.parseInt(`${t}`, 10)
+    },
+    validateEvent: { type: Boolean, default: !0 },
+    ...Le(['ariaLabel']),
+    inputmode: { type: Ae(String), default: void 0 }
+  }),
+  Ue = {
+    [le]: (t, i) => i !== t,
+    blur: (t) => t instanceof FocusEvent,
+    focus: (t) => t instanceof FocusEvent,
+    [$]: (t) => g(t) || w(t),
+    [y]: (t) => g(t) || w(t)
+  },
+  He = ae({ name: 'ElInputNumber' }),
+  We = ae({
+    ...He,
+    props: je,
+    emits: Ue,
+    setup(t, { expose: i, emit: a }) {
+      const n = t,
+        { t: f } = Be(),
+        o = Fe('input-number'),
+        c = he(),
+        r = Ne({ currentValue: n.modelValue, userInput: null }),
+        { formItem: p } = Ge(),
+        E = I(() => g(n.modelValue) && n.modelValue <= n.min),
+        V = I(() => g(n.modelValue) && n.modelValue >= n.max),
+        ie = I(() => {
+          const e = H(n.step)
+          return T(n.precision)
+            ? Math.max(H(n.modelValue), e)
+            : (e > n.precision, n.precision)
+        }),
+        D = I(() => n.controls && n.controlsPosition === 'right'),
+        U = Re(),
+        _ = Ke(),
+        B = I(() => {
+          if (r.userInput !== null) return r.userInput
+          let e = r.currentValue
+          if (w(e)) return ''
+          if (g(e)) {
+            if (Number.isNaN(e)) return ''
+            T(n.precision) || (e = e.toFixed(n.precision))
+          }
+          return e
+        }),
+        L = (e, s) => {
+          if ((T(s) && (s = ie.value), s === 0)) return Math.round(e)
+          let l = String(e)
+          const d = l.indexOf('.')
+          if (d === -1 || !l.replace('.', '').split('')[d + s]) return e
+          const A = l.length
+          return (
+            l.charAt(A - 1) === '5' &&
+              (l = `${l.slice(0, Math.max(0, A - 1))}6`),
+            Number.parseFloat(Number(l).toFixed(s))
+          )
+        },
+        H = (e) => {
+          if (w(e)) return 0
+          const s = e.toString(),
+            l = s.indexOf('.')
+          let d = 0
+          return l !== -1 && (d = s.length - l - 1), d
+        },
+        W = (e, s = 1) =>
+          g(e)
+            ? (e >= Number.MAX_SAFE_INTEGER && s === 1) ||
+              (e <= Number.MIN_SAFE_INTEGER && s === -1)
+              ? e
+              : L(e + n.step * s)
+            : r.currentValue,
+        G = () => {
+          if (n.readonly || _.value || V.value) return
+          const e = Number(B.value) || 0,
+            s = W(e)
+          k(s), a($, r.currentValue), K()
+        },
+        R = () => {
+          if (n.readonly || _.value || E.value) return
+          const e = Number(B.value) || 0,
+            s = W(e, -1)
+          k(s), a($, r.currentValue), K()
+        },
+        q = (e, s) => {
+          const {
+            max: l,
+            min: d,
+            step: m,
+            precision: N,
+            stepStrictly: A,
+            valueOnClear: P
+          } = n
+          l < d && ze('InputNumber', 'min should not be greater than max.')
+          let b = Number(e)
+          if (w(e) || Number.isNaN(b)) return null
+          if (e === '') {
+            if (P === null) return null
+            b = _e(P) ? { min: d, max: l }[P] : P
+          }
+          return (
+            A && ((b = L(Math.round(b / m) * m, N)), b !== e && s && a(y, b)),
+            T(N) || (b = L(b, N)),
+            (b > l || b < d) && ((b = b > l ? l : d), s && a(y, b)),
+            b
+          )
+        },
+        k = (e, s = !0) => {
+          var l
+          const d = r.currentValue,
+            m = q(e)
+          if (!s) {
+            a(y, m)
+            return
+          }
+          ;(d === m && e) ||
+            ((r.userInput = null),
+            a(y, m),
+            d !== m && a(le, m, d),
+            n.validateEvent &&
+              ((l = p?.validate) == null ||
+                l.call(p, 'change').catch((N) => se())),
+            (r.currentValue = m))
+        },
+        ce = (e) => {
+          r.userInput = e
+          const s = e === '' ? null : Number(e)
+          a($, s), k(s, !1)
+        },
+        de = (e) => {
+          const s = e !== '' ? Number(e) : ''
+          ;((g(s) && !Number.isNaN(s)) || e === '') && k(s),
+            K(),
+            (r.userInput = null)
+        },
+        me = () => {
+          var e, s
+          ;(s = (e = c.value) == null ? void 0 : e.focus) == null || s.call(e)
+        },
+        fe = () => {
+          var e, s
+          ;(s = (e = c.value) == null ? void 0 : e.blur) == null || s.call(e)
+        },
+        pe = (e) => {
+          a('focus', e)
+        },
+        be = (e) => {
+          var s, l
+          ;(r.userInput = null),
+            r.currentValue === null &&
+              (s = c.value) != null &&
+              s.input &&
+              (c.value.input.value = ''),
+            a('blur', e),
+            n.validateEvent &&
+              ((l = p?.validate) == null ||
+                l.call(p, 'blur').catch((d) => se()))
+        },
+        K = () => {
+          r.currentValue !== n.modelValue && (r.currentValue = n.modelValue)
+        },
+        ve = (e) => {
+          document.activeElement === e.target && e.preventDefault()
+        }
+      return (
+        ge(
+          () => n.modelValue,
+          (e, s) => {
+            const l = q(e, !0)
+            r.userInput === null && l !== s && (r.currentValue = l)
+          },
+          { immediate: !0 }
+        ),
+        Ee(() => {
+          var e
+          const { min: s, max: l, modelValue: d } = n,
+            m = (e = c.value) == null ? void 0 : e.input
+          if (
+            (m.setAttribute('role', 'spinbutton'),
+            Number.isFinite(l)
+              ? m.setAttribute('aria-valuemax', String(l))
+              : m.removeAttribute('aria-valuemax'),
+            Number.isFinite(s)
+              ? m.setAttribute('aria-valuemin', String(s))
+              : m.removeAttribute('aria-valuemin'),
+            m.setAttribute(
+              'aria-valuenow',
+              r.currentValue || r.currentValue === 0
+                ? String(r.currentValue)
+                : ''
+            ),
+            m.setAttribute('aria-disabled', String(_.value)),
+            !g(d) && d != null)
+          ) {
+            let N = Number(d)
+            Number.isNaN(N) && (N = null), a(y, N)
+          }
+          m.addEventListener('wheel', ve, { passive: !1 })
+        }),
+        ye(() => {
+          var e, s
+          const l = (e = c.value) == null ? void 0 : e.input
+          l?.setAttribute(
+            'aria-valuenow',
+            `${(s = r.currentValue) != null ? s : ''}`
+          )
+        }),
+        i({ focus: me, blur: fe }),
+        (e, s) => (
+          v(),
+          h(
+            'div',
+            {
+              class: S([
+                u(o).b(),
+                u(o).m(u(U)),
+                u(o).is('disabled', u(_)),
+                u(o).is('without-controls', !e.controls),
+                u(o).is('controls-right', u(D))
+              ]),
+              onDragstart: O(() => {}, ['prevent'])
+            },
+            [
+              e.controls
+                ? J(
+                    (v(),
+                    h(
+                      'span',
+                      {
+                        key: 0,
+                        role: 'button',
+                        'aria-label': u(f)('el.inputNumber.decrease'),
+                        class: S([
+                          u(o).e('decrease'),
+                          u(o).is('disabled', u(E))
+                        ]),
+                        onKeydown: F(R, ['enter'])
+                      },
+                      [
+                        x(e.$slots, 'decrease-icon', {}, () => [
+                          z(u(ne), null, {
+                            default: C(() => [
+                              u(D)
+                                ? (v(), M(u(xe), { key: 0 }))
+                                : (v(), M(u(Ce), { key: 1 }))
+                            ]),
+                            _: 1
+                          })
+                        ])
+                      ],
+                      42,
+                      ['aria-label', 'onKeydown']
+                    )),
+                    [[u(re), R]]
+                  )
+                : Q('v-if', !0),
+              e.controls
+                ? J(
+                    (v(),
+                    h(
+                      'span',
+                      {
+                        key: 1,
+                        role: 'button',
+                        'aria-label': u(f)('el.inputNumber.increase'),
+                        class: S([
+                          u(o).e('increase'),
+                          u(o).is('disabled', u(V))
+                        ]),
+                        onKeydown: F(G, ['enter'])
+                      },
+                      [
+                        x(e.$slots, 'increase-icon', {}, () => [
+                          z(u(ne), null, {
+                            default: C(() => [
+                              u(D)
+                                ? (v(), M(u(Me), { key: 0 }))
+                                : (v(), M(u(Te), { key: 1 }))
+                            ]),
+                            _: 1
+                          })
+                        ])
+                      ],
+                      42,
+                      ['aria-label', 'onKeydown']
+                    )),
+                    [[u(re), G]]
+                  )
+                : Q('v-if', !0),
+              z(
+                u(we),
+                {
+                  id: e.id,
+                  ref_key: 'input',
+                  ref: c,
+                  type: 'number',
+                  step: e.step,
+                  'model-value': u(B),
+                  placeholder: e.placeholder,
+                  readonly: e.readonly,
+                  disabled: u(_),
+                  size: u(U),
+                  max: e.max,
+                  min: e.min,
+                  name: e.name,
+                  'aria-label': e.ariaLabel,
+                  'validate-event': !1,
+                  inputmode: e.inputmode,
+                  onKeydown: [
+                    F(O(G, ['prevent']), ['up']),
+                    F(O(R, ['prevent']), ['down'])
+                  ],
+                  onBlur: be,
+                  onFocus: pe,
+                  onInput: ce,
+                  onChange: de
+                },
+                Ve({ _: 2 }, [
+                  e.$slots.prefix
+                    ? { name: 'prefix', fn: C(() => [x(e.$slots, 'prefix')]) }
+                    : void 0,
+                  e.$slots.suffix
+                    ? { name: 'suffix', fn: C(() => [x(e.$slots, 'suffix')]) }
+                    : void 0
+                ]),
+                1032,
+                [
+                  'id',
+                  'step',
+                  'model-value',
+                  'placeholder',
+                  'readonly',
+                  'disabled',
+                  'size',
+                  'max',
+                  'min',
+                  'name',
+                  'aria-label',
+                  'inputmode',
+                  'onKeydown'
+                ]
+              )
+            ],
+            42,
+            ['onDragstart']
+          )
+        )
+      )
+    }
+  })
+var qe = Pe(We, [['__file', 'input-number.vue']])
+const ft = $e(qe),
+  pt = (t) => oe.get('/goods', { params: { id: t } }),
+  bt = ({ id: t, type: i, limit: a = 3 }) =>
+    oe.get('/goods/hot', { params: { id: t, type: i, limit: a } })
+function Ye(t) {
+  const i = [],
+    a = 2 ** t.length
+  for (let n = 0; n < a; n += 1) {
+    const f = []
+    for (let o = 0; o < t.length; o += 1) n & (1 << o) && f.push(t[o])
+    i.push(f)
+  }
+  return i
+}
+const j = '★',
+  Je = (t) => {
+    const i = {}
+    return (
+      t &&
+        t.length > 0 &&
+        t.forEach((a) => {
+          if (a.inventory) {
+            const n = a.specs.map((o) => o.valueName)
+            Ye(n).forEach((o) => {
+              const c = o.join(j)
+              i[c] || (i[c] = []), i[c].push(a.id)
+            })
+          }
+        }),
+      i
+    )
+  }
+function Qe(t, i) {
+  t &&
+    t.length > 0 &&
+    t.forEach((a) => {
+      a.values.forEach((n) => {
+        n.disabled = !i[n.name]
+      })
+    })
+}
+const ue = (t) => {
+    const i = []
+    return (
+      t.forEach((a, n) => {
+        const f = a.values.find((o) => o.selected)
+        f ? (i[n] = f.name) : (i[n] = void 0)
+      }),
+      i
+    )
+  },
+  Ze = (t, i) => {
+    t.forEach((a, n) => {
+      const f = ue(t)
+      a.values.forEach((o) => {
+        if (!o.selected) {
+          f[n] = o.name
+          const c = f.filter((r) => r).join(j)
+          o.disabled = !i[c]
+        }
+      })
+    })
+  },
+  et = {
+    name: 'XtxGoodSku',
+    props: {
+      goods: { type: Object, default: () => ({ specs: [], skus: [] }) }
+    },
+    emits: ['change'],
+    setup(t, { emit: i }) {
+      let a = {}
+      return (
+        Se(() => {
+          ;(a = Je(t.goods.skus)), Qe(t.goods.specs, a)
+        }),
+        {
+          clickSpecs: (f, o) => {
+            if (o.disabled) return !1
+            o.selected
+              ? (o.selected = !1)
+              : (f.values.forEach((r) => {
+                  r.selected = !1
+                }),
+                (o.selected = !0)),
+              Ze(t.goods.specs, a)
+            const c = ue(t.goods.specs).filter((r) => r)
+            if (c.length === t.goods.specs.length) {
+              const r = a[c.join(j)][0],
+                p = t.goods.skus.find((E) => E.id === r)
+              i('change', {
+                skuId: p.id,
+                price: p.price,
+                oldPrice: p.oldPrice,
+                inventory: p.inventory,
+                specsText: p.specs
+                  .reduce((E, V) => `${E} ${V.name}：${V.valueName}`, '')
+                  .trim()
+              })
+            } else i('change', {})
+          }
+        }
+      )
+    }
+  },
+  tt = { class: 'goods-sku' },
+  nt = ['onClick', 'src'],
+  st = ['onClick']
+function rt(t, i, a, n, f, o) {
+  return (
+    v(),
+    h('div', tt, [
+      (v(!0),
+      h(
+        X,
+        null,
+        Z(
+          a.goods.specs,
+          (c) => (
+            v(),
+            h('dl', { key: c.id }, [
+              ee('dt', null, te(c.name), 1),
+              ee('dd', null, [
+                (v(!0),
+                h(
+                  X,
+                  null,
+                  Z(
+                    c.values,
+                    (r) => (
+                      v(),
+                      h(
+                        X,
+                        { key: r.name },
+                        [
+                          r.picture
+                            ? (v(),
+                              h(
+                                'img',
+                                {
+                                  key: 0,
+                                  class: S({
+                                    selected: r.selected,
+                                    disabled: r.disabled
+                                  }),
+                                  onClick: (p) => n.clickSpecs(c, r),
+                                  src: r.picture
+                                },
+                                null,
+                                10,
+                                nt
+                              ))
+                            : (v(),
+                              h(
+                                'span',
+                                {
+                                  key: 1,
+                                  class: S({
+                                    selected: r.selected,
+                                    disabled: r.disabled
+                                  }),
+                                  onClick: (p) => n.clickSpecs(c, r)
+                                },
+                                te(r.name),
+                                11,
+                                st
+                              ))
+                        ],
+                        64
+                      )
+                    )
+                  ),
+                  128
+                ))
+              ])
+            ])
+          )
+        ),
+        128
+      ))
+    ])
+  )
+}
+const vt = Ie(et, [
+  ['render', rt],
+  ['__scopeId', 'data-v-b6cba04e']
+])
+export { ft as E, vt as X, bt as a, pt as g }
