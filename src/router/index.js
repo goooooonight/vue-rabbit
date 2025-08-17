@@ -71,7 +71,7 @@ const router = createRouter({
     // 404
     {
       path: '/:pathMatch(.*)*',
-      component: () => import('@/views/NotFound.vue')
+      component: () => import('@/views/not-found/NotFound.vue')
     }
   ],
   scrollBehavior() {
