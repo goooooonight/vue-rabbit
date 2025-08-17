@@ -10,7 +10,7 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/views/layout/XtxLayout.vue'),
-      redirect: 'home',
+      redirect: '/home',
       children: [
         {
           path: 'home',
@@ -69,7 +69,10 @@ const router = createRouter({
       ]
     },
     // 404
-    { path: '/*', component: () => import('@/views/NotFound.vue') }
+    {
+      path: '/:pathMatch(.*)*',
+      component: () => import('@/views/NotFound.vue')
+    }
   ],
   scrollBehavior() {
     return { top: 0 }

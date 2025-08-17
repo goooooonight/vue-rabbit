@@ -35,8 +35,8 @@ export const useOrderPay = () => {
   // 是否进入等待订单支付状态
   const isWaiting = ref(false)
   // 支付地址
-  const baseURL = 'http://pcapi-xiaotuxian-front-devtest.itheima.net/'
-  const backURL = 'http://localhost:5173/paycallback'
+  const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net/'
+  const backURL = 'https://localhost:5173/paycallback'
   const redirectUrl = encodeURIComponent(backURL)
   const payUrl = `${baseURL}pay/aliPay?orderId=${orderId}&redirect=${redirectUrl}`
   // 跳转至支付宝支付
