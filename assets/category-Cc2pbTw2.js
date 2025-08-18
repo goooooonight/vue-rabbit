@@ -1,0 +1,1 @@
+import{z as a,r}from"./index-DJvtCeIq.js";import{g as o}from"./category-BaZlGN9R.js";const i=a("rabbit-category",()=>{const t=r([]);return{cateList:t,getCategory:async()=>{const{data:{result:e}}=await o();t.value=e}}});export{i as u};
