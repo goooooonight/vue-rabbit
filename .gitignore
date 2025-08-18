@@ -28,6 +28,4 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-public/TODO.md
-
-build
+TODO.md
