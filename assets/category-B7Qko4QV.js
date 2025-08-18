@@ -1,0 +1,1 @@
+import{z as a,r}from"./index-cawNzx8d.js";import{g as o}from"./category-C2_1i-EL.js";const i=a("rabbit-category",()=>{const t=r([]);return{cateList:t,getCategory:async()=>{const{data:{result:e}}=await o();t.value=e}}});export{i as u};
